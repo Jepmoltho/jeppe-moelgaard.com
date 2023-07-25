@@ -23,7 +23,7 @@ export default function Header() {
             </h3>
           </div>
           <div className="col paragraph">
-            <img src={myImage} alt="profile"></img>
+            <img className="profile-picture" src={myImage} alt="profile"></img>
             <p>test</p>
           </div>
         </div>
