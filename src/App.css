@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  /*background-color: #121b3d;*/
+  background-color: #0c1225;
 }
 
 .App-logo {
@@ -38,6 +39,24 @@
 }
 
 /* Header component */
+.header {
+  min-height: 300px;
+  padding-top: 20px;
+}
+
 .leftalligned {
   text-align: left;
+}
+
+.tagline {
+  padding-left: 2px;
+  color: #4ca1af;
+}
+
+.headline {
+  color: #ffffff;
+}
+
+.paragraphs {
+  color: #ffffff;
 }
