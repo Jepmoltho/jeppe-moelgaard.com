@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 import Typer from "./Typer";
-import myImage from "../media/logo192.png";
+import myImage from "../media/profile-picture.png";
 
 export default function Header() {
   return (
@@ -22,9 +22,8 @@ export default function Header() {
               />
             </h3>
           </div>
-          <div className="col paragraph">
+          <div className="col paragraph pt-4">
             <img className="profile-picture" src={myImage} alt="profile"></img>
-            <p>test</p>
           </div>
         </div>
       </div>
