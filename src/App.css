@@ -1,11 +1,5 @@
-/*
-.row {
-  height: 100%;
-}
-*/
-
+/* Shared between all components */
 .tagline {
-  padding-left: 2px;
   color: #4ca1af;
 }
 
@@ -22,7 +16,23 @@
   font-size: small;
 }
 
-/* Image animations */
+/* Header component */
+
+.header {
+  min-height: 300px;
+  background-color: #0c1225;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 6rem; /*100px*/
+  padding-right: 6rem; /*100px*/
+  display: flex;
+  @media screen and (max-width: 705px) {
+    padding-top: 60px;
+    padding-left: 2rem; /*100px*/
+    padding-right: 2rem;
+  }
+}
+
 @keyframes slideInFromBottom {
   0% {
     transform: translateY(30%);
@@ -34,7 +44,6 @@
   }
 }
 
-/* Media */
 .image {
   width: 200px !important;
   height: 200px !important;
@@ -45,21 +54,7 @@
   max-height: 200px;
 }
 
-/* Header component */
-.header {
-  min-height: 300px;
-  background-color: #0c1225;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 6rem; /*100px*/
-  padding-right: 6rem; /*100px*/
-  display: flex;
-}
-
-.header-container {
-  height: 300px; /* Default height for screens larger than 705 pixels */
-}
-
+/* Bio component */
 .bio {
   min-height: 500px;
   padding-top: 20px;
@@ -69,13 +64,19 @@
   padding-right: 6rem;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 705px) {
+    padding-top: 20px;
+    padding-left: 1rem; /*100px*/
+    padding-right: 1rem;
+  }
 }
 
-.column-circle {
-  display: flex;
-  justify-content: left;
-  height: 100%;
-  align-items: center;
+.bio-text {
+  padding: 3rem;
+  @media screen and (max-width: 705px) {
+    padding-left: 1rem; /*100px*/
+    padding-right: 1rem;
+  }
 }
 
 .circle {
@@ -141,6 +142,27 @@
   margin-right: 20px; /* Adjust the spacing between logos as needed */
   animation: scroll 10s linear infinite; /* Adjust the animation duration (10s in this example) */
 }
+
+/*
+.column-circle {
+  display: flex;
+  justify-content: left;
+  height: 100%;
+  align-items: center;
+}
+*/
+
+/*
+.header-container {
+  height: 300px; 
+}
+*/
+
+/*
+.row {
+  height: 100%;
+}
+*/
 
 /*
 .column {
