@@ -9,21 +9,21 @@ export default function Bio() {
           <div className="col-md-5">
             <div class="d-flex align-items-center justify-content-center h-100">
               <div>
-                <div className="circle" />
+                <div className="circle c1" />
               </div>
               <div>
-                <div className="circle" />
-                <div className="circle" />
+                <div className="circle c2" />
+                <div className="circle c3" />
               </div>
               <div>
-                <div className="circle" />
+                <div className="circle c4" />
               </div>
               <div>
-                <div className="circle" />
-                <div className="circle" />
+                <div className="circle c5" />
+                <div className="circle c6" />
               </div>
               <div>
-                <div className="circle" />
+                <div className="circle c7" />
               </div>
             </div>
           </div>
@@ -42,11 +42,13 @@ export default function Bio() {
                   visualisation.
                 </p>
               </div>
+              <button className="button-6"> → </button>
             </div>
           </div>
         </div>
       </div>
     </header>
+
     /*
     <div className="bio">
       <div className="container bio-container">
