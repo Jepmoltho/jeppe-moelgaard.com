@@ -4,11 +4,21 @@ export default function Bio() {
       <div className="container bio-container">
         <div className="row">
           <div className="col column-circle ">
-            <div className="circle"></div>
-            <div className="circle"></div>
-            <div className="circle"></div>
-            <div className="circle"></div>
-            <div className="circle"></div>
+            <div className="circle c1"></div>
+            <div className="circle ci"></div>
+            <div>
+              <div className="circle c3"></div>
+              <div className="circle c4"></div>
+            </div>
+            <div className="circle ci"></div>
+            <div className="circle c7"></div>
+            <div className="circle ci"></div>
+            <div>
+              <div className="circle c5"></div>
+              <div className="circle c6"></div>
+            </div>
+            <div className="circle ci"></div>
+            <div className="circle c7"></div>
           </div>
           <div className="col column">
             <p className="text-start tagline-paragraph mb-1">

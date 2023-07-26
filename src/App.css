@@ -1,10 +1,6 @@
 .App {
 }
 
-.header-container {
-  height: 300px;
-}
-
 .row {
   height: 100%;
 }
@@ -14,6 +10,8 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  /**/
+  /*flex-grow: 1;*/
 }
 
 .leftalligned {
@@ -66,10 +64,14 @@
   min-height: 300px;
   background-color: #0c1225;
   padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 6rem; /*100px*/
   padding-right: 6rem; /*100px*/
 }
 
+.header-container {
+  height: 300px; /* Default height for screens larger than 705 pixels */
+}
 /* Bio */
 .bio-container {
   height: 400px;
@@ -82,6 +84,13 @@
   padding-right: 6rem;
 }
 
+.column-circle {
+  display: flex;
+  justify-content: left;
+  height: 100%;
+  align-items: center;
+}
+
 .circle {
   width: 30px;
   height: 30px;
@@ -90,13 +99,36 @@
   border: 2px solid #4ca1af;
   box-shadow: 0 0 2px #4ca1af, /* Outer glow */ 0 0 2px #4ca1af,
     /* Medium glow */ 0 0 5px #4ca1af; /* Inner glow */
-  margin: 5px;
+  margin: 10px;
 }
-.column-circle {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  align-items: center;
+
+.ci {
+  visibility: hidden;
+  max-width: 10px;
+}
+
+.c1 {
+  margin-top: 10px !important;
+}
+
+.c2 {
+  margin-top: 10px !important;
+}
+
+.c3 {
+  margin-top: -15px !important;
+}
+
+.c4 {
+  margin-top: -90px !important;
+}
+
+.c5 {
+  margin-top: 60px !important;
+}
+
+.c6 {
+  margin-top: -90px !important;
 }
 
 /*Image wheel*/
