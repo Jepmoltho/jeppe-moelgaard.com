@@ -1,5 +1,38 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../App.css";
+
 export default function Bio() {
   return (
+    <header className="bio">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-7">
+            <div class="d-flex align-items-center h-100">
+              <div>
+                <p className="tagline">Not your average developer</p>
+                <p className="">
+                  As a Frontend Developer with a Master's Degree in Software
+                  Development from ITU and a Bachelor's Degree in Journalism
+                  from DMJX, I bring a unique blend of technical and
+                  communication skills to the table. My technical experience
+                  revoScript, and React, alongside other frontend frameworks and
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-5">
+            <div class="d-flex align-items-center justify-content-center h-100 p-5">
+              <center>
+                <div>
+                  <div className="cicle" />
+                </div>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    /*
     <div className="bio">
       <div className="container bio-container">
         <div className="row">
@@ -40,5 +73,6 @@ export default function Bio() {
         </div>
       </div>
     </div>
+    */
   );
 }

@@ -67,21 +67,27 @@
   padding-bottom: 20px;
   padding-left: 6rem; /*100px*/
   padding-right: 6rem; /*100px*/
+  display: flex;
 }
 
 .header-container {
   height: 300px; /* Default height for screens larger than 705 pixels */
 }
 /* Bio */
+/*
 .bio-container {
   height: 400px;
 }
+*/
 
 .bio {
-  min-height: 400px;
+  min-height: 500px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: #323c46;
   padding-left: 6rem;
   padding-right: 6rem;
+  display: flex;
 }
 
 .column-circle {
