@@ -1,8 +1,129 @@
 .App {
-  /*background-color: #121b3d;*/
-  background-color: #0c1225;
 }
 
+.header-container {
+  height: 300px;
+}
+
+.row {
+  height: 100%;
+}
+.column {
+  /*justify-content: center;  Horizontal centering (optional) */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.leftalligned {
+  text-align: left;
+}
+
+.tagline {
+  padding-left: 2px;
+  color: #4ca1af;
+}
+
+.tagline-paragraph {
+  color: #4ca1af;
+}
+
+.headline {
+  color: #ffffff;
+}
+
+.paragraph {
+  color: #ffffff;
+  font-size: small;
+}
+
+/* Image animations */
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Media */
+.image {
+  width: 200px !important;
+  height: 200px !important;
+}
+
+.profile-picture {
+  animation: slideInFromBottom 1s ease-in-out; /* Apply the animation to the image */
+  max-height: 200px;
+}
+
+/* Header component */
+.header {
+  min-height: 300px;
+  background-color: #0c1225;
+  padding-top: 20px;
+  padding-left: 6rem; /*100px*/
+  padding-right: 6rem; /*100px*/
+}
+
+/* Bio */
+.bio-container {
+  height: 400px;
+}
+
+.bio {
+  min-height: 400px;
+  background-color: #323c46;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  /*background-color: #323c46;*/
+  border-radius: 50%;
+  border: 2px solid #4ca1af;
+  box-shadow: 0 0 2px #4ca1af, /* Outer glow */ 0 0 2px #4ca1af,
+    /* Medium glow */ 0 0 5px #4ca1af; /* Inner glow */
+  margin: 5px;
+}
+.column-circle {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+
+/*Image wheel*/
+.logo-container {
+  display: flex;
+  /*overflow-x: hidden;*/
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      -50% /*-100%*/
+    ); /* Adjust this value to control the scrolling speed */
+  }
+}
+
+.logo-container img {
+  margin-right: 20px; /* Adjust the spacing between logos as needed */
+  animation: scroll 10s linear infinite; /* Adjust the animation duration (10s in this example) */
+}
+
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -37,67 +158,4 @@
     transform: rotate(360deg);
   }
 }
-
-/* Header component */
-.header {
-  min-height: 300px;
-  padding-top: 20px;
-}
-
-.leftalligned {
-  text-align: left;
-}
-
-.tagline {
-  padding-left: 2px;
-  color: #4ca1af;
-}
-
-.headline {
-  color: #ffffff;
-}
-
-.paragraph {
-  color: #ffffff;
-}
-
-/* Image animations */
-@keyframes slideInFromBottom {
-  0% {
-    transform: translateY(30%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.profile-picture {
-  animation: slideInFromBottom 1s ease-in-out; /* Apply the animation to the image */
-  max-height: 200px;
-}
-
-/*Image wheel*/
-.logo-container {
-  display: flex;
-  /*overflow-x: hidden;*/
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(
-      -50% /*-100%*/
-    ); /* Adjust this value to control the scrolling speed */
-  }
-}
-
-.logo-container img {
-  margin-right: 20px; /* Adjust the spacing between logos as needed */
-  animation: scroll 10s linear infinite; /* Adjust the animation duration (10s in this example) */
-}
+*/
