@@ -5,12 +5,26 @@ export default function Bio() {
   return (
     <header className="bio">
       <div className="container">
-        <div className="row">
+        <div className="row flex-column-reverse flex-md-row">
           <div className="col-md-7">
             <div class="d-flex align-items-center h-100">
               <div>
+                <div className="circle" />
+              </div>
+              <div>
+                <div className="circle" />
+                <div className="circle" />
+              </div>
+              <div>
+                <div className="circle" />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-5">
+            <div class="d-flex align-items-center justify-content-center h-100 p-5">
+              <div>
                 <p className="tagline">Not your average developer</p>
-                <p className="">
+                <p className="paragraph">
                   As a Frontend Developer with a Master's Degree in Software
                   Development from ITU and a Bachelor's Degree in Journalism
                   from DMJX, I bring a unique blend of technical and
@@ -18,15 +32,6 @@ export default function Bio() {
                   revoScript, and React, alongside other frontend frameworks and
                 </p>
               </div>
-            </div>
-          </div>
-          <div className="col-md-5">
-            <div class="d-flex align-items-center justify-content-center h-100 p-5">
-              <center>
-                <div>
-                  <div className="cicle" />
-                </div>
-              </center>
             </div>
           </div>
         </div>

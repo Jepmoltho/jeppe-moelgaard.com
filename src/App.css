@@ -1,22 +1,8 @@
-.App {
-}
-
+/*
 .row {
   height: 100%;
 }
-.column {
-  /*justify-content: center;  Horizontal centering (optional) */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  /**/
-  /*flex-grow: 1;*/
-}
-
-.leftalligned {
-  text-align: left;
-}
+*/
 
 .tagline {
   padding-left: 2px;
@@ -73,12 +59,6 @@
 .header-container {
   height: 300px; /* Default height for screens larger than 705 pixels */
 }
-/* Bio */
-/*
-.bio-container {
-  height: 400px;
-}
-*/
 
 .bio {
   min-height: 500px;
@@ -88,6 +68,7 @@
   padding-left: 6rem;
   padding-right: 6rem;
   display: flex;
+  align-items: center;
 }
 
 .column-circle {
@@ -160,6 +141,26 @@
   margin-right: 20px; /* Adjust the spacing between logos as needed */
   animation: scroll 10s linear infinite; /* Adjust the animation duration (10s in this example) */
 }
+
+/*
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+*/
+/*
+.leftalligned {
+  text-align: left;
+}
+*/
+/* Bio */
+/*
+.bio-container {
+  height: 400px;
+}
+*/
 
 /*
 .App-logo {
