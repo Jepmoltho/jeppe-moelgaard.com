@@ -11,7 +11,7 @@ export default function Header() {
           <div className="col-md-7">
             <div className="d-flex align-items-center h-100">
               <div>
-                <p className="tagline">Hi, I'm a!</p>
+                <p className="tagline">Hi, I'm a</p>
                 <h1 className="text-start headline">
                   <Typer text="Frontend Developer" delay={50} start={0} />
                   <br />
