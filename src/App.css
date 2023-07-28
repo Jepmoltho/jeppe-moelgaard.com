@@ -281,19 +281,38 @@
   border-radius: 6px;
   display: flex;
   align-items: center;
+  flex-direction: row;
+  @media screen and (max-width: 445px) {
+    flex-direction: column;
+    /*padding-top: 20px;*/
+    /*padding-left: 1rem;*/ /*100px*/
+    /*padding-right: 1rem;*/
+  }
 }
 
 .techlogo {
   height: 50px;
   width: 50px;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  /*padding-top: 2px;*/
+  /*padding-bottom: 2px;*/
+  padding: 6px;
   margin-right: 10px;
   margin-left: 10px;
+  border-radius: 10px;
 }
 
 .paragraphtechstack {
   margin-bottom: 0rem !important;
+  padding-left: 8px;
+  /*display: flex;*/
+}
+
+.links {
+  margin-bottom: 30px;
+}
+
+.inline-p {
+  display: inline;
 }
 
 @keyframes scroll {
