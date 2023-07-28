@@ -237,10 +237,14 @@
 .content-container {
   /*border: 1px solid #ccc;*/
   /*border: 1px solid #4ca1af;*/
-  padding: 20px;
+  padding: 40px;
   border-radius: 0 0 4px 4px;
   /*background-color: #4ca1af;*/
   background-color: #d4dce2;
+  @media screen and (max-width: 768px) {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
 }
 
 .content {
@@ -253,7 +257,20 @@
   margin-bottom: 0rem !important;
 }
 
-/*Image wheel*/
+/* Project */
+.project {
+  margin-bottom: 6rem;
+  margin-top: 4rem;
+}
+
+.project-text-container {
+  /*padding-right: 40px !important;*/
+  @media screen and (max-width: 768px) {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+}
+
 .logo-container {
   display: flex;
   /*overflow-x: hidden;*/
@@ -266,16 +283,19 @@
   /*height: 100%;*/
   display: block !important;
   margin: 0 auto;
-
-  /* Set background properties */
-  /*
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  */
-  /* Center the image within its container */
 }
 
+.project-image-parent-container {
+  margin-bottom: 0px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+/*
+.techstack-container {
+  padding-right: 1rem;
+}
+*/
 .techstack {
   background-color: #f0f0f1;
   border-radius: 6px;
@@ -284,9 +304,6 @@
   flex-direction: row;
   @media screen and (max-width: 445px) {
     flex-direction: column;
-    /*padding-top: 20px;*/
-    /*padding-left: 1rem;*/ /*100px*/
-    /*padding-right: 1rem;*/
   }
 }
 
@@ -308,7 +325,7 @@
 }
 
 .links {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .inline-p {
