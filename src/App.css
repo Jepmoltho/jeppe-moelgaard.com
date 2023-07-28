@@ -225,6 +225,7 @@
   border-radius: 4px 4px 0 0;
   color: aliceblue;
   font-size: 20px;
+  text-align: center;
 }
 
 .tab.active {
@@ -244,6 +245,7 @@
   @media screen and (max-width: 768px) {
     padding-right: 20px !important;
     padding-left: 20px !important;
+    /*padding-top: "inherit";*/
   }
 }
 
@@ -261,6 +263,22 @@
 .project {
   margin-bottom: 6rem;
   margin-top: 4rem;
+  @media screen and (max-width: 768px) {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-top: 1rem;
+
+    /*padding-top: "inherit";*/
+  }
+}
+
+.project-container {
+  margin-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 0px;
+
+    /*padding-top: "inherit";*/
+  }
 }
 
 .project-text-container {
@@ -287,15 +305,13 @@
 
 .project-image-parent-container {
   margin-bottom: 0px;
+  padding: 0px !important;
   @media screen and (max-width: 768px) {
     margin-bottom: 20px;
+    padding-left: 0px !important; /*Removes padding left on mobile*/
   }
 }
-/*
-.techstack-container {
-  padding-right: 1rem;
-}
-*/
+
 .techstack {
   background-color: #f0f0f1;
   border-radius: 6px;
@@ -325,7 +341,10 @@
 }
 
 .links {
-  margin-bottom: 60px;
+  /*margin-bottom: 60px;*/
+  @media screen and (max-width: 768px) {
+    margin-bottom: 20px;
+  }
 }
 
 .inline-p {

@@ -19,13 +19,13 @@ export default function Project({
   const isReverseBool = direction === "reverse";
 
   const textContainerPadding = {
-    paddingRight: isReverseBool ? "10px" : "40px",
-    paddingLeft: isReverseBool ? "40px" : "10px",
+    paddingRight: isReverseBool ? "00px" : "40px",
+    paddingLeft: isReverseBool ? "40px" : "0px",
   };
 
   return (
     <div className="project">
-      <div className="container">
+      <div className="container project-container">
         <div className={`row ${isReverse}`}>
           <div
             className="col-md-7 project-text-container"
@@ -33,6 +33,7 @@ export default function Project({
           >
             <div className="d-flex align-items-center h-100">
               <div>
+                <p></p>
                 <p className="tagline-tabs">{tagline}</p>
                 <h2>{headline}</h2>
                 <p>{description}</p>
@@ -45,6 +46,7 @@ export default function Project({
                   <p className="inline-p">Blog, </p>
                   <p className="inline-p">Blog post, </p>
                 </div>
+                <p></p>
               </div>
             </div>
           </div>
@@ -54,19 +56,20 @@ export default function Project({
             </div>
           </div>
         </div>
-        <div className="techstack-container">
-          <div className="techstack">
-            <p className="paragraphtechstack">Techstack:</p>
-            <div>
-              <img className="techlogo" alt="js logo" src={js} />
-              <img className="techlogo" alt="html logo" src={html} />
-              <img className="techlogo" alt="css logo" src={css} />
-              <img className="techlogo" alt="bootstrap logo" src={bootstrap} />
-              <img className="techlogo" alt=".net logo" src={net} />
-              <img className="techlogo" alt="c# logo" src={csharp} />
-              <img className="techlogo" alt="umbraco logo" src={umbraco} />
-              <img className="techlogo" alt="github logo" src={github} />
-            </div>
+      </div>
+      {/* Move this one div up if its causing problems*/}
+      <div className="techstack-container">
+        <div className="techstack">
+          <p className="paragraphtechstack">Techstack:</p>
+          <div>
+            <img className="techlogo" alt="js logo" src={js} />
+            <img className="techlogo" alt="html logo" src={html} />
+            <img className="techlogo" alt="css logo" src={css} />
+            <img className="techlogo" alt="bootstrap logo" src={bootstrap} />
+            <img className="techlogo" alt=".net logo" src={net} />
+            <img className="techlogo" alt="c# logo" src={csharp} />
+            <img className="techlogo" alt="umbraco logo" src={umbraco} />
+            <img className="techlogo" alt="github logo" src={github} />
           </div>
         </div>
       </div>

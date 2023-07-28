@@ -38,8 +38,8 @@ const Tabs = () => {
               image={tamigo}
             />
             <Project
-              tagline="tamigo"
-              headline="Frontend Developer"
+              tagline="Staun and Stender"
+              headline="Developer and IT Management Consultant"
               description="In the field of Journalism, I have a passion for storytelling and
               reporting on important events and stories that impact society. In the field of Journalism, I have a passion for storytelling and
               reporting on important events and stories that impact society."
