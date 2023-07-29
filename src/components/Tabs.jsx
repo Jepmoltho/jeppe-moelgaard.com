@@ -12,6 +12,9 @@ import github from "../media/github-v2.png";
 import umbraco from "../media/umbraco-v2.png";
 import sql from "../media/SQL-v3.png";
 import ssms from "../media/SSMS-v5.png";
+import wordpress from "../media/WP-v2.png";
+import silkeborgfadoel from "../media/silkeborgfadoel.png";
+import templafy from "../media/templafy.png";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("software");
@@ -39,6 +42,20 @@ const Tabs = () => {
     { id: 3, path: html },
     { id: 4, path: css },
     { id: 5, path: github },
+  ];
+
+  const pathsTemplafy = [
+    { id: 0, path: wordpress },
+    { id: 1, path: html },
+    { id: 2, path: css },
+  ];
+
+  const pathsSilkeborgFadoel = [
+    { id: 0, path: wordpress },
+    { id: 1, path: css },
+    { id: 2, path: html },
+    { id: 3, path: js },
+    { id: 4, path: github },
   ];
 
   return (
@@ -88,6 +105,44 @@ const Tabs = () => {
               classname="sogslogo"
               //pass down the logos constant to the project component
               logos={pathsSogS.map((humlebuks) => (
+                <img
+                  src={humlebuks.path}
+                  alt="logo"
+                  key={humlebuks.key}
+                  className="techlogo"
+                />
+              ))}
+            />
+            <Project
+              tagline="Templafy"
+              headline="Website Specialist"
+              description="In the field of Journalism, I have a passion for storytelling and
+              reporting on important events and stories that impact society. In the field of Journalism, I have a passion for storytelling and
+              reporting on important events and stories that impact society."
+              image={templafy}
+              direction=""
+              classname="templafylogo"
+              //pass down the logos constant to the project component
+              logos={pathsTemplafy.map((humlebuks) => (
+                <img
+                  src={humlebuks.path}
+                  alt="logo"
+                  key={humlebuks.key}
+                  className="techlogo"
+                />
+              ))}
+            />
+            <Project
+              tagline="Silkeborg Fadøl"
+              headline="Web Developer"
+              description="In the field of Journalism, I have a passion for storytelling and
+              reporting on important events and stories that impact society. In the field of Journalism, I have a passion for storytelling and
+              reporting on important events and stories that impact society."
+              image={silkeborgfadoel}
+              direction="reverse"
+              classname="silkeborgfadoellogo"
+              //pass down the logos constant to the project component
+              logos={pathsSilkeborgFadoel.map((humlebuks) => (
                 <img
                   src={humlebuks.path}
                   alt="logo"

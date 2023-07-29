@@ -76,7 +76,14 @@
   padding: 3rem;
   @media screen and (max-width: 705px) {
     padding-left: 1rem; /*100px*/
-    padding-right: 1rem;
+    padding-right: 0rem;
+    min-width: 325px;
+  }
+}
+
+.textslide {
+  @media screen and (max-width: 705px) {
+    padding-right: 10px;
   }
 }
 
