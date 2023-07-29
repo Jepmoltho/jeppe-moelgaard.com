@@ -190,7 +190,7 @@
   align-items: center;
   justify-content: center;
   min-height: 70px;
-  margin-bottom: 0px !important;
+  padding-bottom: 45px;
   @media screen and (max-width: 705px) {
     padding-top: 20px;
     padding-left: 1rem; /*100px*/
@@ -225,14 +225,26 @@
   width: 100%;
   cursor: pointer;
   padding: 10px 20px;
-  /*border: 1px solid #ccc;*/
+  border: 1px solid #ccc;
   border-color: #ccc;
+
+  /*
   border-style: solid;
   border-width: 1px 1px 0 1px;
   border-radius: 4px 4px 0 0;
+  */
+  border-radius: 4px 4px 0 0;
+  border-width: 1px 1px 0 1px;
+  border-radius: 4px 4px 0 0;
+
   color: aliceblue;
   font-size: 20px;
   text-align: center;
+}
+
+.tabs-container {
+  background-color: #d4dce2;
+  border-radius: 4px;
 }
 
 .tab.active {
@@ -242,17 +254,26 @@
   font-weight: 700;
 }
 
+.tab:not(.active) {
+  background-color: #15395a;
+  color: aliceblue;
+  /* Your CSS styles for the inactive tab here */
+}
+
+/*
+If you want to apply some rules that doesnt count hovering the active tab, you can use this:
+.tab:not(.active):not(:hover) {
+  background-color: #15395a;
+  color: aliceblue;
+}
+*/
+
 .content-container {
-  /*border: 1px solid #ccc;*/
-  /*border: 1px solid #4ca1af;*/
-  padding: 40px;
+  /*padding: 40px;*/
   border-radius: 0 0 4px 4px;
   /*background-color: #4ca1af;*/
   background-color: #d4dce2;
   @media screen and (max-width: 768px) {
-    padding-right: 20px !important;
-    padding-left: 20px !important;
-    /*padding-top: "inherit";*/
   }
 }
 
@@ -268,25 +289,50 @@
 
 /* Project */
 .project {
-  margin-bottom: 6rem;
-  margin-top: 4rem;
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+  padding: 40px;
   @media screen and (max-width: 768px) {
-    padding-right: 0px !important;
-    padding-left: 0px !important;
-    margin-top: 1rem;
-
-    /*padding-top: "inherit";*/
+    /*margin-bottom: 0rem;*/
+    padding-bottom: 4rem;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
   }
+}
+
+.project-0,
+.project-2 {
+  background-color: #d4dce2 !important;
+}
+
+.project-1,
+.project-3 {
+  background-color: #ccd7e1 !important;
+}
+
+.project-3 {
+  border-radius: 4px;
 }
 
 .project-container {
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
+  padding-bottom: 45px;
   @media screen and (max-width: 768px) {
     margin-bottom: 0px;
-
-    /*padding-top: "inherit";*/
+    padding-bottom: 0px;
   }
 }
+
+.project-1 > .project-container {
+  /*margin-bottom: 20px;*/
+  padding-bottom: 25px;
+}
+
+/*
+.project-1 > .tabsimage {
+  padding-bottom: 0px !important;
+}
+*/
 
 .project-text-container {
   /*padding-right: 40px !important;*/
@@ -360,6 +406,17 @@
 
 .sogslogo {
   padding: 60px;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0px;
+  }
+}
+
+.silkeborgfadoellogo {
+  padding: 60px;
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+    padding-bottom: 20px;
+  }
 }
 
 @keyframes scroll {

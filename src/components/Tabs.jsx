@@ -13,7 +13,7 @@ import umbraco from "../media/umbraco-v2.png";
 import sql from "../media/SQL-v3.png";
 import ssms from "../media/SSMS-v5.png";
 import wordpress from "../media/WP-v2.png";
-import silkeborgfadoel from "../media/silkeborgfadoel.png";
+import silkeborgfadoel2 from "../media/SF logo.png";
 import templafy from "../media/templafy.png";
 
 const Tabs = () => {
@@ -60,108 +60,118 @@ const Tabs = () => {
 
   return (
     <div className="tabscomponent">
-      <div className="tabs">
-        <div
-          className={`tab ${activeTab === "software" ? "active" : ""}`}
-          onClick={() => handleTabClick("software")}
-        >
-          Software Developer
-        </div>
-        <div
-          className={`tab ${activeTab === "journalism" ? "active" : ""}`}
-          onClick={() => handleTabClick("journalism")}
-        >
-          Journalism
-        </div>
+      <div>
+        <h2 className="componentheadline">Portfolio</h2>
       </div>
+      <div className="tabs-container">
+        <div className="tabs">
+          <div
+            className={`tab ${activeTab === "software" ? "active" : ""}`}
+            onClick={() => handleTabClick("software")}
+          >
+            Software Developer
+          </div>
+          <div
+            className={`tab ${activeTab === "journalism" ? "active" : ""}`}
+            onClick={() => handleTabClick("journalism")}
+          >
+            Journalism
+          </div>
+        </div>
 
-      <div className="content-container">
-        {activeTab === "software" && (
-          <div className="content">
-            <Project
-              tagline="tamigo"
-              headline="Frontend Developer"
-              description="In the field of Journalism, I have a passion for storytelling and
+        <div className="content-container">
+          {activeTab === "software" && (
+            <div className="content">
+              <Project
+                tagline="tamigo"
+                headline="Frontend Developer"
+                description="In the field of Journalism, I have a passion for storytelling and
               reporting on important events and stories that impact society. In the field of Journalism, I have a passion for storytelling and
               reporting on important events and stories that impact society."
-              image={tamigo}
-              logos={pathsTamigo.map((humlebuks) => (
-                <img
-                  src={humlebuks.path}
-                  alt="logo"
-                  key={humlebuks.key}
-                  className="techlogo"
-                />
-              ))}
-            />
-            <Project
-              tagline="Staun and Stender"
-              headline="Developer and IT Management Consultant"
-              description="In the field of Journalism, I have a passion for storytelling and
+                image={tamigo}
+                projectnumber={0}
+                logos={pathsTamigo.map((humlebuks) => (
+                  <img
+                    src={humlebuks.path}
+                    alt="logo"
+                    key={humlebuks.key}
+                    className="techlogo"
+                  />
+                ))}
+              />
+              <Project
+                tagline="Staun and Stender"
+                headline="Developer and IT Management Consultant"
+                description="In the field of Journalism, I have a passion for storytelling and
               reporting on important events and stories that impact society. In the field of Journalism, I have a passion for storytelling and
               reporting on important events and stories that impact society."
-              image={sogs}
-              direction="reverse"
-              classname="sogslogo"
-              //pass down the logos constant to the project component
-              logos={pathsSogS.map((humlebuks) => (
-                <img
-                  src={humlebuks.path}
-                  alt="logo"
-                  key={humlebuks.key}
-                  className="techlogo"
-                />
-              ))}
-            />
-            <Project
-              tagline="Templafy"
-              headline="Website Specialist"
-              description="In the field of Journalism, I have a passion for storytelling and
+                image={sogs}
+                direction="reverse"
+                classname="sogslogo"
+                projectnumber={1}
+                //pass down the logos constant to the project component
+                logos={pathsSogS.map((humlebuks) => (
+                  <img
+                    src={humlebuks.path}
+                    alt="logo"
+                    key={humlebuks.key}
+                    className="techlogo"
+                  />
+                ))}
+              />
+              <Project
+                tagline="Templafy"
+                headline="Website Specialist"
+                description="In the field of Journalism, I have a passion for storytelling and
               reporting on important events and stories that impact society. In the field of Journalism, I have a passion for storytelling and
               reporting on important events and stories that impact society."
-              image={templafy}
-              direction=""
-              classname="templafylogo"
-              //pass down the logos constant to the project component
-              logos={pathsTemplafy.map((humlebuks) => (
-                <img
-                  src={humlebuks.path}
-                  alt="logo"
-                  key={humlebuks.key}
-                  className="techlogo"
-                />
-              ))}
-            />
-            <Project
-              tagline="Silkeborg Fadøl"
-              headline="Web Developer"
-              description="In the field of Journalism, I have a passion for storytelling and
+                image={templafy}
+                direction=""
+                classname="templafylogo"
+                projectnumber={2}
+                //pass down the logos constant to the project component
+                logos={pathsTemplafy.map((humlebuks) => (
+                  <img
+                    src={humlebuks.path}
+                    alt="logo"
+                    key={humlebuks.key}
+                    className="techlogo"
+                  />
+                ))}
+              />
+              <Project
+                tagline="Silkeborg Fadøl"
+                headline="Web Developer"
+                description="In the field of Journalism, I have a passion for storytelling and
               reporting on important events and stories that impact society. In the field of Journalism, I have a passion for storytelling and
               reporting on important events and stories that impact society."
-              image={silkeborgfadoel}
-              direction="reverse"
-              classname="silkeborgfadoellogo"
-              //pass down the logos constant to the project component
-              logos={pathsSilkeborgFadoel.map((humlebuks) => (
-                <img
-                  src={humlebuks.path}
-                  alt="logo"
-                  key={humlebuks.key}
-                  className="techlogo"
-                />
-              ))}
-            />
-          </div>
-        )}
-        {activeTab === "journalism" && (
-          <div className="content">
-            {/* Content for Journalism tab */}
-            <p>
-              In the field of Journalism, I have a passion for storytelling and
-              reporting on important events and stories that impact society.
-            </p>
-          </div>
-        )}
+                image={silkeborgfadoel2}
+                direction="reverse"
+                classname="silkeborgfadoellogo"
+                projectnumber={3}
+                //pass down the logos constant to the project component
+                logos={pathsSilkeborgFadoel.map((humlebuks) => (
+                  <img
+                    src={humlebuks.path}
+                    alt="logo"
+                    key={humlebuks.key}
+                    className="techlogo"
+                  />
+                ))}
+              />
+            </div>
+          )}
+          {activeTab === "journalism" && (
+            <div className="content">
+              {/* Content for Journalism tab */}
+              <p>
+                In the field of Journalism, I have a passion for storytelling
+                and reporting on important events and stories that impact
+                society.
+              </p>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

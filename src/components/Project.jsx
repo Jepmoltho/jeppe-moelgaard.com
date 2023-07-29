@@ -6,17 +6,20 @@ export default function Project({
   direction,
   classname,
   logos,
+  projectnumber,
 }) {
   const isReverse = `flex-row${direction === "reverse" ? "-reverse" : ""}`;
   const isReverseBool = direction === "reverse";
 
   const textContainerPadding = {
-    paddingRight: isReverseBool ? "00px" : "40px",
-    paddingLeft: isReverseBool ? "40px" : "0px",
+    paddingRight: isReverseBool ? "00px" : "60px",
+    paddingLeft: isReverseBool ? "60px" : "0px",
   };
 
+  const projectNumber = `project-${projectnumber}`;
+
   return (
-    <div className="project">
+    <div className={` project ${projectNumber}`}>
       <div className="container project-container">
         <div className={`row ${isReverse}`}>
           <div
