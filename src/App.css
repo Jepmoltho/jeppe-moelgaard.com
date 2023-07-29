@@ -351,6 +351,10 @@
   display: inline;
 }
 
+.sogslogo {
+  padding: 60px;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);

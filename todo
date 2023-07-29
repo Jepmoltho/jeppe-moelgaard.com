@@ -1,1 +1,2 @@
 Make bio module a component that where you can press arrow to the right to get more text snippets. This way you can create a story without filling the page with text. And each time you press next, the image on the left will move one down in the tree structure.
+Maybe make projects background color slighly vary to distinquish between projects

@@ -1,6 +1,17 @@
 import React, { useState } from "react";
 import Project from "./Project";
 import tamigo from "../media/tamigo.png";
+import sogs from "../media/staunandstender-v2.png";
+import js from "../media/JS.png";
+import html from "../media/HTML.png";
+import net from "../media/net-v2.png";
+import bootstrap from "../media/bootstrap-v3.png";
+import csharp from "../media/csharp-v2.png";
+import css from "../media/CSS-v3.png";
+import github from "../media/github-v2.png";
+import umbraco from "../media/umbraco-v2.png";
+import sql from "../media/SQL-v3.png";
+import ssms from "../media/SSMS-v5.png";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("software");
@@ -8,6 +19,27 @@ const Tabs = () => {
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
+
+  //create a constant coaining all the media imports
+  const pathsTamigo = [
+    { id: 0, path: js },
+    { id: 1, path: html },
+    { id: 2, path: css },
+    { id: 3, path: bootstrap },
+    { id: 4, path: umbraco },
+    { id: 5, path: net },
+    { id: 6, path: csharp },
+    { id: 7, path: github },
+  ];
+
+  const pathsSogS = [
+    { id: 0, path: js },
+    { id: 1, path: sql },
+    { id: 2, path: ssms },
+    { id: 3, path: html },
+    { id: 4, path: css },
+    { id: 5, path: github },
+  ];
 
   return (
     <div className="tabscomponent">
@@ -36,6 +68,14 @@ const Tabs = () => {
               reporting on important events and stories that impact society. In the field of Journalism, I have a passion for storytelling and
               reporting on important events and stories that impact society."
               image={tamigo}
+              logos={pathsTamigo.map((humlebuks) => (
+                <img
+                  src={humlebuks.path}
+                  alt="logo"
+                  key={humlebuks.key}
+                  className="techlogo"
+                />
+              ))}
             />
             <Project
               tagline="Staun and Stender"
@@ -43,8 +83,18 @@ const Tabs = () => {
               description="In the field of Journalism, I have a passion for storytelling and
               reporting on important events and stories that impact society. In the field of Journalism, I have a passion for storytelling and
               reporting on important events and stories that impact society."
-              image={tamigo}
+              image={sogs}
               direction="reverse"
+              classname="sogslogo"
+              //pass down the logos constant to the project component
+              logos={pathsSogS.map((humlebuks) => (
+                <img
+                  src={humlebuks.path}
+                  alt="logo"
+                  key={humlebuks.key}
+                  className="techlogo"
+                />
+              ))}
             />
           </div>
         )}
