@@ -7,6 +7,7 @@ export default function Project({
   classname,
   logos,
   projectnumber,
+  links,
 }) {
   const isReverse = `flex-row${direction === "reverse" ? "-reverse" : ""}`;
   const isReverseBool = direction === "reverse";
@@ -34,12 +35,7 @@ export default function Project({
                 <p>{description}</p>
                 <div className="links">
                   <p className="inline-p">Links: </p>
-                  <p className="inline-p">Pricing, </p>
-                  <p className="inline-p">Industries, </p>
-                  <p className="inline-p">Front page, </p>
-                  <p className="inline-p">Demo, </p>
-                  <p className="inline-p">Blog, </p>
-                  <p className="inline-p">Blog post, </p>
+                  {links}
                 </div>
                 <p></p>
               </div>

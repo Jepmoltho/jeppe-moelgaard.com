@@ -33,6 +33,12 @@
   }
 }
 
+.header-text-container {
+  /*padding-left: 80px !important;*/
+  justify-content: center;
+  align-items: center;
+}
+
 @keyframes slideInFromBottom {
   0% {
     transform: translateY(30%);
@@ -82,6 +88,7 @@
 }
 
 .textslide {
+  padding-right: 20px;
   @media screen and (max-width: 705px) {
     padding-right: 10px;
   }
@@ -328,6 +335,12 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
   padding-bottom: 25px;
 }
 
+.project-image-parent-container .sogslogo {
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0px;
+  }
+}
+
 /*
 .project-1 > .tabsimage {
   padding-bottom: 0px !important;
@@ -405,9 +418,31 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 }
 
 .sogslogo {
-  padding: 60px;
-  @media screen and (max-width: 768px) {
-    padding-bottom: 0px;
+  padding: 100px;
+}
+@media screen and (max-width: 1200px) {
+  .sogslogo {
+    padding: 80px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .sogslogo {
+    padding: 70px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .sogslogo {
+    padding: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sogslogo {
+    padding: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .sogslogo {
+    padding: 40px;
   }
 }
 

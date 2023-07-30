@@ -25,37 +25,54 @@ const Tabs = () => {
 
   //create a constant coaining all the media imports
   const pathsTamigo = [
-    { id: 0, path: js },
-    { id: 1, path: html },
-    { id: 2, path: css },
-    { id: 3, path: bootstrap },
-    { id: 4, path: umbraco },
-    { id: 5, path: net },
-    { id: 6, path: csharp },
-    { id: 7, path: github },
+    { id: 0, path: js, name: "JavaScript" },
+    { id: 1, path: html, name: "HTML" },
+    { id: 2, path: css, name: "CSS" },
+    { id: 3, path: bootstrap, name: "Bootstrap" },
+    { id: 4, path: umbraco, name: "Umbraco" },
+    { id: 5, path: net, name: ".NET" },
+    { id: 6, path: csharp, name: "C#" },
+    { id: 7, path: github, name: "GitHub" },
+  ];
+
+  const linksTamigo = [
+    { id: 0, link: "https://tamigo.com/pricing", name: "Pricing" },
+    {
+      id: 1,
+      link: "https://tamigo.com/industries/supermarkets",
+      name: "Industries",
+    },
+    { id: 2, link: "https://tamigo.com/", name: "Front page" },
+    { id: 3, link: "https://tamigo.com/free-demo", name: "Demo" },
+    { id: 4, link: "https://tamigo.de/blog", name: "Blog" },
+    {
+      id: 5,
+      link: "https://www.tamigo.de/blog/so-spart-das-hotel-des-nordens-in-haupt-und-nebensaison-zeit-und-kosten/",
+      name: "Blog post",
+    },
   ];
 
   const pathsSogS = [
-    { id: 0, path: js },
-    { id: 1, path: sql },
-    { id: 2, path: ssms },
-    { id: 3, path: html },
-    { id: 4, path: css },
-    { id: 5, path: github },
+    { id: 0, path: js, name: "JavaScript" },
+    { id: 1, path: sql, name: "SQL" },
+    { id: 2, path: ssms, name: "Microsoft Sequel Server Management Studio" },
+    { id: 3, path: html, name: "HTML" },
+    { id: 4, path: css, name: "CSS" },
+    { id: 5, path: github, name: "GitHub" },
   ];
 
   const pathsTemplafy = [
-    { id: 0, path: wordpress },
-    { id: 1, path: html },
-    { id: 2, path: css },
+    { id: 0, path: wordpress, name: "WordPress" },
+    { id: 1, path: html, name: "HTML" },
+    { id: 2, path: css, name: "CSS" },
   ];
 
   const pathsSilkeborgFadoel = [
-    { id: 0, path: wordpress },
-    { id: 1, path: css },
-    { id: 2, path: html },
-    { id: 3, path: js },
-    { id: 4, path: github },
+    { id: 0, path: wordpress, name: "WordPress" },
+    { id: 1, path: css, name: "CSS" },
+    { id: 2, path: html, name: "HTML" },
+    { id: 3, path: js, name: "JavaScript" },
+    { id: 4, path: github, name: "GitHub" },
   ];
 
   return (
@@ -85,17 +102,22 @@ const Tabs = () => {
               <Project
                 tagline="tamigo"
                 headline="Frontend Developer"
-                description="In the field of Journalism, I have a passion for storytelling and
-              reporting on important events and stories that impact society. In the field of Journalism, I have a passion for storytelling and
-              reporting on important events and stories that impact society."
+                description="I develop and maintain tamigo's website in the Umbraco framework. I developed multiple reusable components & landing pages using HTML, CSS & JavaScript and optimize design for desktop/mobile/tablet using media queries & Bootstrap."
                 image={tamigo}
                 projectnumber={0}
+                links={linksTamigo.map((link) => (
+                  <p className="inline-p">
+                    <a href={link.link}>{link.name}</a>
+                    {link.id === 5 ? " " : ","}{" "}
+                  </p>
+                ))}
                 logos={pathsTamigo.map((humlebuks) => (
                   <img
                     src={humlebuks.path}
                     alt="logo"
                     key={humlebuks.key}
                     className="techlogo"
+                    title={humlebuks.name}
                   />
                 ))}
               />
@@ -116,6 +138,7 @@ const Tabs = () => {
                     alt="logo"
                     key={humlebuks.key}
                     className="techlogo"
+                    title={humlebuks.name}
                   />
                 ))}
               />
@@ -136,6 +159,7 @@ const Tabs = () => {
                     alt="logo"
                     key={humlebuks.key}
                     className="techlogo"
+                    title={humlebuks.name}
                   />
                 ))}
               />
@@ -156,6 +180,7 @@ const Tabs = () => {
                     alt="logo"
                     key={humlebuks.key}
                     className="techlogo"
+                    title={humlebuks.name}
                   />
                 ))}
               />
