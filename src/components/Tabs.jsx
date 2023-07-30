@@ -61,10 +61,26 @@ const Tabs = () => {
     { id: 5, path: github, name: "GitHub" },
   ];
 
+  const linksSogS = [
+    {
+      id: 0,
+      link: "https://github.com/sorenstaun/mood-jsextend",
+      name: "GitHub",
+    },
+  ];
+
   const pathsTemplafy = [
     { id: 0, path: wordpress, name: "WordPress" },
     { id: 1, path: html, name: "HTML" },
     { id: 2, path: css, name: "CSS" },
+  ];
+
+  const linksTemplafy = [
+    {
+      id: 0,
+      link: "https://www.templafy.com/",
+      name: "Templafy",
+    },
   ];
 
   const pathsSilkeborgFadoel = [
@@ -73,6 +89,19 @@ const Tabs = () => {
     { id: 2, path: html, name: "HTML" },
     { id: 3, path: js, name: "JavaScript" },
     { id: 4, path: github, name: "GitHub" },
+  ];
+
+  const linksSilkeborgFadoel = [
+    {
+      id: 0,
+      link: "https://www.silkeborgfadoel.dk/",
+      name: "Silkeborg Fadøl",
+    },
+    {
+      id: 1,
+      link: "https://github.com/Jepmoltho/Silkeborgfadoel.dk-Custom-Code-for-WordPress",
+      name: "GitHub",
+    },
   ];
 
   return (
@@ -107,7 +136,9 @@ const Tabs = () => {
                 projectnumber={0}
                 links={linksTamigo.map((link) => (
                   <p className="inline-p">
-                    <a href={link.link}>{link.name}</a>
+                    <a href={link.link} target="__blank">
+                      {link.name}
+                    </a>
                     {link.id === 5 ? " " : ","}{" "}
                   </p>
                 ))}
@@ -124,14 +155,20 @@ const Tabs = () => {
               <Project
                 tagline="Staun and Stender"
                 headline="Developer and IT Management Consultant"
-                description="In the field of Journalism, I have a passion for storytelling and
-              reporting on important events and stories that impact society. In the field of Journalism, I have a passion for storytelling and
-              reporting on important events and stories that impact society."
+                description="I develop interactive web applications for enterprises to manage data in an Enterprise Architecture Relational Database framework. Responsibilities include developing web applications and creating a code library using custom JavaScript, HTML & CSS. Futher, I used a DBMS and SQL to transfer and manipulate data between systems"
                 image={sogs}
                 direction="reverse"
                 classname="sogslogo"
                 projectnumber={1}
                 //pass down the logos constant to the project component
+                links={linksSogS.map((link) => (
+                  <p className="inline-p">
+                    <a href={link.link} target="__blank">
+                      {link.name}
+                    </a>
+                    {link.id === 0 ? " " : ","}{" "}
+                  </p>
+                ))}
                 logos={pathsSogS.map((humlebuks) => (
                   <img
                     src={humlebuks.path}
@@ -153,6 +190,14 @@ const Tabs = () => {
                 classname="templafylogo"
                 projectnumber={2}
                 //pass down the logos constant to the project component
+                links={linksTemplafy.map((link) => (
+                  <p className="inline-p">
+                    <a href={link.link} target="__blank">
+                      {link.name}
+                    </a>
+                    {link.id === 0 ? " " : ","}{" "}
+                  </p>
+                ))}
                 logos={pathsTemplafy.map((humlebuks) => (
                   <img
                     src={humlebuks.path}
@@ -166,14 +211,20 @@ const Tabs = () => {
               <Project
                 tagline="Silkeborg Fadøl"
                 headline="Web Developer"
-                description="In the field of Journalism, I have a passion for storytelling and
-              reporting on important events and stories that impact society. In the field of Journalism, I have a passion for storytelling and
-              reporting on important events and stories that impact society."
+                description="I design and develop Silkeborg Fadøls webpage in WordPress. I develop custom JavaScript, CSS & HTML to improve chosen theme and to improve page design for mobile view"
                 image={silkeborgfadoel2}
                 direction="reverse"
                 classname="silkeborgfadoellogo"
                 projectnumber={3}
                 //pass down the logos constant to the project component
+                links={linksSilkeborgFadoel.map((link) => (
+                  <p className="inline-p">
+                    <a href={link.link} target="__blank">
+                      {link.name}
+                    </a>
+                    {link.id === 1 ? " " : ", "}
+                  </p>
+                ))}
                 logos={pathsSilkeborgFadoel.map((humlebuks) => (
                   <img
                     src={humlebuks.path}
