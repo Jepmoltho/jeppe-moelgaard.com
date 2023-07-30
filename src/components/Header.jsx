@@ -9,7 +9,7 @@ export default function Header() {
       <div className="container">
         <div className="row">
           <div className="col-md-7">
-            <div className="d-flex align-items-center h-100">
+            <div className="d-flex header-text-container h-100">
               <div>
                 <p className="tagline">Hi, I'm a</p>
                 <h1 className="text-start headline">
