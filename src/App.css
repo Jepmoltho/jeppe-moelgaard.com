@@ -23,9 +23,8 @@
 }
 
 /* Header component */
-
 .header {
-  min-height: 300px;
+  min-height: 500px;
   background-color: #0c1225;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -37,6 +36,10 @@
     padding-left: 2rem; /*100px*/
     padding-right: 2rem;
   }
+}
+
+.header-container {
+  display: grid;
 }
 
 .header-text-container {

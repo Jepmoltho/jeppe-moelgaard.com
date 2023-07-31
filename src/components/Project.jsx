@@ -1,3 +1,6 @@
+import { useEffect, useRef } from "react";
+import useScrollHook from "../hooks/useScrollObserver";
+
 export default function Project({
   tagline,
   headline,
@@ -7,6 +10,7 @@ export default function Project({
   classname,
   logos,
   projectnumber,
+  animationId,
   links,
 }) {
   const isReverse = `flex-row${direction === "reverse" ? "-reverse" : ""}`;
@@ -18,6 +22,21 @@ export default function Project({
   };
 
   const projectNumber = `project-${projectnumber}`;
+
+  const animationContainerRef = useRef();
+  const isVisible = useScrollHook(animationContainerRef);
+
+  useEffect(() => {
+    //console.log("isVisible: ", isVisible);
+    if (isVisible) {
+      document
+        .getElementsByClassName("animation-container")
+        [animationId].classList.add("fade-in");
+      document
+        .getElementsByClassName("animation-container")
+        [animationId].classList.remove("hide-default");
+    }
+  }, [isVisible, animationId]);
 
   return (
     <div className={` project ${projectNumber}`}>
@@ -44,7 +63,8 @@ export default function Project({
           <div className="col-md-5 project-image-parent-container">
             <div className="d-flex align-items-center h-100">
               <img
-                className={`tabsimage ${classname}`}
+                ref={animationContainerRef}
+                className={`tabsimage ${classname} animation-container hide-default`}
                 src={image}
                 alt="profile"
               ></img>

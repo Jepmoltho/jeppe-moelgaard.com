@@ -134,6 +134,7 @@ const Tabs = () => {
                 description="I develop and maintain tamigo's website in the Umbraco framework. I developed multiple reusable components & landing pages using HTML, CSS & JavaScript and optimize design for desktop/mobile/tablet using media queries & Bootstrap."
                 image={tamigo}
                 projectnumber={0}
+                animationId={1}
                 links={linksTamigo.map((link) => (
                   <p className="inline-p">
                     <a href={link.link} target="__blank">
@@ -160,6 +161,7 @@ const Tabs = () => {
                 direction="reverse"
                 classname="sogslogo"
                 projectnumber={1}
+                animationId={2}
                 //pass down the logos constant to the project component
                 links={linksSogS.map((link) => (
                   <p className="inline-p">
@@ -189,6 +191,7 @@ const Tabs = () => {
                 direction=""
                 classname="templafylogo"
                 projectnumber={2}
+                animationId={3}
                 //pass down the logos constant to the project component
                 links={linksTemplafy.map((link) => (
                   <p className="inline-p">
@@ -216,6 +219,7 @@ const Tabs = () => {
                 direction="reverse"
                 classname="silkeborgfadoellogo"
                 projectnumber={3}
+                animationId={4}
                 //pass down the logos constant to the project component
                 links={linksSilkeborgFadoel.map((link) => (
                   <p className="inline-p">

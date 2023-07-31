@@ -6,7 +6,7 @@ import myImage from "../media/profile-picture-v2.png";
 export default function Header() {
   return (
     <header className="header">
-      <div className="container">
+      <div className="container header-container">
         <div className="row">
           <div className="col-md-7">
             <div className="d-flex header-text-container h-100">

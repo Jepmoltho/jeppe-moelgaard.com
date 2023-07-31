@@ -11,14 +11,9 @@ import Tabs from "./components/Tabs";
 function App() {
   return (
     <div className="App">
-      {/*<h1 class="jumping-letters">Frontend Developer</h1>*/}
-      {/*<Imageandtext />*/}
-
       <Header />
-      {/*<ComponentHeadline headline="Portfolio" />*/}
-      <Tabs />
-      {/*<Wheel />*/}
       <Bio />
+      <Tabs />
     </div>
   );
 }
