@@ -75,7 +75,9 @@ export default function Project({
       <div className="techstack-container">
         <div className="techstack">
           <p className="paragraphtechstack">Techstack:</p>
-          <div>{logos}</div>
+          <div className="tech-logo-container">
+            <center>{logos}</center>
+          </div>
         </div>
       </div>
     </div>

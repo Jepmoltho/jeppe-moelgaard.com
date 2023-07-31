@@ -1,2 +1,11 @@
 Make bio module a component that where you can press arrow to the right to get more text snippets. This way you can create a story without filling the page with text. And each time you press next, the image on the left will move one down in the tree structure.
-Maybe make projects background color slighly vary to distinquish between projects
+
+Make techstack flow in from left to right on desktop same way as image. Prevent image animation on mobile and make tech stack expand from top to bottom instead.
+
+When you click or hover over a logo do this: https://www.cozy-codeur.fr/
+
+Implement darkmode like this guy: https://www.oakharborwebdesigns.com/
+
+Make background like this guy: https://www.reddit.com/r/webdev/comments/15cxz92/i_redesigned_my_mini_portfolio_twice_which/
+
+Make own portfolio sita a project component to display react and node.js experience

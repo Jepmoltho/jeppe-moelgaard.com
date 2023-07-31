@@ -334,7 +334,7 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 /* Project */
 .project {
   padding-top: 4rem !important;
-  padding-bottom: 4rem !important;
+  padding-bottom: 5rem !important;
   padding: 40px;
   @media screen and (max-width: 768px) {
     /*margin-bottom: 0rem;*/
@@ -347,6 +347,12 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 .project-0,
 .project-2 {
   background-color: #d4dce2 !important;
+  padding-top: 6rem !important;
+  @media screen and (max-width: 768px) {
+    /*margin-bottom: 0rem;*/
+    padding-top: 3rem !important;
+    padding-bottom: 4rem;
+  }
 }
 
 .project-1,
@@ -426,6 +432,12 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
   }
 }
 
+.tech-logo-container {
+  @media screen and (max-width: 768px) {
+    margin-bottom: 5px;
+  }
+}
+
 .techlogo {
   height: 50px;
   width: 50px;
@@ -440,6 +452,7 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 .paragraphtechstack {
   margin-bottom: 0rem !important;
   padding-left: 8px;
+  padding: 5px 5px 5px 15px;
   /*display: flex;*/
 }
 
@@ -484,6 +497,14 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 }
 
 .silkeborgfadoellogo {
+  padding: 60px;
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+    padding-bottom: 20px;
+  }
+}
+
+.ownlogo {
   padding: 60px;
   @media screen and (max-width: 768px) {
     padding: 10px;
