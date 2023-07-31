@@ -27,7 +27,6 @@ export default function Project({
   const isVisible = useScrollHook(animationContainerRef);
 
   useEffect(() => {
-    //console.log("isVisible: ", isVisible);
     if (isVisible) {
       document
         .getElementsByClassName("animation-container")
