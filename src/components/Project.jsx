@@ -28,6 +28,7 @@ export default function Project({
 
   useEffect(() => {
     if (isVisible) {
+      //check if mobile or desktop. If desktop:
       document
         .getElementsByClassName("animation-container")
         [animationId].classList.add("fade-in");
@@ -35,6 +36,9 @@ export default function Project({
         .getElementsByClassName("animation-container")
         [animationId].classList.remove("hide-default");
     }
+    //If mobile:
+    //document.getElementsByClassName("animation-container-mobile")[animationId].classList.add("fade-in");
+    //document.getElementsByClassName("animation-container-mobile")[animationId].classList.remove("hide-default");
   }, [isVisible, animationId]);
 
   return (
@@ -75,6 +79,7 @@ export default function Project({
       <div className="techstack-container">
         <div className="techstack">
           <p className="paragraphtechstack">Techstack:</p>
+          {/*Pass hook to tech-logo-container*/}
           <div className="tech-logo-container">
             <center>{logos}</center>
           </div>
