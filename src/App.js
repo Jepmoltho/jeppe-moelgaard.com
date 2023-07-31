@@ -15,10 +15,10 @@ function App() {
       {/*<Imageandtext />*/}
 
       <Header />
-      <Bio />
       {/*<ComponentHeadline headline="Portfolio" />*/}
       <Tabs />
       {/*<Wheel />*/}
+      <Bio />
     </div>
   );
 }

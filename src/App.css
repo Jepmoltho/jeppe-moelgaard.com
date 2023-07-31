@@ -9,6 +9,12 @@
 
 .headline {
   color: #ffffff;
+  /*animation: slideInFromBottom 1s ease-in-out;*/ /* Apply the animation to the image */
+}
+
+.sub-headline {
+  color: #ffffff;
+  /*animation: slideInFromBottom 2s ease-in-out;*/ /* Apply the animation to the image */
 }
 
 .paragraph {
@@ -49,6 +55,20 @@
     opacity: 1;
   }
 }
+/*
+@keyframes slideInFromBottomSlow {
+  0% {
+    transform: translateY(30%);
+    opacity: 0;
+    animation-delay: 1s;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    animation-delay: 1s;
+  }
+}
+*/
 
 .image {
   width: 200px !important;
@@ -92,6 +112,20 @@
   @media screen and (max-width: 705px) {
     padding-right: 10px;
   }
+}
+
+/*
+.animation-container {
+  animation: slideInFromBottom 1s forwards; 
+}
+*/
+
+.fade-in {
+  animation: slideInFromBottom 1s forwards;
+}
+
+.hide-default {
+  visibility: hidden;
 }
 
 .circle {

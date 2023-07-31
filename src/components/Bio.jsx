@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "../App.css";
+import useScrollHook from "../hooks/useScrollObserver";
 
 export default function Bio() {
   const slides = [
@@ -17,8 +18,41 @@ export default function Bio() {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
   };
 
-  //prettier-ignore
+  //useScrollHook logic
+  const animationContainerRef = useRef();
+  const isVisible = useScrollHook(animationContainerRef);
+  //const isVisible = useScrollObserver(animationContainerRef);
+
+  //fix the useEffect hook so that it only runs when isVisible is true
   useEffect(() => {
+    if (isVisible) {
+      document
+        .getElementsByClassName("animation-container")[0]
+        .classList.add("fade-in");
+      document
+        .getElementsByClassName("animation-container")[0]
+        .classList.remove("hide-default");
+
+      const circlesToFill = document.getElementsByClassName(
+        "ci" + currentSlide
+      );
+      Array.from(circlesToFill).forEach(
+        (circle) => (circle.style.backgroundColor = "#4ca1af")
+      );
+
+      if (currentSlide === 0) {
+        const allCircles = document.querySelectorAll("[class^='ci']");
+        Array.from(allCircles).forEach((circle) => {
+          if (!circle.classList.contains("ci0")) {
+            circle.style.removeProperty("background-color");
+          }
+        });
+      }
+    }
+  }, [currentSlide, isVisible]);
+
+  /*
+ useEffect(() => {
     const circlesToFill = document.getElementsByClassName("ci" + currentSlide);
     Array.from(circlesToFill).forEach(circle => circle.style.backgroundColor = "#4ca1af");
   
@@ -31,15 +65,19 @@ export default function Bio() {
       });
     }
 
-  }, [currentSlide]);
+  }, [currentSlide]);  
+  */
 
   return (
     <header className="bio">
       <div className="container">
         <div className="row flex-column-reverse flex-md-row">
           <div className="col-md-5">
-            <div className="d-flex align-items-center justify-content-center h-100">
-              <div>
+            <div
+              ref={animationContainerRef}
+              className="d-flex align-items-center justify-content-center h-100 animation-container hide-default"
+            >
+              <div className="">
                 <div className="circle c1 ci0" />
               </div>
               <div>

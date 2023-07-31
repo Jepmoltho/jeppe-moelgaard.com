@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
-import Typer from "./Typer";
+/*import Typer from "./Typer";*/
 import myImage from "../media/profile-picture-v2.png";
 
 export default function Header() {
@@ -13,15 +13,19 @@ export default function Header() {
               <div>
                 <p className="tagline">Hi, I'm a</p>
                 <h1 className="text-start headline">
-                  <Typer text="Frontend Developer" delay={50} start={0} />
+                  {/*<Typer text="Frontend Developer" delay={50} start={0} />*/}
+                  Software Developer
                   <br />
                 </h1>
-                <h3 className="text-start headline">
+                <h3 className="text-start sub-headline">
+                  skilled in coding and communications
+                  {/*
                   <Typer
                     text="skilled in coding and communications"
                     delay={30}
                     start={1}
                   />
+  */}
                 </h3>
               </div>
             </div>
