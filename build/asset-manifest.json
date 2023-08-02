@@ -25,5 +25,8 @@
     "main.849268ff.js.map": "/jeppe-moelgaard.com/static/js/main.849268ff.js.map",
     "787.c4bf6669.chunk.js.map": "/jeppe-moelgaard.com/static/js/787.c4bf6669.chunk.js.map"
   },
-  "entrypoints": ["static/css/main.ab0743bb.css", "static/js/main.849268ff.js"]
+  "entrypoints": [
+    "static/css/main.ab0743bb.css",
+    "static/js/main.849268ff.js"
+  ]
 }

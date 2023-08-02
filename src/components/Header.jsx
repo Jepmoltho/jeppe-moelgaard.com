@@ -14,7 +14,7 @@ export default function Header() {
                 <p className="tagline">Hi, I'm a</p>
                 <h1 className="text-start headline">
                   {/*<Typer text="Frontend Developer" delay={50} start={0} />*/}
-                  Software Developer
+                  Software DDeveloper
                   <br />
                 </h1>
                 <h3 className="text-start sub-headline ">
