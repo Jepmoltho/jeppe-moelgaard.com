@@ -9,10 +9,12 @@
 
 .headline {
   color: #ffffff;
+  min-height: 100%;
 }
 
 .sub-headline {
   color: #ffffff;
+  min-height: 100%;
 }
 
 .paragraph {
@@ -46,6 +48,12 @@
   align-items: center;
 }
 
+/*
+.show-header-text-container {
+  visibility: visible;
+}
+*/
+
 @keyframes slideInFromBottom {
   0% {
     transform: translateY(30%);
@@ -69,8 +77,12 @@
 }
 
 .profile-picture {
-  animation: slideInFromBottom 1s ease-in-out; /* Apply the animation to the image */
+  animation: slideInFromBottom 1s ease-in-out; /* There is an issue here */ /* Apply the animation to the image */
   max-height: 200px;
+}
+
+.profile-picture-container {
+  min-height: 300px;
 }
 
 /* Bio component */

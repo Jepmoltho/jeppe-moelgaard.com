@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 /*import Typer from "./Typer";*/
 import myImage from "../media/profile-picture-v2.png";
+//import { useEffect } from "react";
 
 export default function Header() {
   return (
@@ -9,7 +10,8 @@ export default function Header() {
       <div className="container header-container">
         <div className="row">
           <div className="col-md-7">
-            <div className="d-flex header-text-container h-100">
+            {/*prettier-ignore */}
+            <div className="d-flex header-text-container h-100"> {/*header-text-container <-- there is an issue with this clas*/}
               <div>
                 <p className="tagline">Hi, I'm a</p>
                 <h1 className="text-start headline">
@@ -31,10 +33,10 @@ export default function Header() {
             </div>
           </div>
           <div className="col-md-5">
-            <div className="d-flex align-items-center justify-content-center h-100 p-5">
+            <div className="d-flex align-items-center justify-content-center h-100 p-5 profile-picture-container">
               <center>
                 <img
-                  className="profile-picture image"
+                  className="profile-picture"
                   src={myImage}
                   alt="profile"
                 ></img>
