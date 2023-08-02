@@ -9,12 +9,10 @@
 
 .headline {
   color: #ffffff;
-  /*animation: slideInFromBottom 1s ease-in-out;*/ /* Apply the animation to the image */
 }
 
 .sub-headline {
   color: #ffffff;
-  /*animation: slideInFromBottom 2s ease-in-out;*/ /* Apply the animation to the image */
 }
 
 .paragraph {
@@ -28,12 +26,12 @@
   background-color: #0c1225;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 6rem; /*100px*/
-  padding-right: 6rem; /*100px*/
+  padding-left: 6rem;
+  padding-right: 6rem;
   display: flex;
   @media screen and (max-width: 705px) {
     padding-top: 60px;
-    padding-left: 2rem; /*100px*/
+    padding-left: 2rem;
     padding-right: 2rem;
   }
 }
@@ -43,7 +41,6 @@
 }
 
 .header-text-container {
-  /*padding-left: 80px !important;*/
   justify-content: center;
   align-items: center;
 }
@@ -69,30 +66,14 @@
     opacity: 1;
   }
 }
-/*
-@keyframes slideInFromBottomSlow {
-  0% {
-    transform: translateY(30%);
-    opacity: 0;
-    animation-delay: 1s;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-    animation-delay: 1s;
-  }
-}
-*/
-
-/*
-.image {
-  width: 200px !important;
-  height: 200px !important;
-}
-*/
 
 .profile-picture {
   animation: slideInFromBottom 1s ease-in-out; /* Apply the animation to the image */
+  max-height: 200px;
+}
+
+.sub-headline-header {
+  animation: slideInFromTop 2s ease-in-out; /* Apply the animation to the image */
   max-height: 200px;
 }
 
@@ -109,7 +90,7 @@
   align-items: center;
   @media screen and (max-width: 705px) {
     padding-top: 20px;
-    padding-left: 1rem; /*100px*/
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 }
@@ -117,7 +98,7 @@
 .bio-text {
   padding: 3rem;
   @media screen and (max-width: 705px) {
-    padding-left: 1rem; /*100px*/
+    padding-left: 1rem;
     padding-right: 0rem;
     min-width: 325px;
   }
@@ -129,12 +110,6 @@
     padding-right: 10px;
   }
 }
-
-/*
-.animation-container {
-  animation: slideInFromBottom 1s forwards; 
-}
-*/
 
 .fade-in {
   animation: slideInFromBottom 1s forwards;
@@ -279,11 +254,6 @@
 
 .tabs {
   display: flex;
-  @media screen and (max-width: 705px) {
-    /*padding-top: 20px;*/
-    /*padding-left: 1rem;*/ /*100px*/
-    /*padding-right: 1rem;*/
-  }
 }
 
 .tab {
@@ -292,12 +262,6 @@
   padding: 10px 20px;
   border: 1px solid #ccc;
   border-color: #ccc;
-
-  /*
-  border-style: solid;
-  border-width: 1px 1px 0 1px;
-  border-radius: 4px 4px 0 0;
-  */
   border-radius: 4px 4px 0 0;
   border-width: 1px 1px 0 1px;
   border-radius: 4px 4px 0 0;
@@ -322,7 +286,6 @@
 .tab:not(.active) {
   background-color: #15395a;
   color: aliceblue;
-  /* Your CSS styles for the inactive tab here */
 }
 
 /*
@@ -334,7 +297,6 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 */
 
 .content-container {
-  /*padding: 40px;*/
   border-radius: 0 0 4px 4px;
   /*background-color: #4ca1af;*/
   background-color: #d4dce2;
@@ -395,29 +357,16 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 }
 
 /*
-.project-1 > .project-container,
-.project-3 > .project-container,
-.project-4 > .project-container {
-  padding-bottom: 0px;
-}
-*/
-
-.project-image-parent-container .sogslogo,
+.project-image-parent-container .squareimg,
 .project-image-parent-container .ownlogo,
 .project-image-parent-container .silkeborgfadoellogo {
   @media screen and (max-width: 768px) {
     padding-bottom: 0px;
   }
 }
-
-/*
-.project-1 > .tabsimage {
-  padding-bottom: 0px !important;
-}
 */
 
 .project-text-container {
-  /*padding-right: 40px !important;*/
   @media screen and (max-width: 768px) {
     padding-right: 0px !important;
     padding-left: 0px !important;
@@ -438,12 +387,12 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 }
 
 .project-image-parent-container {
-  /*margin-bottom: 0px;*/
-  /*padding: 0px !important;*/
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 0px !important;
   @media screen and (max-width: 768px) {
+    padding-right: 0px !important;
     margin-bottom: 20px;
     padding-left: 0px !important; /*Removes padding left on mobile*/
   }
@@ -469,8 +418,6 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 .techlogo {
   height: 50px;
   width: 50px;
-  /*padding-top: 2px;*/
-  /*padding-bottom: 2px;*/
   padding: 6px;
   margin-right: 10px;
   margin-left: 10px;
@@ -481,11 +428,9 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
   margin-bottom: 0rem !important;
   padding-left: 8px;
   padding: 5px 5px 5px 15px;
-  /*display: flex;*/
 }
 
 .links {
-  /*margin-bottom: 60px;*/
   @media screen and (max-width: 768px) {
     margin-bottom: 20px;
   }
@@ -493,6 +438,27 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 
 .inline-p {
   display: inline;
+}
+
+.squareimg {
+  max-height: 150px;
+  max-width: 150px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      -50% /*-100%*/
+    ); /* Adjust this value to control the scrolling speed */
+  }
+}
+
+.logo-container img {
+  margin-right: 20px; /* Adjust the spacing between logos as needed */
+  animation: scroll 10s linear infinite; /* Adjust the animation duration (10s in this example) */
 }
 
 /*
@@ -538,11 +504,6 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 }
 */
 
-.squareimg {
-  max-height: 150px;
-  max-width: 150px;
-}
-
 /*
 .silkeborgfadoellogo {
   padding: 60px;
@@ -561,22 +522,6 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
   }
 }
 */
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(
-      -50% /*-100%*/
-    ); /* Adjust this value to control the scrolling speed */
-  }
-}
-
-.logo-container img {
-  margin-right: 20px; /* Adjust the spacing between logos as needed */
-  animation: scroll 10s linear infinite; /* Adjust the animation duration (10s in this example) */
-}
 
 /*
 .column-circle {

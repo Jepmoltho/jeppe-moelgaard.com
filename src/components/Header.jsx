@@ -17,7 +17,7 @@ export default function Header() {
                   Software Developer
                   <br />
                 </h1>
-                <h3 className="text-start sub-headline">
+                <h3 className="text-start sub-headline ">
                   skilled in coding and communications
                   {/*
                   <Typer
