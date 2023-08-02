@@ -15,6 +15,9 @@ import ssms from "../media/SSMS-v5.png";
 import wordpress from "../media/WP-v2.png";
 import silkeborgfadoel2 from "../media/SF logo.png";
 import templafy from "../media/templafy.png";
+import ownlogo from "../media/own-logo-v2.png";
+import react from "../media/react-v2.png";
+import node from "../media/node-v2.png";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("software");
@@ -104,6 +107,24 @@ const Tabs = () => {
     },
   ];
 
+  const pathsOwnSite = [
+    { id: 0, path: react, name: "React" },
+    { id: 1, path: js, name: "JavaScript" },
+    { id: 2, path: node, name: "Node.js" },
+    { id: 3, path: html, name: "HTML" },
+    { id: 4, path: css, name: "CSS" },
+    { id: 5, path: bootstrap, name: "Bootstrap" },
+    { id: 6, path: github, name: "GitHub" },
+  ];
+
+  const linksOwnSite = [
+    {
+      id: 0,
+      link: "https://github.com/Jepmoltho/jeppe-moelgaard.com",
+      name: "GitHub",
+    },
+  ];
+
   return (
     <div className="tabscomponent">
       <div>
@@ -134,6 +155,8 @@ const Tabs = () => {
                 description="I develop and maintain tamigo's website in the Umbraco framework. I developed multiple reusable components & landing pages using HTML, CSS & JavaScript and optimize design for desktop/mobile/tablet using media queries & Bootstrap."
                 image={tamigo}
                 projectnumber={0}
+                animationId={1}
+                animationIdMobile={0}
                 links={linksTamigo.map((link) => (
                   <p className="inline-p">
                     <a href={link.link} target="__blank">
@@ -158,8 +181,11 @@ const Tabs = () => {
                 description="I develop interactive web applications for enterprises to manage data in an Enterprise Architecture Relational Database framework. Responsibilities include developing web applications and creating a code library using custom JavaScript, HTML & CSS. Futher, I used a DBMS and SQL to transfer and manipulate data between systems"
                 image={sogs}
                 direction="reverse"
-                classname="sogslogo"
+                classname="sogslogo squareimg"
                 projectnumber={1}
+                animationId={2}
+                animationIdMobile={1}
+                hideImgOnMobile={true}
                 //pass down the logos constant to the project component
                 links={linksSogS.map((link) => (
                   <p className="inline-p">
@@ -182,13 +208,13 @@ const Tabs = () => {
               <Project
                 tagline="Templafy"
                 headline="Website Specialist"
-                description="In the field of Journalism, I have a passion for storytelling and
-              reporting on important events and stories that impact society. In the field of Journalism, I have a passion for storytelling and
-              reporting on important events and stories that impact society."
+                description="I updated and rebuild all Templafy's 300+ landing pages (and HubSpot pages) to WordPress 5.3+ spanning over three diffrenent project."
                 image={templafy}
                 direction=""
                 classname="templafylogo"
                 projectnumber={2}
+                animationId={3}
+                animationIdMobile={2}
                 //pass down the logos constant to the project component
                 links={linksTemplafy.map((link) => (
                   <p className="inline-p">
@@ -214,8 +240,11 @@ const Tabs = () => {
                 description="I design and develop Silkeborg Fadøls webpage in WordPress. I develop custom JavaScript, CSS & HTML to improve chosen theme and to improve page design for mobile view"
                 image={silkeborgfadoel2}
                 direction="reverse"
-                classname="silkeborgfadoellogo"
+                classname="silkeborgfadoellogo squareimg"
                 projectnumber={3}
+                animationId={4}
+                animationIdMobile={3}
+                hideImgOnMobile={true}
                 //pass down the logos constant to the project component
                 links={linksSilkeborgFadoel.map((link) => (
                   <p className="inline-p">
@@ -226,6 +255,35 @@ const Tabs = () => {
                   </p>
                 ))}
                 logos={pathsSilkeborgFadoel.map((humlebuks) => (
+                  <img
+                    src={humlebuks.path}
+                    alt="logo"
+                    key={humlebuks.key}
+                    className="techlogo"
+                    title={humlebuks.name}
+                  />
+                ))}
+              />
+              <Project
+                tagline="www.jeppemølgaard.com"
+                headline="Web Developer"
+                description="With the fear of sounding extremely meta, I want to highlight my own site (this website) which i developed from scratch using React, JavaScript, HTML, CSS and Node.js."
+                image={ownlogo}
+                direction=""
+                classname="ownlogo squareimg"
+                projectnumber={4}
+                animationId={5}
+                animationIdMobile={4}
+                hideImgOnMobile={true}
+                links={linksOwnSite.map((link) => (
+                  <p className="inline-p">
+                    <a href={link.link} target="__blank">
+                      {link.name}
+                    </a>
+                    {link.id === 0 ? " " : ", "}
+                  </p>
+                ))}
+                logos={pathsOwnSite.map((humlebuks) => (
                   <img
                     src={humlebuks.path}
                     alt="logo"

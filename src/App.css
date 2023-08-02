@@ -11,30 +11,37 @@
   color: #ffffff;
 }
 
+.sub-headline {
+  color: #ffffff;
+}
+
 .paragraph {
   color: #ffffff;
   font-size: small;
 }
 
 /* Header component */
-
 .header {
-  min-height: 300px;
+  min-height: 500px;
   background-color: #0c1225;
+  background-image: linear-gradient(to bottom, #0c1225, #0e273f);
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 6rem; /*100px*/
-  padding-right: 6rem; /*100px*/
+  padding-left: 6rem;
+  padding-right: 6rem;
   display: flex;
   @media screen and (max-width: 705px) {
     padding-top: 60px;
-    padding-left: 2rem; /*100px*/
+    padding-left: 2rem;
     padding-right: 2rem;
   }
 }
 
+.header-container {
+  display: grid;
+}
+
 .header-text-container {
-  /*padding-left: 80px !important;*/
   justify-content: center;
   align-items: center;
 }
@@ -50,9 +57,15 @@
   }
 }
 
-.image {
-  width: 200px !important;
-  height: 200px !important;
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .profile-picture {
@@ -67,13 +80,15 @@
   padding-bottom: 20px;
   /*background-color: #323c46;*/
   background-color: #2c333c;
+  background-image: linear-gradient(to bottom, #2c333c, #1f2329);
+  /*background-image: linear-gradient(to bottom, #2c333c, #0e273f);*/
   padding-left: 6rem;
   padding-right: 6rem;
   display: flex;
   align-items: center;
   @media screen and (max-width: 705px) {
     padding-top: 20px;
-    padding-left: 1rem; /*100px*/
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 }
@@ -81,9 +96,16 @@
 .bio-text {
   padding: 3rem;
   @media screen and (max-width: 705px) {
-    padding-left: 1rem; /*100px*/
+    padding-left: 0rem;
     padding-right: 0rem;
     min-width: 325px;
+  }
+}
+
+.bio-text-container {
+  @media screen and (max-width: 705px) {
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
   }
 }
 
@@ -92,6 +114,22 @@
   @media screen and (max-width: 705px) {
     padding-right: 10px;
   }
+}
+
+.fade-in {
+  animation: slideInFromBottom 1s forwards;
+}
+
+.fade-down {
+  animation: slideInFromTop 1s forwards;
+}
+
+.hide-default {
+  visibility: hidden;
+}
+
+.remove-default {
+  display: none !important;
 }
 
 .circle {
@@ -208,6 +246,7 @@
 /* Tabs */
 .tabscomponent {
   background-color: #15395a;
+  background-image: linear-gradient(to bottom, #15395a, #0e273f);
   padding-left: 6rem;
   padding-right: 6rem;
   padding-bottom: 6rem;
@@ -221,11 +260,6 @@
 
 .tabs {
   display: flex;
-  @media screen and (max-width: 705px) {
-    /*padding-top: 20px;*/
-    /*padding-left: 1rem;*/ /*100px*/
-    /*padding-right: 1rem;*/
-  }
 }
 
 .tab {
@@ -234,12 +268,6 @@
   padding: 10px 20px;
   border: 1px solid #ccc;
   border-color: #ccc;
-
-  /*
-  border-style: solid;
-  border-width: 1px 1px 0 1px;
-  border-radius: 4px 4px 0 0;
-  */
   border-radius: 4px 4px 0 0;
   border-width: 1px 1px 0 1px;
   border-radius: 4px 4px 0 0;
@@ -264,7 +292,6 @@
 .tab:not(.active) {
   background-color: #15395a;
   color: aliceblue;
-  /* Your CSS styles for the inactive tab here */
 }
 
 /*
@@ -276,7 +303,6 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 */
 
 .content-container {
-  /*padding: 40px;*/
   border-radius: 0 0 4px 4px;
   /*background-color: #4ca1af;*/
   background-color: #d4dce2;
@@ -297,7 +323,7 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 /* Project */
 .project {
   padding-top: 4rem !important;
-  padding-bottom: 4rem !important;
+  padding-bottom: 5rem !important;
   padding: 40px;
   @media screen and (max-width: 768px) {
     /*margin-bottom: 0rem;*/
@@ -310,6 +336,12 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 .project-0,
 .project-2 {
   background-color: #d4dce2 !important;
+  padding-top: 6rem !important;
+  @media screen and (max-width: 768px) {
+    /*margin-bottom: 0rem;*/
+    padding-top: 3rem !important;
+    padding-bottom: 4rem;
+  }
 }
 
 .project-1,
@@ -330,25 +362,17 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
   }
 }
 
-.project-1 > .project-container {
-  /*margin-bottom: 20px;*/
-  padding-bottom: 25px;
-}
-
-.project-image-parent-container .sogslogo {
+/*
+.project-image-parent-container .squareimg,
+.project-image-parent-container .ownlogo,
+.project-image-parent-container .silkeborgfadoellogo {
   @media screen and (max-width: 768px) {
     padding-bottom: 0px;
   }
 }
-
-/*
-.project-1 > .tabsimage {
-  padding-bottom: 0px !important;
-}
 */
 
 .project-text-container {
-  /*padding-right: 40px !important;*/
   @media screen and (max-width: 768px) {
     padding-right: 0px !important;
     padding-left: 0px !important;
@@ -364,15 +388,17 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 
 .tabsimage {
   width: 100%;
-  /*height: 100%;*/
   display: block !important;
   margin: 0 auto;
 }
 
 .project-image-parent-container {
-  margin-bottom: 0px;
-  padding: 0px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 0px !important;
   @media screen and (max-width: 768px) {
+    padding-right: 0px !important;
     margin-bottom: 20px;
     padding-left: 0px !important; /*Removes padding left on mobile*/
   }
@@ -389,11 +415,15 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
   }
 }
 
+.tech-logo-container {
+  @media screen and (max-width: 768px) {
+    margin-bottom: 5px;
+  }
+}
+
 .techlogo {
   height: 50px;
   width: 50px;
-  /*padding-top: 2px;*/
-  /*padding-bottom: 2px;*/
   padding: 6px;
   margin-right: 10px;
   margin-left: 10px;
@@ -403,11 +433,10 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 .paragraphtechstack {
   margin-bottom: 0rem !important;
   padding-left: 8px;
-  /*display: flex;*/
+  padding: 5px 5px 5px 15px;
 }
 
 .links {
-  /*margin-bottom: 60px;*/
   @media screen and (max-width: 768px) {
     margin-bottom: 20px;
   }
@@ -417,41 +446,9 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
   display: inline;
 }
 
-.sogslogo {
-  padding: 100px;
-}
-@media screen and (max-width: 1200px) {
-  .sogslogo {
-    padding: 80px;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .sogslogo {
-    padding: 70px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .sogslogo {
-    padding: 60px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .sogslogo {
-    padding: 50px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .sogslogo {
-    padding: 40px;
-  }
-}
-
-.silkeborgfadoellogo {
-  padding: 60px;
-  @media screen and (max-width: 768px) {
-    padding: 10px;
-    padding-bottom: 20px;
-  }
+.squareimg {
+  max-height: 150px;
+  max-width: 150px;
 }
 
 @keyframes scroll {
@@ -469,6 +466,68 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
   margin-right: 20px; /* Adjust the spacing between logos as needed */
   animation: scroll 10s linear infinite; /* Adjust the animation duration (10s in this example) */
 }
+
+/*
+.sogslogo,
+.ownlogo,
+.silkeborgfadoellogo {
+  padding: 120px;
+}
+@media screen and (max-width: 1200px) {
+  .sogslogo,
+  .ownlogo,
+  .silkeborgfadoellogo {
+    padding: 80px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .sogslogo,
+  .ownlogo,
+  .silkeborgfadoellogo {
+    padding: 70px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .sogslogo,
+  .ownlogo,
+  .silkeborgfadoellogo {
+    padding: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sogslogo,
+  .ownlogo,
+  .silkeborgfadoellogo {
+    padding: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .sogslogo,
+  .ownlogo,
+  .silkeborgfadoellogo {
+    padding: 40px;
+  }
+}
+*/
+
+/*
+.silkeborgfadoellogo {
+  padding: 60px;
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+    padding-bottom: 20px;
+  }
+}
+*/
+
+/*
+.ownlogo {
+  padding: 6rem;
+  @media screen and (max-width: 768px) {
+
+  }
+}
+*/
 
 /*
 .column-circle {
