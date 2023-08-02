@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/jeppe-moelgaard.com/static/css/main.ab0743bb.css",
-    "main.js": "/jeppe-moelgaard.com/static/js/main.849268ff.js",
+    "main.css": "/jeppe-moelgaard.com/static/css/main.e27776bf.css",
+    "main.js": "/jeppe-moelgaard.com/static/js/main.2c62e288.js",
     "static/js/787.c4bf6669.chunk.js": "/jeppe-moelgaard.com/static/js/787.c4bf6669.chunk.js",
     "static/media/profile-picture-v2.png": "/jeppe-moelgaard.com/static/media/profile-picture-v2.9eebb0ec66483bbbbe40.png",
     "static/media/SF logo.png": "/jeppe-moelgaard.com/static/media/SF logo.f56fb3416383a08920bc.png",
@@ -21,12 +21,12 @@
     "static/media/JS.png": "/jeppe-moelgaard.com/static/media/JS.773faebb68b068db8910.png",
     "static/media/CSS-v3.png": "/jeppe-moelgaard.com/static/media/CSS-v3.2165f49fb4c6643828bc.png",
     "index.html": "/jeppe-moelgaard.com/index.html",
-    "main.ab0743bb.css.map": "/jeppe-moelgaard.com/static/css/main.ab0743bb.css.map",
-    "main.849268ff.js.map": "/jeppe-moelgaard.com/static/js/main.849268ff.js.map",
+    "main.e27776bf.css.map": "/jeppe-moelgaard.com/static/css/main.e27776bf.css.map",
+    "main.2c62e288.js.map": "/jeppe-moelgaard.com/static/js/main.2c62e288.js.map",
     "787.c4bf6669.chunk.js.map": "/jeppe-moelgaard.com/static/js/787.c4bf6669.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab0743bb.css",
-    "static/js/main.849268ff.js"
+    "static/css/main.e27776bf.css",
+    "static/js/main.2c62e288.js"
   ]
 }
