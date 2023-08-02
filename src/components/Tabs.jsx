@@ -156,6 +156,7 @@ const Tabs = () => {
                 image={tamigo}
                 projectnumber={0}
                 animationId={1}
+                animationIdMobile={0}
                 links={linksTamigo.map((link) => (
                   <p className="inline-p">
                     <a href={link.link} target="__blank">
@@ -183,6 +184,7 @@ const Tabs = () => {
                 classname="sogslogo"
                 projectnumber={1}
                 animationId={2}
+                animationIdMobile={1}
                 //pass down the logos constant to the project component
                 links={linksSogS.map((link) => (
                   <p className="inline-p">
@@ -211,6 +213,7 @@ const Tabs = () => {
                 classname="templafylogo"
                 projectnumber={2}
                 animationId={3}
+                animationIdMobile={2}
                 //pass down the logos constant to the project component
                 links={linksTemplafy.map((link) => (
                   <p className="inline-p">
@@ -239,6 +242,7 @@ const Tabs = () => {
                 classname="silkeborgfadoellogo"
                 projectnumber={3}
                 animationId={4}
+                animationIdMobile={3}
                 //pass down the logos constant to the project component
                 links={linksSilkeborgFadoel.map((link) => (
                   <p className="inline-p">
@@ -267,6 +271,7 @@ const Tabs = () => {
                 classname="ownlogo"
                 projectnumber={4}
                 animationId={5}
+                animationIdMobile={4}
                 links={linksOwnSite.map((link) => (
                   <p className="inline-p">
                     <a href={link.link} target="__blank">

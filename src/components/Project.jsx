@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import useScrollHook from "../hooks/useScrollObserver";
+import useScrollObserverMobile from "../hooks/useScrollObserverMobile";
 
 export default function Project({
   tagline,
@@ -11,6 +12,7 @@ export default function Project({
   logos,
   projectnumber,
   animationId,
+  animationMobileId,
   links,
 }) {
   const isReverse = `flex-row${direction === "reverse" ? "-reverse" : ""}`;
@@ -26,6 +28,9 @@ export default function Project({
   const animationContainerRef = useRef();
   const isVisible = useScrollHook(animationContainerRef);
 
+  const animationContainerMobileRef = useRef();
+  const isVisibleMobile = useScrollObserverMobile(animationContainerMobileRef);
+
   useEffect(() => {
     if (isVisible) {
       //check if mobile or desktop. If desktop:
@@ -36,10 +41,18 @@ export default function Project({
         .getElementsByClassName("animation-container")
         [animationId].classList.remove("hide-default");
     }
-    //If mobile:
-    //document.getElementsByClassName("animation-container-mobile")[animationId].classList.add("fade-in");
-    //document.getElementsByClassName("animation-container-mobile")[animationId].classList.remove("hide-default");
   }, [isVisible, animationId]);
+
+  useEffect(() => {
+    if (isVisibleMobile) {
+      document
+        .getElementsByClassName("animation-container-mobile")
+        [animationId - 1].classList.add("fade-in");
+      document
+        .getElementsByClassName("animation-container-mobile")
+        [animationId - 1].classList.remove("hide-default");
+    }
+  }, [isVisibleMobile, animationId]);
 
   return (
     <div className={` project ${projectNumber}`}>
@@ -76,7 +89,10 @@ export default function Project({
         </div>
       </div>
       {/* Move this one div up if its causing problems*/}
-      <div className="techstack-container">
+      <div
+        ref={animationContainerMobileRef}
+        className="techstack-container animation-container-mobile hide-default"
+      >
         <div className="techstack">
           <p className="paragraphtechstack">Techstack:</p>
           {/*Pass hook to tech-logo-container*/}
