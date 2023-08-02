@@ -21,21 +21,17 @@ export default function Bio() {
   const animationContainerRef = useRef();
   const isVisible = useScrollHook(animationContainerRef);
 
-  useEffect(() => {
-    if (isVisible) {
-      document
-        .getElementsByClassName("animation-container")[0]
-        .classList.add("fade-in");
-      document
-        .getElementsByClassName("animation-container")[0]
-        .classList.remove("hide-default");
+  const mobileBreakpoint = 768;
+  const isDesktop = window.innerWidth > mobileBreakpoint;
 
-      const circlesToFill = document.getElementsByClassName(
-        "ci" + currentSlide
-      );
-      Array.from(circlesToFill).forEach(
-        (circle) => (circle.style.backgroundColor = "#4ca1af")
-      );
+  useEffect(() => {
+    //prettier-ignore
+    if (isVisible) {
+      document.getElementsByClassName("animation-container")[0].classList.add("fade-in");
+      document.getElementsByClassName("animation-container")[0].classList.remove("hide-default");
+
+      const circlesToFill = document.getElementsByClassName("ci" + currentSlide);
+      Array.from(circlesToFill).forEach((circle) => (circle.style.backgroundColor = "#4ca1af"));
 
       if (currentSlide === 0) {
         const allCircles = document.querySelectorAll("[class^='ci']");
@@ -76,7 +72,36 @@ export default function Bio() {
               </div>
             </div>
           </div>
-          <div className="col-md-7">
+          <div className="col-md-7 bio-text-container">
+            {isDesktop === true ? (
+              <div className="d-flex align-items-center justify-content-center h-100 bio-text">
+                <div>
+                  <p className="tagline">Not your average developer</p>
+                  <p className="paragraph textslide">{slides[currentSlide]}</p>
+                </div>
+                <button className="button-6" onClick={changeSlide}>
+                  →
+                </button>
+              </div>
+            ) : (
+              <div className="d-flex align-items-center justify-content-center h-100 bio-text">
+                <button className="button-6" onClick={changeSlide}>
+                  <span>&#60;</span>
+                </button>
+                <center>
+                  <div>
+                    <p className="tagline">your average developer</p>
+                    <p className="paragraph textslide">
+                      {slides[currentSlide]}
+                    </p>
+                  </div>
+                </center>
+                <button className="button-6" onClick={changeSlide}>
+                  <span>&#62;</span>
+                </button>
+              </div>
+            )}
+            {/*
             <div className="d-flex align-items-center justify-content-center h-100 bio-text">
               <div>
                 <p className="tagline">Not your average developer</p>
@@ -86,6 +111,7 @@ export default function Bio() {
                 →
               </button>
             </div>
+            */}
           </div>
         </div>
       </div>
