@@ -181,10 +181,11 @@ const Tabs = () => {
                 description="I develop interactive web applications for enterprises to manage data in an Enterprise Architecture Relational Database framework. Responsibilities include developing web applications and creating a code library using custom JavaScript, HTML & CSS. Futher, I used a DBMS and SQL to transfer and manipulate data between systems"
                 image={sogs}
                 direction="reverse"
-                classname="sogslogo"
+                classname="sogslogo squareimg"
                 projectnumber={1}
                 animationId={2}
                 animationIdMobile={1}
+                hideImgOnMobile={true}
                 //pass down the logos constant to the project component
                 links={linksSogS.map((link) => (
                   <p className="inline-p">
@@ -239,10 +240,11 @@ const Tabs = () => {
                 description="I design and develop Silkeborg Fadøls webpage in WordPress. I develop custom JavaScript, CSS & HTML to improve chosen theme and to improve page design for mobile view"
                 image={silkeborgfadoel2}
                 direction="reverse"
-                classname="silkeborgfadoellogo"
+                classname="silkeborgfadoellogo squareimg"
                 projectnumber={3}
                 animationId={4}
                 animationIdMobile={3}
+                hideImgOnMobile={true}
                 //pass down the logos constant to the project component
                 links={linksSilkeborgFadoel.map((link) => (
                   <p className="inline-p">
@@ -268,10 +270,11 @@ const Tabs = () => {
                 description="With the fear of sounding extremely meta, I want to highlight my own site (this website) which i developed from scratch using React, JavaScript, HTML, CSS and Node.js."
                 image={ownlogo}
                 direction=""
-                classname="ownlogo"
+                classname="ownlogo squareimg"
                 projectnumber={4}
                 animationId={5}
                 animationIdMobile={4}
+                hideImgOnMobile={true}
                 links={linksOwnSite.map((link) => (
                   <p className="inline-p">
                     <a href={link.link} target="__blank">

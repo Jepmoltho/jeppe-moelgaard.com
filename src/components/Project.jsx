@@ -12,8 +12,8 @@ export default function Project({
   logos,
   projectnumber,
   animationId,
-  animationMobileId,
   links,
+  hideImgOnMobile,
 }) {
   const isReverse = `flex-row${direction === "reverse" ? "-reverse" : ""}`;
   const isReverseBool = direction === "reverse";
@@ -31,31 +31,29 @@ export default function Project({
   const animationContainerMobileRef = useRef();
   const isVisibleMobile = useScrollObserverMobile(animationContainerMobileRef);
 
+  const isOnMobile = window.innerWidth < 768;
+
+  //prettier-ignore
   useEffect(() => {
     if (isVisible) {
       //check if mobile or desktop. If desktop:
-      document
-        .getElementsByClassName("animation-container")
-        [animationId].classList.add("fade-in");
-      document
-        .getElementsByClassName("animation-container")
-        [animationId].classList.remove("hide-default");
+      document.getElementsByClassName("animation-container")[animationId].classList.add("fade-in");
+      document.getElementsByClassName("animation-container")[animationId].classList.remove("hide-default");
     }
   }, [isVisible, animationId]);
 
+  //prettier-ignore
   useEffect(() => {
-    if (isVisibleMobile) {
-      document
-        .getElementsByClassName("animation-container-mobile")
-        [animationId - 1].classList.add("fade-in");
-      document
-        .getElementsByClassName("animation-container-mobile")
-        [animationId - 1].classList.remove("hide-default");
+    if (isVisibleMobile /*&& isOnMobile*/) {
+     document.getElementsByClassName("animation-container-mobile")[animationId - 1].classList.add("fade-in");
+      //document.getElementsByClassName("animation-container")[animationId].classList.add("fade-down");
+      document.getElementsByClassName("animation-container-mobile")[animationId - 1].classList.remove("hide-default");
+      //document.getElementsByClassName("animation-container")[animationId].classList.remove("hide-default");
     }
   }, [isVisibleMobile, animationId]);
 
   return (
-    <div className={` project ${projectNumber}`}>
+    <div className={`project ${projectNumber}`}>
       <div className="container project-container">
         <div className={`row ${isReverse}`}>
           <div
@@ -76,8 +74,9 @@ export default function Project({
               </div>
             </div>
           </div>
-          <div className="col-md-5 project-image-parent-container">
-            <div className="d-flex align-items-center h-100">
+          {/*prettier-ignore */}
+          <div className={`col-md-5 project-image-parent-container ${hideImgOnMobile === true && isOnMobile ? "remove-default" : ""}`}>
+            <div className="d-flex align-items-center" /*h-100*/>
               <img
                 ref={animationContainerRef}
                 className={`tabsimage ${classname} animation-container hide-default`}
