@@ -15,6 +15,7 @@ export default function Bio() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const changeSlide = () => {
+    console.log("change slide");
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
   };
 
@@ -44,25 +45,26 @@ export default function Bio() {
     }
   }, [currentSlide, isVisible]);
 
-  //Swipe functionality
-  //const [touchPosition, setTouchPosition] = useState(0);
   const [touchStartX, setTouchStartX] = useState(0);
 
-  const handleTouchMove = (e) => {
-    e.preventDefault();
-  };
-
   const handleTouchEnd = (e) => {
-    if (e.touches.length === 0) return;
-
+    console.log("touch end");
     const touchEndX = e.changedTouches[0].clientX; //e.touches[0].clientX;
     const touchDeltaX = touchEndX - touchStartX;
     const sensitivity = 100;
+    const totalSlides = slides.length;
 
     if (touchDeltaX > sensitivity) {
-      setCurrentSlide((prevsSlide) => (prevsSlide - 1) % slides.length);
+      //setCurrentSlide((prevsSlide) => (prevsSlide - 1) % slides.length);
+      if (currentSlide !== 0) {
+        setCurrentSlide(
+          (prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides
+        );
+      }
     } else if (touchDeltaX < -sensitivity) {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+      //setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+      //setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
     }
   };
 
@@ -94,13 +96,7 @@ export default function Bio() {
               </div>
             </div>
           </div>
-          {/*prettier-ignore*/}
-          <div 
-          onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)}
-          onTouchMove={(e) => handleTouchMove(e)}
-          onTouchEnd={(e) => handleTouchEnd(e)}
-          className="col-md-7 bio-text-container"
-          >
+          <div className="col-md-7 bio-text-container">
             {isDesktop === true ? (
               // Desktop
               <div className="d-flex align-items-center justify-content-center h-100 bio-text">
@@ -114,21 +110,30 @@ export default function Bio() {
               </div>
             ) : (
               // Mobile
-              <div className="d-flex align-items-center justify-content-center h-100 bio-text">
+              <div
+                onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)}
+                //onTouchMove={(e) => handleTouchMove(e)}
+                onTouchEnd={(e) => handleTouchEnd(e)}
+                className="d-flex align-items-center justify-content-center h-100 bio-text"
+              >
+                {/*
                 <button className="button-6" onClick={changeSlide}>
                   <span>&#60;</span>
                 </button>
+                */}
                 <center>
                   <div>
-                    <p className="tagline">Not your average developer</p>
+                    <p className="tagline">Your average developer</p>
                     <p className="paragraph textslide">
                       {slides[currentSlide]}
                     </p>
                   </div>
                 </center>
+                {/*
                 <button className="button-6" onClick={changeSlide}>
                   <span>&#62;</span>
                 </button>
+              */}
               </div>
             )}
           </div>
@@ -137,6 +142,29 @@ export default function Bio() {
     </header>
   );
 }
+
+/*
+  const handleTouchMove = (e) => {
+    console.log("touch move");
+    //e.preventDefault();
+  };
+  */
+/*
+  const handleTouchEnd = (e) => {
+    console.log("touch end");
+    //if (e.touches.length === 0) return;
+
+    const touchEndX = e.changedTouches[0].clientX; //e.touches[0].clientX;
+    const touchDeltaX = touchEndX - touchStartX;
+    const sensitivity = 100;
+
+    if (touchDeltaX > sensitivity) {
+      setCurrentSlide((prevsSlide) => (prevsSlide - 1) % slides.length);
+    } else if (touchDeltaX < -sensitivity) {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+    }
+  };
+*/
 
 /*
  useEffect(() => {
