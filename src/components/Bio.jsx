@@ -12,13 +12,17 @@ export default function Bio() {
     "Today, I thrive as a full-stack developer at IT Minds, taking on exciting projects that push the boundaries of what's possible. Beyond my professional endeavors, I delve into various hobby projects, embracing HTML, CSS, JavaScript, React, Node.js, and TypeScript. Additionally, I explore the endless possibilities of OpenAI's API, experimenting with cutting-edge technologies that inspire innovation. My journey from journalism to tech has been a rewarding fusion of storytelling and technical expertise, allowing me to not only communicate effectively with diverse stakeholders but also to create innovative solutions at the intersection of technology and human connection.",
   ];
 
+  //State for current and previous slide
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [prevSlideIndex, setPrevSlideIndex] = useState(0);
 
+  //Change slide when clicking arrow only for desktop
   const changeSlide = () => {
-    console.log("change slide");
+    setPrevSlideIndex(currentSlide);
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
   };
 
+  //Ref for animation container to trigger animation when in viewport
   const animationContainerRef = useRef();
   const isVisible = useScrollHook(animationContainerRef);
 
@@ -28,12 +32,23 @@ export default function Bio() {
   useEffect(() => {
     //prettier-ignore
     if (isVisible) {
+      //Add fade in to circle animation upon load
       document.getElementsByClassName("animation-container")[0].classList.add("fade-in");
       document.getElementsByClassName("animation-container")[0].classList.remove("hide-default");
-
+      
+      //Collect circles to fill and clean
       const circlesToFill = document.getElementsByClassName("ci" + currentSlide);
+      const circlesToClean = document.getElementsByClassName("ci" + prevSlideIndex);
+
+      //Fill circles going forwards
       Array.from(circlesToFill).forEach((circle) => (circle.style.backgroundColor = "#4ca1af"));
 
+      //Clean circles if going backwards
+      if (prevSlideIndex > currentSlide) {
+        Array.from(circlesToClean).forEach((circle) => circle.style.removeProperty("background-color"));
+      }
+
+      //Clean circles if back to start except first cicle
       if (currentSlide === 0) {
         const allCircles = document.querySelectorAll("[class^='ci']");
         Array.from(allCircles).forEach((circle) => {
@@ -43,8 +58,9 @@ export default function Bio() {
         });
       }
     }
-  }, [currentSlide, isVisible]);
+  }, [currentSlide, prevSlideIndex, isVisible]);
 
+  //Swipe functionality for mobile
   const [touchStartX, setTouchStartX] = useState(0);
 
   const handleTouchEnd = (e) => {
@@ -55,15 +71,14 @@ export default function Bio() {
     const totalSlides = slides.length;
 
     if (touchDeltaX > sensitivity) {
-      //setCurrentSlide((prevsSlide) => (prevsSlide - 1) % slides.length);
       if (currentSlide !== 0) {
+        setPrevSlideIndex(currentSlide);
         setCurrentSlide(
           (prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides
         );
       }
     } else if (touchDeltaX < -sensitivity) {
-      //setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-      //setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
+      setPrevSlideIndex(currentSlide);
       setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
     }
   };
