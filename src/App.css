@@ -22,6 +22,23 @@
   font-size: small;
 }
 
+/*
+.paragraph-slider{
+  transform: translateX(-100%);
+}
+
+.paragraph.first-slide {
+  transform: translateX(0%);
+}
+
+.textslide {
+  transition: transform 0.3s ease;
+}
+*/
+.slidecontainer-desktop {
+  padding-right: 20px;
+}
+
 /* Header component */
 .header {
   min-height: 500px;
@@ -100,8 +117,8 @@
   align-items: center;
   @media screen and (max-width: 705px) {
     padding-top: 20px;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -121,11 +138,105 @@
   }
 }
 
-.textslide {
+.slide-container {
+  /*display: flex;*/
+  overflow: hidden; /* Hide the overflow to prevent visible extra slides */
+}
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  padding: 10px;
+  /*animation: slideAnimation 0.5s ease;*/
   padding-right: 20px;
   @media screen and (max-width: 705px) {
-    padding-right: 10px;
+    /*background-color: #6b7a85;*/
+    background-color: #364954;
+    padding: 30px;
+    border-radius: 5px;
   }
+}
+
+.slidecontainer2 {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  background-color: #364954;
+  max-width: 300px;
+  min-height: 300px;
+  border-radius: 6px;
+  align-items: center;
+}
+
+.slide2 {
+  flex: 0 0 100%; /* Each slide takes up 100% of the container width */
+  scroll-snap-align: start; /* Snap each slide to the start of the container */
+  white-space: nowrap; /* Prevent text from wrapping to next line */
+  padding: 10px; /* Add optional padding between slides */
+}
+
+/*
+.slide-enter {
+  animation: slideAnimation 0.5s ease;
+}
+
+.fade-in-div {
+  opacity: 0;
+  animation: fadeIn 1s forwards; 
+}
+*/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with 0 opacity (invisible) */
+  }
+  to {
+    opacity: 1; /* End with 1 opacity (fully visible) */
+  }
+}
+
+@keyframes slideAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*
+.text-slider-mobile-container {
+  background-color: #364954;
+  padding: 10px; 
+  display: flex;
+  align-items: center;
+  color: white;
+}
+*/
+
+/* Add CSS for sliding animation */
+
+/**/
+
+.arrow {
+  font-size: 24px;
+  color: #4ca1af; /* Set the arrow color to work well with #364954 background */
+  margin: 0 10px; /* Add spacing between the arrows and the text */
+  z-index: 100;
+}
+
+.arrow-left {
+  position: absolute;
+  right: 342px;
+  margin: 0px;
+}
+
+.arrow-right {
+  position: absolute;
+  left: 342px;
+  margin: 0px;
 }
 
 .fade-in {

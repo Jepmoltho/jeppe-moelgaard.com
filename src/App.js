@@ -4,14 +4,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 //import Wheel from "./components/Wheel";
 import Bio from "./components/Bio";
+import BioSlideV2 from "./components/BioSlideV2";
+
 //import Imageandtext from "./components/Imageandtext";
 /*import ComponentHeadline from "./components/ComponentHeadline";*/
 import Tabs from "./components/Tabs";
+//import BioSlide from "./components/BioSlide";
 
 function App() {
   return (
     <div className="App">
       <Header />
+
       <Bio />
       <Tabs />
     </div>
