@@ -21,13 +21,7 @@ export default function Header() {
                 </h1>
                 <h3 className="text-start sub-headline ">
                   skilled in coding and communications
-                  {/*
-                  <Typer
-                    text="skilled in coding and communications"
-                    delay={30}
-                    start={1}
-                  />
-  */}
+             
                 </h3>
               </div>
             </div>
