@@ -117,6 +117,7 @@
   align-items: center;
   @media screen and (max-width: 705px) {
     padding-top: 20px;
+    padding-bottom: 40px;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -128,6 +129,7 @@
     padding-left: 0rem;
     padding-right: 0rem;
     min-width: 325px;
+    padding-bottom: 2rem;
   }
 }
 
@@ -155,6 +157,10 @@
     padding: 30px;
     border-radius: 5px;
   }
+}
+
+.slide-container-desktop {
+  padding-right: 20px;
 }
 
 .slidecontainer2 {
@@ -225,6 +231,7 @@
   color: #4ca1af; /* Set the arrow color to work well with #364954 background */
   margin: 0 10px; /* Add spacing between the arrows and the text */
   z-index: 100;
+  padding: 10px;
 }
 
 .arrow-left {

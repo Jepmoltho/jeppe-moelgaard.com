@@ -127,6 +127,9 @@ export default function Bio() {
   }, [currentSlide]);
   */
 
+  //
+  const [currentSlideMobile, setCurrentSlideMobile] = useState(0);
+
   //Swipe functionality for mobile
   const [touchStartX, setTouchStartX] = useState(0);
 
@@ -180,6 +183,9 @@ export default function Bio() {
 
     // Determine the index of the currently visible slide
     const currentIndex = Math.floor(scrollLeft / slideWidth);
+
+    //
+    setCurrentSlideMobile(currentIndex);
 
     // Remove slide-active class from all slides
     slides.forEach((slide) => slide.classList.remove("slide-active"));
@@ -236,7 +242,7 @@ export default function Bio() {
               <div className="d-flex align-items-center justify-content-center h-100 bio-text">
                 <div>
                   <p className="tagline">Not your average developer</p>
-                  <div className="paragraph textslide">
+                  <div className="paragraph textslide slide-container-desktop">
                     {slides[currentSlide]}
                   </div>
                 </div>
@@ -254,10 +260,10 @@ export default function Bio() {
                 */
                 className="d-flex align-items-center justify-content-center h-100 bio-text"
               >
-                {currentSlide === 0 ? ("") : (<span className="arrow arrow-left">❮</span>)}
+                {currentSlideMobile === 0 ? ("") : (<span className="arrow arrow-left">❮</span>)}
                 <center>
                   <div>
-                    <p className="tagline">Your average developer</p>
+                    <p className="tagline">Not your average developer</p>
                     <div className="paragraph slidecontainer2" onScroll={updateActiveSlide} /*textslide*/>
                       {/* write a for loop that wraps all slides in a div */}
                       {slides.map((slide, index) => (
@@ -272,7 +278,7 @@ export default function Bio() {
                     </div>
                   </div>
                 </center>
-                {currentSlide === slides.length - 1 ? ("") : (<span className="arrow arrow-right">❯</span>)}
+                {currentSlideMobile === slides.length - 1 ? ("") : (<span className="arrow arrow-right">❯</span>)}
               </div>
             )}
           </div>
