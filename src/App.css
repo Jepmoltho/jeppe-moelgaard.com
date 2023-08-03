@@ -22,19 +22,6 @@
   font-size: small;
 }
 
-/*
-.paragraph-slider{
-  transform: translateX(-100%);
-}
-
-.paragraph.first-slide {
-  transform: translateX(0%);
-}
-
-.textslide {
-  transition: transform 0.3s ease;
-}
-*/
 .slidecontainer-desktop {
   padding-right: 20px;
 }
@@ -64,12 +51,6 @@
   justify-content: center;
   align-items: center;
 }
-
-/*
-.show-header-text-container {
-  visibility: visible;
-}
-*/
 
 @keyframes slideInFromBottom {
   0% {
@@ -163,7 +144,7 @@
   padding-right: 20px;
 }
 
-.slidecontainer2 {
+.slidecontainer-mobile {
   display: flex;
   scroll-snap-type: x mandatory;
   overflow-x: auto;
@@ -174,23 +155,12 @@
   align-items: center;
 }
 
-.slide2 {
+.slide-mobile {
   flex: 0 0 100%; /* Each slide takes up 100% of the container width */
   scroll-snap-align: start; /* Snap each slide to the start of the container */
   /*white-space: nowrap;*/ /* Prevent text from wrapping to next line */
   padding: 10px; /* Add optional padding between slides */
 }
-
-/*
-.slide-enter {
-  animation: slideAnimation 0.5s ease;
-}
-
-.fade-in-div {
-  opacity: 0;
-  animation: fadeIn 1s forwards; 
-}
-*/
 
 @keyframes fadeIn {
   from {
@@ -211,20 +181,6 @@
     transform: translateX(0);
   }
 }
-
-/*
-.text-slider-mobile-container {
-  background-color: #364954;
-  padding: 10px; 
-  display: flex;
-  align-items: center;
-  color: white;
-}
-*/
-
-/* Add CSS for sliding animation */
-
-/**/
 
 .arrow {
   font-size: 24px;

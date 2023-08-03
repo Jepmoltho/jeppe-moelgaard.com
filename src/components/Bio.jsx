@@ -12,59 +12,6 @@ export default function Bio() {
     "Today, I thrive as a full-stack developer at IT Minds, taking on exciting projects that push the boundaries of what's possible. Beyond my professional endeavors, I delve into various hobby projects, embracing HTML, CSS, JavaScript, React, Node.js, and TypeScript. Additionally, I explore the endless possibilities of OpenAI's API, experimenting with cutting-edge technologies that inspire innovation. My journey from journalism to tech has been a rewarding fusion of storytelling and technical expertise, allowing me to not only communicate effectively with diverse stakeholders but also to create innovative solutions at the intersection of technology and human connection",
   ];
 
-  /*
-  const slides = [
-    <div className="slide">
-      My journey started in the world of journalism with a passion for
-      storytelling. Enrolling in the Danish School of Media and Journalism
-      (DMJX), I honed my communication skills and learned how to craft
-      compelling narratives that captivated readers.
-    </div>,
-    <div className="slide">
-      "As I specialized in tech journalism, my path intertwined with influential
-      organizations. I found myself collaborating with DTU, delving into the
-      realm of technological advancements shaping the future. The Nordic
-      Blockchain Association and KPMG offered opportunities to explore the
-      impact of blockchain technology and digital innovation on businesses and
-      society. My writing resonated with tech enthusiasts and industry
-      professionals alike, and I thrived in this dynamic landscape.",
-    </div>,
-    <div className="slide">
-      "However, I yearned to deepen my understanding of technology beyond just
-      storytelling. I realized that to become a skilled tech journalist, I
-      needed to embrace coding myself. Fueling my ambition, I pursued a Master's
-      Degree in Software Development at the IT University of Denmark (ITU). This
-      marked a transformative phase where I delved into the fundamental aspects
-      of computer science and honed my coding skills with backend development,
-      frontend / web development and database management.",
-    </div>,
-    <div className="slide">
-      "My path led me to roles as a frontend developer at tamigo, where I
-      developed and maintained their website in the Umbraco framework which uses
-      the ASP.NET and C# to organise the code base. I contributed by coding
-      several landing pages as well as reusable components that displayed
-      content in multiple languages across different devices. When I became an
-      IT consultant at staun and stender, I delved into the intricacies of
-      combining web development with database management, solidifying my
-      understanding of data management and visualization. I navigated diverse
-      tech challenges, applying both my journalistic prowess and newfound
-      technical expertise to deliver impactful solutions.",
-    </div>,
-    <div className="slide">
-      "Today, I thrive as a full-stack developer at IT Minds, taking on exciting
-      projects that push the boundaries of what's possible. Beyond my
-      professional endeavors, I delve into various hobby projects, embracing
-      HTML, CSS, JavaScript, React, Node.js, and TypeScript. Additionally, I
-      explore the endless possibilities of OpenAI's API, experimenting with
-      cutting-edge technologies that inspire innovation. My journey from
-      journalism to tech has been a rewarding fusion of storytelling and
-      technical expertise, allowing me to not only communicate effectively with
-      diverse stakeholders but also to create innovative solutions at the
-      intersection of technology and human connection.",
-    </div>,
-  ];
-  */
-
   //State for current and previous slide
   const [currentSlide, setCurrentSlide] = useState(0);
   const [prevSlideIndex, setPrevSlideIndex] = useState(0);
@@ -89,8 +36,6 @@ export default function Bio() {
       document.getElementsByClassName("animation-container")[0].classList.add("fade-in");
       document.getElementsByClassName("animation-container")[0].classList.remove("hide-default");
       
-
-
       //Collect circles to fill and clean
       const circlesToFill = document.getElementsByClassName("ci" + currentSlide);
       const circlesToClean = document.getElementsByClassName("ci" + prevSlideIndex);
@@ -115,65 +60,12 @@ export default function Bio() {
     }
   }, [currentSlide, prevSlideIndex, isVisible]);
 
-  /*
-  useEffect(() => {
-    console.log(document.getElementsByClassName("slide")[0]);
-    document.getElementsByClassName("slide")[0].classList.add("fade-in");
-    document
-      .getElementsByClassName("slide")[0]
-      .classList.remove("hide-default");
-
-    //document.getElementsByClassName("slide")[0].classList.remove("fade-in");
-  }, [currentSlide]);
-  */
-
-  //
+  //State for current slide for mobile
   const [currentSlideMobile, setCurrentSlideMobile] = useState(0);
 
   //Swipe functionality for mobile
-  const [touchStartX, setTouchStartX] = useState(0);
-
-  const handleTouchEnd = (e) => {
-    const touchEndX = e.changedTouches[0].clientX;
-    const touchDeltaX = touchEndX - touchStartX;
-    const sensitivity = 100;
-    const totalSlides = slides.length;
-
-    if (touchDeltaX > sensitivity) {
-      if (currentSlide !== 0) {
-        setPrevSlideIndex(currentSlide);
-        setCurrentSlide(
-          (prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides
-        );
-      }
-    } else if (touchDeltaX < -sensitivity) {
-      setPrevSlideIndex(currentSlide);
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
-    }
-  };
-
-  let prevScrollLeft = 0;
-
-  function detectScrollDirection() {
-    const container = document.querySelector(".paragraph");
-    const currentScrollLeft = container.scrollLeft;
-
-    if (currentScrollLeft > prevScrollLeft) {
-      // Scrolling to the right
-      console.log("Scrolling to the right");
-      return "right";
-    } else if (currentScrollLeft < prevScrollLeft) {
-      // Scrolling to the left
-      console.log("Scrolling to the left");
-      return "left";
-    }
-
-    // Update the previous scroll position for the next scroll event
-    prevScrollLeft = currentScrollLeft;
-  }
-
   function updateActiveSlide() {
-    const slides = document.querySelectorAll(".slide2");
+    const slides = document.querySelectorAll(".slide-mobile");
 
     // Calculate the scroll position and width of each slide
     const container = document.querySelector(".paragraph");
@@ -184,7 +76,7 @@ export default function Bio() {
     // Determine the index of the currently visible slide
     const currentIndex = Math.floor(scrollLeft / slideWidth);
 
-    //
+    //Set current slide for mobile rendering of circles
     setCurrentSlideMobile(currentIndex);
 
     // Remove slide-active class from all slides
@@ -253,28 +145,20 @@ export default function Bio() {
             ) : (
               // Mobile
               //prettier-ignore
-              <div
-              /*
-                onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)}
-                onTouchEnd={(e) => handleTouchEnd(e)}
-                */
+              <div /* onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)} onTouchEnd={(e) => handleTouchEnd(e)}*/
                 className="d-flex align-items-center justify-content-center h-100 bio-text"
               >
                 {currentSlideMobile === 0 ? ("") : (<span className="arrow arrow-left">❮</span>)}
                 <center>
                   <div>
                     <p className="tagline">Not your average developer</p>
-                    <div className="paragraph slidecontainer2" onScroll={updateActiveSlide} /*textslide*/>
-                      {/* write a for loop that wraps all slides in a div */}
+                    <div className="paragraph slidecontainer-mobile" onScroll={updateActiveSlide} /*textslide*/>
                       {slides.map((slide, index) => (
-                        <div className="slide2" key={index}>
+                        <div className="slide-mobile" key={index}>
                           {slide}
                         </div>
                       ))}
-
-                      
                       {/*slides[currentSlide]*/}
-                      
                     </div>
                   </div>
                 </center>
@@ -287,6 +171,69 @@ export default function Bio() {
     </header>
   );
 }
+
+/*
+
+//OLD Swipe functionality for mobile before implementing scroll
+  const [touchStartX, setTouchStartX] = useState(0);
+
+  const handleTouchEnd = (e) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchDeltaX = touchEndX - touchStartX;
+    const sensitivity = 100;
+    const totalSlides = slides.length;
+
+    if (touchDeltaX > sensitivity) {
+      if (currentSlide !== 0) {
+        setPrevSlideIndex(currentSlide);
+        setCurrentSlide(
+          (prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides
+        );
+      }
+    } else if (touchDeltaX < -sensitivity) {
+      setPrevSlideIndex(currentSlide);
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
+    }
+  };
+
+
+
+*/
+
+/*
+  /*
+  useEffect(() => {
+    console.log(document.getElementsByClassName("slide")[0]);
+    document.getElementsByClassName("slide")[0].classList.add("fade-in");
+    document
+      .getElementsByClassName("slide")[0]
+      .classList.remove("hide-default");
+
+    //document.getElementsByClassName("slide")[0].classList.remove("fade-in");
+  }, [currentSlide]);
+  */
+
+/*
+  let prevScrollLeft = 0;
+
+  function detectScrollDirection() {
+    const container = document.querySelector(".paragraph");
+    const currentScrollLeft = container.scrollLeft;
+
+    if (currentScrollLeft > prevScrollLeft) {
+      // Scrolling to the right
+      console.log("Scrolling to the right");
+      return "right";
+    } else if (currentScrollLeft < prevScrollLeft) {
+      // Scrolling to the left
+      console.log("Scrolling to the left");
+      return "left";
+    }
+
+    // Update the previous scroll position for the next scroll event
+    prevScrollLeft = currentScrollLeft;
+  }
+*/
 
 /*
   const handleTouchMove = (e) => {
