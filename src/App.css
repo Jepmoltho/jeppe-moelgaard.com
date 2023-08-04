@@ -63,6 +63,17 @@
   }
 }
 
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @keyframes slideInFromTop {
   0% {
     transform: translateY(-30%);
@@ -126,19 +137,20 @@
   overflow: hidden; /* Hide the overflow to prevent visible extra slides */
 }
 
+/*
 .slide {
   flex: 0 0 100%;
   min-width: 100%;
   padding: 10px;
-  /*animation: slideAnimation 0.5s ease;*/
+  animation: slideAnimation 0.5s ease;
   padding-right: 20px;
   @media screen and (max-width: 705px) {
-    /*background-color: #6b7a85;*/
     background-color: #364954;
     padding: 30px;
     border-radius: 5px;
   }
 }
+*/
 
 .slide-container-desktop {
   padding-right: 20px;
@@ -162,7 +174,8 @@
   justify-content: center;
   align-items: center;
   border-radius: 6px;
-  padding: 23px;
+  padding-top: 23px;
+  padding-bottom: 23px;
 }
 
 .slide-mobile {
@@ -195,20 +208,21 @@
 .arrow {
   font-size: 24px;
   color: #4ca1af; /* Set the arrow color to work well with #364954 background */
-  margin: 0 10px; /* Add spacing between the arrows and the text */
-  z-index: 100;
+  /*margin: 0 10px;*/ /* Add spacing between the arrows and the text */
+  /*z-index: 100;*/
   padding: 10px;
+  opacity: 60%;
 }
 
 .arrow-left {
-  position: absolute;
-  right: 342px;
+  position: inherit;
+  /*right: 342px;*/
   margin: 0px;
 }
 
 .arrow-right {
-  position: absolute;
-  left: 342px;
+  position: inherit;
+  /*left: 342px;*/
   margin: 0px;
 }
 
@@ -217,7 +231,8 @@
 }
 
 .fade-down {
-  animation: slideInFromTop 1s forwards;
+  animation: slideInFromRight 1s forwards;
+  visibility: visible !important;
 }
 
 .hide-default {
