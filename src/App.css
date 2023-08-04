@@ -78,6 +78,18 @@
   }
 }
 
+/*here*/
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @keyframes slideInFromTop {
   0% {
     transform: translateY(-30%);
@@ -236,6 +248,11 @@
 
 .fade-down {
   animation: slideInFromRight 1s forwards;
+  visibility: visible !important;
+}
+
+.fade-left {
+  animation: slideInFromLeft 1s forwards;
   visibility: visible !important;
 }
 
@@ -407,6 +424,14 @@
 .tab:not(.active) {
   background-color: #15395a;
   color: aliceblue;
+}
+
+.tab-software-headline {
+  font-family: monospace;
+}
+
+.tab-journalism-headline {
+  font-family: cursive;
 }
 
 /*
@@ -582,6 +607,36 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
   animation: scroll 10s linear infinite; /* Adjust the animation duration (10s in this example) */
 }
 
+/* Journalism projects */
+.journalism-project {
+  padding-top: 80px;
+}
+
+.journalism-piece-container {
+  padding-bottom: 45px;
+}
+.journalism-image {
+  padding: 20px 180px 20px 180px !important;
+}
+
+.construction-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 50px 20px 50px;
+}
+
+.constructions-text-container {
+  padding: 30px;
+}
+
+.construction-text {
+  font-size: 20px;
+}
+
+.journalism-links-container {
+  padding-bottom: 40px;
+}
 /*
 .sogslogo,
 .ownlogo,

@@ -18,6 +18,15 @@ import templafy from "../media/templafy.png";
 import ownlogo from "../media/own-logo-v2.png";
 import react from "../media/react-v2.png";
 import node from "../media/node-v2.png";
+//journalism media
+/*
+import soaked from "../media/Journalism media/soaked.png";
+import btc from "../media/Journalism media/btc.png";
+import el from "../media/Journalism media/el.png";
+import vindturbine from "../media/Journalism media/vindturbine.png";
+import JournalismProject from "./JournalismProject";
+*/
+import UnderConstruction from "../media/Under_construction_animated.gif";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("software");
@@ -125,6 +134,33 @@ const Tabs = () => {
     },
   ];
 
+  const tempLinksJournalism = [
+    {
+      id: 0,
+      link: "https://www.slush.org/article/game-developers-create-real-economies-with-blockchain-and-yes-you-can-make-money-from-it/",
+      name: "Soaked",
+      title: "Game developers create real economies with blockchain",
+    },
+    {
+      id: 1,
+      link: "http://emagstudio.win.dtu.dk/e-books/Dynamo/DYNAMO_51/page_9.html",
+      name: "BTC",
+      title: "New technology makes Bitcoin a real currency",
+    },
+    {
+      id: 2,
+      link: "http://emagstudio.win.dtu.dk/e-books/Dynamo/DYNAMO_54/page_14.html",
+      name: "Cyber1",
+      title: "The cyber threat can be turned to our advantage",
+    },
+    {
+      id: 3,
+      link: "http://emagstudio.win.dtu.dk/e-books/Dynamo/DYNAMO_54/page_16.html",
+      name: "Cyber2",
+      title: "Worlds biggest wind turbine",
+    },
+  ];
+
   return (
     <div className="tabscomponent">
       <div>
@@ -133,13 +169,17 @@ const Tabs = () => {
       <div className="tabs-container">
         <div className="tabs">
           <div
-            className={`tab ${activeTab === "software" ? "active" : ""}`}
+            className={`tab tab-software-headline ${
+              activeTab === "software" ? "active" : ""
+            }`}
             onClick={() => handleTabClick("software")}
           >
             Software Developer
           </div>
           <div
-            className={`tab ${activeTab === "journalism" ? "active" : ""}`}
+            className={`tab tab-journalism-headline ${
+              activeTab === "journalism" ? "active" : ""
+            }`}
             onClick={() => handleTabClick("journalism")}
           >
             Journalism
@@ -303,11 +343,41 @@ const Tabs = () => {
           {activeTab === "journalism" && (
             <div className="content">
               {/* Content for Journalism tab */}
-              <p>
-                In the field of Journalism, I have a passion for storytelling
-                and reporting on important events and stories that impact
-                society.
-              </p>
+              <div className="construction-container">
+                <img
+                  src={UnderConstruction}
+                  alt="Under construction"
+                  className="construction-image"
+                ></img>
+              </div>
+              <center>
+                <div className="constructions-text-container">
+                  <p className="construction-text">
+                    The aestetics of this page is still under development. In
+                    the meantime, you can check some of my journalism projects
+                    by clicking the links below:
+                  </p>
+                </div>
+              </center>
+              <div className="journalism-links-container">
+                <center>
+                  <ul>
+                    {tempLinksJournalism.map((link) => (
+                      <div className="journalism-link-container" key={link.id}>
+                        <a href={link.link} target="__blank">
+                          <p>{link.title}</p>
+                        </a>
+                      </div>
+                    ))}
+                  </ul>
+                </center>
+              </div>
+              {/*
+              <JournalismProject
+                headline={"Worlds biggest wind turbine"}
+                image={vindturbine}
+              />
+          */}
             </div>
           )}
         </div>
