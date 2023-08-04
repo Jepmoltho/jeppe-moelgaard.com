@@ -63,55 +63,26 @@ export default function Bio() {
   //State for current slide for mobile
   const [currentSlideMobile, setCurrentSlideMobile] = useState(0);
 
-  //Swipe functionality for mobile
-  function updateActiveSlide() {
-    const slides = document.querySelectorAll(".slide-mobile");
+  const [touchStartX, setTouchStartX] = useState(0);
 
-    // Calculate the scroll position and width of each slide
-    const container = document.querySelector(".paragraph");
-    const containerWidth = container.clientWidth;
-    const scrollLeft = container.scrollLeft;
-    const slideWidth = containerWidth;
-    console.log("scrollLeft", scrollLeft);
+  const handleTouchEnd = (e) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchDeltaX = touchEndX - touchStartX;
+    const sensitivity = 100;
+    const totalSlides = slides.length;
 
-    // Determine the index of the currently visible slide
-    const currentIndex = Math.floor(scrollLeft / slideWidth);
-
-    //Set current slide for mobile rendering of circles
-    setCurrentSlideMobile(currentIndex);
-
-    // Remove slide-active class from all slides
-    slides.forEach((slide) => slide.classList.remove("slide-active"));
-
-    // Add slide-active class to the currently visible slide
-    slides[currentIndex].classList.add("slide-active");
-
-    //container.scrollTo({ left: currentIndex * slideWidth, behavior: "smooth" });
-    //container.scrollTo({ left: 600, behavior: "smooth" });
-
-    //write a function that color all circles up to the current slide
-    const circlesToFill = document.getElementsByClassName("ci" + currentIndex);
-    Array.from(circlesToFill).forEach(
-      (circle) => (circle.style.backgroundColor = "#4ca1af")
-    );
-
-    //write a function that removes color from all circles after the current slide
-    const circlesToClean = document.getElementsByClassName(
-      "ci" + (currentIndex + 1)
-    );
-    Array.from(circlesToClean).forEach((circle) =>
-      circle.style.removeProperty("background-color")
-    );
-  }
-
-  function updateOneSlide() {
-    const container = document.querySelector(".paragraph");
-    const scrollDistance = 10000000; // Adjust this value to control scroll speed
-    container.scrollTo({
-      left: container.scrollLeft + scrollDistance,
-      behavior: "smooth",
-    });
-  }
+    if (touchDeltaX > sensitivity) {
+      if (currentSlide !== 0) {
+        setPrevSlideIndex(currentSlide);
+        setCurrentSlide(
+          (prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides
+        );
+      }
+    } else if (touchDeltaX < -sensitivity) {
+      setPrevSlideIndex(currentSlide);
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
+    }
+  };
 
   return (
     <header className="bio">
@@ -157,25 +128,36 @@ export default function Bio() {
               </div>
             ) : (
               // Mobile
-              //prettier-ignore
-              <div /* onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)} onTouchEnd={(e) => handleTouchEnd(e)}*/
+              <div
+                onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)}
+                onTouchEnd={(e) => handleTouchEnd(e)}
                 className="d-flex align-items-center justify-content-center h-100 bio-text"
               >
-                {currentSlideMobile === 0 ? ("") : (<span className="arrow arrow-left">❮</span>)}
+                {currentSlideMobile === 0 ? (
+                  ""
+                ) : (
+                  <span className="arrow arrow-left">❮</span>
+                )}
                 <center>
                   <div>
                     <p className="tagline">Not your average developer</p>
-                    <div className="paragraph slidecontainer-mobile" onScroll={updateActiveSlide} /*textslide*/>
-                      {slides.map((slide, index) => (
+                    <div
+                      className="paragraph textslide slide-no-scroll-container-mobile" /* slidecontainer-mobile*/
+                    >
+                      {/*slides.map((slide, index) => (
                         <div className="slide-mobile" key={index}>
                           {slide}
                         </div>
-                      ))}
-                      {/*slides[currentSlide]*/}
+                      ))*/}
+                      {slides[currentSlide]}
                     </div>
                   </div>
                 </center>
-                {currentSlideMobile === slides.length - 1 ? ("") : (<span className="arrow arrow-right">❯</span>)}
+                {currentSlideMobile === slides.length - 1 ? (
+                  ""
+                ) : (
+                  <span className="arrow arrow-right">❯</span>
+                )}
               </div>
             )}
           </div>
@@ -184,6 +166,51 @@ export default function Bio() {
     </header>
   );
 }
+
+/*
+  
+  //Swipe functionality for mobile
+  function updateActiveSlide() {
+    const slides = document.querySelectorAll(".slide-mobile");
+
+    // Calculate the scroll position and width of each slide
+    const container = document.querySelector(".paragraph");
+    const containerWidth = container.clientWidth;
+    const scrollLeft = container.scrollLeft;
+    const slideWidth = containerWidth;
+    console.log("scrollLeft", scrollLeft);
+
+    // Determine the index of the currently visible slide
+    const currentIndex = Math.floor(scrollLeft / slideWidth);
+
+    //Set current slide for mobile rendering of circles
+    setCurrentSlideMobile(currentIndex);
+
+    // Remove slide-active class from all slides
+    slides.forEach((slide) => slide.classList.remove("slide-active"));
+
+    // Add slide-active class to the currently visible slide
+    slides[currentIndex].classList.add("slide-active");
+
+    //container.scrollTo({ left: currentIndex * slideWidth, behavior: "smooth" });
+    //container.scrollTo({ left: 600, behavior: "smooth" });
+
+    //write a function that color all circles up to the current slide
+    const circlesToFill = document.getElementsByClassName("ci" + currentIndex);
+    Array.from(circlesToFill).forEach(
+      (circle) => (circle.style.backgroundColor = "#4ca1af")
+    );
+
+    //write a function that removes color from all circles after the current slide
+    const circlesToClean = document.getElementsByClassName(
+      "ci" + (currentIndex + 1)
+    );
+    Array.from(circlesToClean).forEach((circle) =>
+      circle.style.removeProperty("background-color")
+    );
+  }
+
+*/
 
 /*
 

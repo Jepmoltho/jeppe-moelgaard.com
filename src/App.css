@@ -155,6 +155,16 @@
   align-items: center;
 }
 
+.slide-no-scroll-container-mobile {
+  min-height: 300px;
+  background-color: #364954;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  padding: 23px;
+}
+
 .slide-mobile {
   flex: 0 0 100%; /* Each slide takes up 100% of the container width */
   scroll-snap-align: start; /* Snap each slide to the start of the container */

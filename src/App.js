@@ -1,14 +1,14 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
-import Bio from "./components/Bio";
+import BioClick from "./components/BioClick";
 import Tabs from "./components/Tabs";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Bio />
+      <BioClick />
       <Tabs />
     </div>
   );
