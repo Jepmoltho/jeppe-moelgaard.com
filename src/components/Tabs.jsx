@@ -157,8 +157,9 @@ const Tabs = () => {
                 projectnumber={0}
                 animationId={1}
                 animationIdMobile={0}
+                key={0}
                 links={linksTamigo.map((link) => (
-                  <p className="inline-p">
+                  <p className="inline-p" key={link.id}>
                     <a href={link.link} target="__blank">
                       {link.name}
                     </a>
@@ -186,9 +187,10 @@ const Tabs = () => {
                 animationId={2}
                 animationIdMobile={1}
                 hideImgOnMobile={true}
+                key={1}
                 //pass down the logos constant to the project component
                 links={linksSogS.map((link) => (
-                  <p className="inline-p">
+                  <p className="inline-p" key={link.id}>
                     <a href={link.link} target="__blank">
                       {link.name}
                     </a>
@@ -215,9 +217,10 @@ const Tabs = () => {
                 projectnumber={2}
                 animationId={3}
                 animationIdMobile={2}
+                key={2}
                 //pass down the logos constant to the project component
                 links={linksTemplafy.map((link) => (
-                  <p className="inline-p">
+                  <p className="inline-p" key={link.id}>
                     <a href={link.link} target="__blank">
                       {link.name}
                     </a>
@@ -245,9 +248,10 @@ const Tabs = () => {
                 animationId={4}
                 animationIdMobile={3}
                 hideImgOnMobile={true}
+                key={3}
                 //pass down the logos constant to the project component
                 links={linksSilkeborgFadoel.map((link) => (
-                  <p className="inline-p">
+                  <p className="inline-p" key={link.id}>
                     <a href={link.link} target="__blank">
                       {link.name}
                     </a>
@@ -275,8 +279,9 @@ const Tabs = () => {
                 animationId={5}
                 animationIdMobile={4}
                 hideImgOnMobile={true}
+                key={4}
                 links={linksOwnSite.map((link) => (
-                  <p className="inline-p">
+                  <p className="inline-p" key={link.id}>
                     <a href={link.link} target="__blank">
                       {link.name}
                     </a>

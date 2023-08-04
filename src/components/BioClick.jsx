@@ -19,7 +19,7 @@ export default function Bio() {
 
   //prettier-ignore
   const slidesMobile = [
-    <div className={`slide ${slideEnteredDOM === true ? "" : ""}`}>
+    <div className={`slide hide-default ${slideEnteredDOM === true ? "fade-down" : ""}`}>
       My journey started in the world of journalism with a passion for
       storytelling. Enrolling in the Danish School of Media and Journalism
       (DMJX), I honed my communication skills and learned how to craft
@@ -44,10 +44,20 @@ export default function Bio() {
       frontend / web development and database management.
     </div>,
     <div className={`slide hide-default ${slideEnteredDOM === true ? "fade-down" : ""}`}>
-    My path led me to roles as a frontend developer at tamigo, where I developed and maintained their website in the Umbraco framework which uses the ASP.NET and C# to organise the code base. I contributed by coding several landing pages as well as reusable components that displayed content in multiple languages across different devices. When I became an IT consultant at staun and stender, I delved into the intricacies of combining web development with database management, solidifying my understanding of data management and visualization. I navigated diverse tech challenges, applying both my journalistic prowess and newfound technical expertise to deliver impactful solutions.",
+      My path led me to roles as a frontend developer at tamigo, where I
+      developed and maintained their website in the Umbraco framework. I contributed by coding
+      several landing pages as well as reusable components displaying
+      content in multiple languages across different devices. Later I started working as
+      an IT consultant where I combed web development and database management. I navigated diverse
+      tech challenges, applying both my communicative skills and 
+      technical expertise to deliver impactful solutions.
     </div>,
     <div className={`slide hide-default ${slideEnteredDOM === true ? "fade-down" : ""}`}>
-    Today, I thrive as a full-stack developer at IT Minds, taking on exciting projects that push the boundaries of what's possible. Beyond my professional endeavors, I delve into various hobby projects, embracing HTML, CSS, JavaScript, React, Node.js, and TypeScript. Additionally, I explore the endless possibilities of OpenAI's API, experimenting with cutting-edge technologies that inspire innovation. My journey from journalism to tech has been a rewarding fusion of storytelling and technical expertise, allowing me to not only communicate effectively with diverse stakeholders but also to create innovative solutions at the intersection of technology and human connection",
+      Today, I thrive as a full-stack developer at IT Minds, taking on exciting
+      software projects for multiple clients. Beyond my full time job, 
+      I develop  various hobby projects exploring the latest 
+      trends within frontend development. Lately, I'm investigating combining
+      different frontend frameworks and AI to create the next generation of web applciations.
     </div>,
   ];
 

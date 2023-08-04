@@ -37,8 +37,7 @@ export default function Project({
   useEffect(() => {
     if (isVisible) {
       //check if mobile or desktop. If desktop:
-
-      //UNDO THIS
+      //Check why bio component has a depenency on this
       document.getElementsByClassName("animation-container")[animationId].classList.add("fade-in");
       document.getElementsByClassName("animation-container")[animationId].classList.remove("hide-default");
     }
