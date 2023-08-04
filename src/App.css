@@ -1,4 +1,8 @@
 /* Shared between all components */
+.App {
+  touch-action: pan-y;
+}
+
 .tagline {
   color: #4ca1af;
 }

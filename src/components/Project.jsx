@@ -37,6 +37,8 @@ export default function Project({
   useEffect(() => {
     if (isVisible) {
       //check if mobile or desktop. If desktop:
+
+      //UNDO THIS
       document.getElementsByClassName("animation-container")[animationId].classList.add("fade-in");
       document.getElementsByClassName("animation-container")[animationId].classList.remove("hide-default");
     }
