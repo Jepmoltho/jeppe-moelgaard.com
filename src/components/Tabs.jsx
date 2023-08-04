@@ -18,6 +18,7 @@ import templafy from "../media/templafy.png";
 import ownlogo from "../media/own-logo-v2.png";
 import react from "../media/react-v2.png";
 import node from "../media/node-v2.png";
+import SwiperComponent from "./SwiperComponent";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("software");
