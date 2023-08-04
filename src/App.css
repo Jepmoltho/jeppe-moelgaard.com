@@ -1,6 +1,20 @@
 /* Shared between all components */
 .App {
   touch-action: pan-y;
+  /*
+  scroll-snap-type: y mandatory !important;
+  overflow-y: scroll !important;
+  */
+}
+
+.scroll-snap-container {
+  @media screen and (max-width: 705px) {
+    touch-action: pan-y;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    scroll-snap-align: start;
+    overflow-y: scroll;
+  }
 }
 
 .tagline {
@@ -44,6 +58,12 @@
     padding-top: 60px;
     padding-left: 2rem;
     padding-right: 2rem;
+
+    /**/
+    /*scroll-snap-align: start !important;*/
+    /*HERE*/
+    height: 100vh;
+    scroll-snap-align: start;
   }
 }
 
@@ -110,6 +130,10 @@
   min-height: 300px;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 /* Bio component */
 .bio {
   min-height: 500px;
@@ -128,6 +152,13 @@
     padding-bottom: 40px;
     padding-left: 10px;
     padding-right: 10px;
+    /*Here*/
+    /*height: 100vh !important;*/ /* Set the height of the container to fit the viewport */
+    /*scroll-snap-align: start !important;*/
+    /*HERE*/
+    height: 100vh;
+    scroll-snap-align: start;
+    /*scroll-snap-stop: always;*/
   }
 }
 
@@ -383,6 +414,8 @@
   padding-right: 6rem;
   padding-bottom: 6rem;
   padding-top: 2rem;
+  /*HERE*/
+  scroll-snap-stop: always;
   @media screen and (max-width: 705px) {
     padding-top: 20px;
     padding-left: 1rem; /*100px*/

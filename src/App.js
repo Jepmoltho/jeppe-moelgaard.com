@@ -9,8 +9,10 @@ import Tabs from "./components/Tabs";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <BioClick />
+      <div className="scroll-snap-container">
+        <Header />
+        <BioClick />
+      </div>
       <Tabs />
     </div>
   );

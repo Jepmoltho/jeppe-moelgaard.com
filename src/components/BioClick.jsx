@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect, useRef } from "react";
 import "../App.css";
 import useScrollHook from "../hooks/useScrollObserver";
+//import useScrollHookLessSensitive from "../hooks/useScrollObserverLessSensitive";
 
 export default function Bio() {
   //State for current and previous slide
@@ -71,11 +72,21 @@ export default function Bio() {
   const animationContainerRef = useRef();
   const isVisible = useScrollHook(animationContainerRef);
 
+  //Ref for animation on mobile less sensitve
+
+  /*
+  const animationContainerMobileRef = useRef();
+  const isVisibleMobile = useScrollHookLessSensitive(
+    animationContainerMobileRef
+  );
+  */
+
   const mobileBreakpoint = 768;
   const isDesktop = window.innerWidth > mobileBreakpoint;
 
   useEffect(() => {
     //prettier-ignore
+    //write an or conditional operator
     if (isVisible) {
       //Add fade in to circle animation upon load
       document.getElementsByClassName("animation-container")[0].classList.add("fade-in");
