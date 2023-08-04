@@ -63,7 +63,7 @@
   }
 }
 
-@keyframes slideInFromTop {
+@keyframes slideInFromRight {
   0% {
     transform: translateX(30%);
     opacity: 0;
@@ -72,7 +72,9 @@
     transform: translateX(0);
     opacity: 1;
   }
-  /*
+}
+
+@keyframes slideInFromTop {
   0% {
     transform: translateY(-30%);
     opacity: 0;
@@ -81,7 +83,6 @@
     transform: translateY(0);
     opacity: 1;
   }
-  */
 }
 
 .profile-picture {
@@ -230,7 +231,7 @@
 }
 
 .fade-down {
-  animation: slideInFromTop 1s forwards;
+  animation: slideInFromRight 1s forwards;
   visibility: visible !important;
 }
 
