@@ -61,7 +61,7 @@ export default function Bio() {
   }, [currentSlide, prevSlideIndex, isVisible]);
 
   //State for current slide for mobile
-  const [currentSlideMobile, setCurrentSlideMobile] = useState(0);
+  //const [currentSlideMobile, setCurrentSlideMobile] = useState(0);
 
   const [touchStartX, setTouchStartX] = useState(0);
 
@@ -128,36 +128,24 @@ export default function Bio() {
               </div>
             ) : (
               // Mobile
+              //prettier-ignore
               <div
                 onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)}
                 onTouchEnd={(e) => handleTouchEnd(e)}
                 className="d-flex align-items-center justify-content-center h-100 bio-text"
               >
-                {currentSlideMobile === 0 ? (
-                  ""
-                ) : (
-                  <span className="arrow arrow-left">❮</span>
-                )}
                 <center>
                   <div>
                     <p className="tagline">Not your average developer</p>
                     <div
                       className="paragraph textslide slide-no-scroll-container-mobile" /* slidecontainer-mobile*/
                     >
-                      {/*slides.map((slide, index) => (
-                        <div className="slide-mobile" key={index}>
-                          {slide}
-                        </div>
-                      ))*/}
-                      {slides[currentSlide]}
+                        {currentSlide === 0 ? (<span className="arrow arrow-left hide-default">❮</span>) : (<span className="arrow arrow-left">❮</span>)}
+                        {slides[currentSlide]}
+                        {currentSlide === slides.length - 1 ? (<span className="arrow arrow-righ hide-default">❯</span>) : (<span className="arrow arrow-right">❯</span>)}
                     </div>
                   </div>
                 </center>
-                {currentSlideMobile === slides.length - 1 ? (
-                  ""
-                ) : (
-                  <span className="arrow arrow-right">❯</span>
-                )}
               </div>
             )}
           </div>
