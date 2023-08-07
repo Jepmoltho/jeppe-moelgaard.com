@@ -259,6 +259,7 @@ const Tabs = () => {
                 animationIdMobile={2}
                 hideImgOnMobile={true}
                 key={2}
+                scrollSpacer={true}
                 links={linksOwnSite.map((link) => (
                   <p className="inline-p" key={link.id}>
                     <a href={link.link} target="__blank">
