@@ -128,6 +128,10 @@
 
 .profile-picture-container {
   min-height: 300px;
+  align-items: center;
+  @media screen and (max-width: 705px) {
+    align-items: baseline;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -494,8 +498,8 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 
 /* Project */
 .project {
-  padding-top: 4rem !important;
-  padding-bottom: 5rem !important;
+  padding-top: 5rem !important;
+  padding-bottom: 6rem !important;
   padding: 40px;
   @media screen and (max-width: 768px) {
     /*margin-bottom: 0rem;*/
@@ -569,11 +573,22 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
   justify-content: center;
   align-items: center;
   padding-right: 0px !important;
+  padding-left: 20px;
+
+  /*
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  */
   @media screen and (max-width: 768px) {
     padding-right: 0px !important;
     margin-bottom: 20px;
     padding-left: 0px !important; /*Removes padding left on mobile*/
   }
+}
+
+.flex-row-reverse .project-image-parent-container {
+  padding-left: 0px !important;
+  padding-right: 10px !important;
 }
 
 .techstack {

@@ -27,7 +27,7 @@ export default function Header() {
             </div>
           </div>
           <div className="col-md-5">
-            <div className="d-flex align-items-center justify-content-center h-100 p-5 profile-picture-container">
+            <div className="d-flex justify-content-center h-100 p-5 profile-picture-container">
               <center>
                 <img
                   className="profile-picture"
