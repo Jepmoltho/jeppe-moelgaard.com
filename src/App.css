@@ -416,12 +416,13 @@
   padding-bottom: 6rem;
   padding-top: 2rem;
   /*HERE*/
-  scroll-snap-stop: always;
+  /*scroll-snap-stop: always;*/
   @media screen and (max-width: 705px) {
     padding-top: 20px;
     padding-left: 1rem; /*100px*/
     padding-right: 1rem;
     /*Applied*/
+    scroll-snap-stop: always;
     scroll-snap-align: start;
   }
 }
@@ -506,6 +507,8 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
     padding-bottom: 4rem;
     padding-right: 20px !important;
     padding-left: 20px !important;
+    scroll-snap-stop: always;
+    scroll-snap-align: start;
   }
 }
 
