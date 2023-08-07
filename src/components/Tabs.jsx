@@ -29,14 +29,38 @@ const Tabs = () => {
 
   //create a constant coaining all the media imports
   const pathsTamigo = [
-    { id: 0, path: js, name: "JavaScript" },
-    { id: 1, path: html, name: "HTML" },
-    { id: 2, path: css, name: "CSS" },
-    { id: 3, path: bootstrap, name: "Bootstrap" },
-    { id: 4, path: umbraco, name: "Umbraco" },
-    { id: 5, path: net, name: ".NET" },
-    { id: 6, path: csharp, name: "C#" },
-    { id: 7, path: github, name: "GitHub" },
+    {
+      id: 0,
+      path: js,
+      name: "JavaScript",
+      parent: "tamigo",
+      displayname: "JavaScript",
+    },
+    { id: 1, path: html, name: "HTML", parent: "tamigo", displayname: "HTML" },
+    { id: 2, path: css, name: "CSS", parent: "tamigo", displayname: "CSS" },
+    {
+      id: 3,
+      path: bootstrap,
+      name: "Bootstrap",
+      parent: "tamigo",
+      displayname: "Bootstrap",
+    },
+    {
+      id: 4,
+      path: umbraco,
+      name: "Umbraco",
+      parent: "tamigo",
+      displayname: "Umbraco",
+    },
+    { id: 5, path: net, name: "NET", parent: "tamigo", displayname: ".NET" },
+    { id: 6, path: csharp, name: "C", parent: "tamigo", displayname: "C#" },
+    {
+      id: 7,
+      path: github,
+      name: "GitHub",
+      parent: "tamigo",
+      displayname: "GitHub",
+    },
   ];
 
   const linksTamigo = [
@@ -57,12 +81,30 @@ const Tabs = () => {
   ];
 
   const pathsSogS = [
-    { id: 0, path: js, name: "JavaScript" },
-    { id: 1, path: sql, name: "SQL" },
-    { id: 2, path: ssms, name: "Microsoft Sequel Server Management Studio" },
-    { id: 3, path: html, name: "HTML" },
-    { id: 4, path: css, name: "CSS" },
-    { id: 5, path: github, name: "GitHub" },
+    {
+      id: 0,
+      path: js,
+      name: "JavaScript",
+      parent: "sogs",
+      displayname: "JavaScript",
+    },
+    { id: 1, path: sql, name: "SQL", parent: "sogs", displayname: "SQL" },
+    {
+      id: 2,
+      path: ssms,
+      name: "MicrosoftSequelServerManagementStudio",
+      parent: "sogs",
+      displayname: "Microsoft Sequel Server Management Studio",
+    },
+    { id: 3, path: html, name: "HTML", parent: "sogs", displayname: "HTML" },
+    { id: 4, path: css, name: "CSS", parent: "sogs", displayname: "CSS" },
+    {
+      id: 5,
+      path: github,
+      name: "GitHub",
+      parent: "sogs",
+      displayname: "GitHub",
+    },
   ];
 
   const linksSogS = [
@@ -74,9 +116,21 @@ const Tabs = () => {
   ];
 
   const pathsTemplafy = [
-    { id: 0, path: wordpress, name: "WordPress" },
-    { id: 1, path: html, name: "HTML" },
-    { id: 2, path: css, name: "CSS" },
+    {
+      id: 0,
+      path: wordpress,
+      name: "WordPress",
+      parent: "templafy",
+      displayname: "WordPress",
+    },
+    {
+      id: 1,
+      path: html,
+      name: "HTML",
+      parent: "templafy",
+      displayname: "HTML",
+    },
+    { id: 2, path: css, name: "CSS", parent: "templafy", displayname: "CSS" },
   ];
 
   const linksTemplafy = [
@@ -88,11 +142,41 @@ const Tabs = () => {
   ];
 
   const pathsSilkeborgFadoel = [
-    { id: 0, path: wordpress, name: "WordPress" },
-    { id: 1, path: css, name: "CSS" },
-    { id: 2, path: html, name: "HTML" },
-    { id: 3, path: js, name: "JavaScript" },
-    { id: 4, path: github, name: "GitHub" },
+    {
+      id: 0,
+      path: wordpress,
+      name: "WordPress",
+      parent: "silkeborgfadoel",
+      displayname: "WordPress",
+    },
+    {
+      id: 1,
+      path: css,
+      name: "CSS",
+      parent: "silkeborgfadoel",
+      displayname: "CSS",
+    },
+    {
+      id: 2,
+      path: html,
+      name: "HTML",
+      parent: "silkeborgfadoel",
+      displayname: "HTML",
+    },
+    {
+      id: 3,
+      path: js,
+      name: "JavaScript",
+      parent: "silkeborgfadoel",
+      displayname: "JavaScript",
+    },
+    {
+      id: 4,
+      path: github,
+      name: "GitHub",
+      parent: "silkeborgfadoel",
+      displayname: "GitHub",
+    },
   ];
 
   const linksSilkeborgFadoel = [
@@ -109,13 +193,43 @@ const Tabs = () => {
   ];
 
   const pathsOwnSite = [
-    { id: 0, path: react, name: "React" },
-    { id: 1, path: js, name: "JavaScript" },
-    { id: 2, path: node, name: "Node.js" },
-    { id: 3, path: html, name: "HTML" },
-    { id: 4, path: css, name: "CSS" },
-    { id: 5, path: bootstrap, name: "Bootstrap" },
-    { id: 6, path: github, name: "GitHub" },
+    {
+      id: 0,
+      path: react,
+      name: "React",
+      parent: "ownsite",
+      displayname: "React",
+    },
+    {
+      id: 1,
+      path: js,
+      name: "JavaScript",
+      parent: "ownsite",
+      displayname: "JavaScript",
+    },
+    {
+      id: 2,
+      path: node,
+      name: "Nodejs",
+      parent: "ownsite",
+      displayname: "Node.js",
+    },
+    { id: 3, path: html, name: "HTML", parent: "ownsite", displayname: "HTML" },
+    { id: 4, path: css, name: "CSS", parent: "ownsite", displayname: "CSS" },
+    {
+      id: 5,
+      path: bootstrap,
+      name: "Bootstrap",
+      parent: "ownsite",
+      displayname: "Bootstrap",
+    },
+    {
+      id: 6,
+      path: github,
+      name: "GitHub",
+      parent: "ownsite",
+      displayname: "GitHub",
+    },
   ];
 
   const linksOwnSite = [
@@ -153,10 +267,10 @@ const Tabs = () => {
     },
   ];
 
-  const handleImageClick = (name) => {
-    const flipper = document.querySelector(`.flipper${name}`);
-    const front = document.querySelector(`.front${name}`);
-    const back = document.querySelector(`.back${name}`);
+  const handleImageClick = (name, parent) => {
+    const flipper = document.querySelector(`.flipper${name}${parent}`);
+    const front = document.querySelector(`.front${name}${parent}`);
+    const back = document.querySelector(`.back${name}${parent}`);
 
     if (flipper.classList.contains("flipped")) {
       // If the flipper is already flipped, flip it back to the front side
@@ -170,26 +284,6 @@ const Tabs = () => {
       back.style.display = "flex";
     }
   };
-
-  /*
-  function handleImageClick() {
-    const flipper = document.querySelector(".flipper");
-    const front = document.querySelector(".front");
-    const back = document.querySelector(".back");
-
-    if (flipper.classList.contains("flipped")) {
-      // If the flipper is already flipped, flip it back to the front side
-      flipper.classList.remove("flipped");
-      front.style.display = "block";
-      back.style.display = "none";
-    } else {
-      // If the flipper is not flipped, flip it to the back side
-      flipper.classList.add("flipped");
-      front.style.display = "none";
-      back.style.display = "block";
-    }
-  }
-  */
 
   return (
     <div className="tabscomponent">
@@ -238,10 +332,16 @@ const Tabs = () => {
                 logos={pathsTamigo.map((humlebuks) => (
                   <div
                     className="flip-container"
-                    onClick={() => handleImageClick(humlebuks.name)}
+                    onClick={() =>
+                      handleImageClick(humlebuks.name, humlebuks.parent)
+                    }
                   >
-                    <div class={`flipper flipper${humlebuks.name}`}>
-                      <div class={`front front${humlebuks.name}`}>
+                    <div
+                      class={`flipper flipper${humlebuks.name}${humlebuks.parent}`}
+                    >
+                      <div
+                        class={`front front${humlebuks.name}${humlebuks.parent}`}
+                      >
                         <img
                           src={humlebuks.path}
                           alt="logo"
@@ -250,27 +350,12 @@ const Tabs = () => {
                           title={humlebuks.name}
                         />
                       </div>
-                      <div class={`back back${humlebuks.name}`}>
-                        <p className="flipped-text">{humlebuks.name}</p>
+                      <div
+                        class={`back back${humlebuks.name}${humlebuks.parent}`}
+                      >
+                        <p className="flipped-text">{humlebuks.displayname}</p>
                       </div>
                     </div>
-
-                    {/*
-                    <div class="flipper">
-                      <div class="front">
-                        <img
-                          src={humlebuks.path}
-                          alt="logo"
-                          key={humlebuks.key}
-                          className="techlogo"
-                          title={humlebuks.name}
-                        />
-                      </div>
-                      <div class="back">
-                        <p>{humlebuks.name}</p>
-                      </div>
-                    </div>
-                    */}
                   </div>
                 ))}
               />
@@ -296,13 +381,33 @@ const Tabs = () => {
                   </p>
                 ))}
                 logos={pathsSogS.map((humlebuks) => (
-                  <img
-                    src={humlebuks.path}
-                    alt="logo"
-                    key={humlebuks.key}
-                    className="techlogo"
-                    title={humlebuks.name}
-                  />
+                  <div
+                    className="flip-container"
+                    onClick={() =>
+                      handleImageClick(humlebuks.name, humlebuks.parent)
+                    }
+                  >
+                    <div
+                      class={`flipper flipper${humlebuks.name}${humlebuks.parent}`}
+                    >
+                      <div
+                        class={`front front${humlebuks.name}${humlebuks.parent}`}
+                      >
+                        <img
+                          src={humlebuks.path}
+                          alt="logo"
+                          key={humlebuks.key}
+                          className="techlogo"
+                          title={humlebuks.name}
+                        />
+                      </div>
+                      <div
+                        class={`back back${humlebuks.name}${humlebuks.parent}`}
+                      >
+                        <p className="flipped-text">{humlebuks.displayname}</p>
+                      </div>
+                    </div>
+                  </div>
                 ))}
               />
               <div className="scrollspacetall"></div>
@@ -328,13 +433,33 @@ const Tabs = () => {
                   </p>
                 ))}
                 logos={pathsOwnSite.map((humlebuks) => (
-                  <img
-                    src={humlebuks.path}
-                    alt="logo"
-                    key={humlebuks.key}
-                    className="techlogo"
-                    title={humlebuks.name}
-                  />
+                  <div
+                    className="flip-container"
+                    onClick={() =>
+                      handleImageClick(humlebuks.name, humlebuks.parent)
+                    }
+                  >
+                    <div
+                      class={`flipper flipper${humlebuks.name}${humlebuks.parent}`}
+                    >
+                      <div
+                        class={`front front${humlebuks.name}${humlebuks.parent}`}
+                      >
+                        <img
+                          src={humlebuks.path}
+                          alt="logo"
+                          key={humlebuks.key}
+                          className="techlogo"
+                          title={humlebuks.name}
+                        />
+                      </div>
+                      <div
+                        class={`back back${humlebuks.name}${humlebuks.parent}`}
+                      >
+                        <p className="flipped-text">{humlebuks.displayname}</p>
+                      </div>
+                    </div>
+                  </div>
                 ))}
               />
               <Project
@@ -358,13 +483,33 @@ const Tabs = () => {
                   </p>
                 ))}
                 logos={pathsTemplafy.map((humlebuks) => (
-                  <img
-                    src={humlebuks.path}
-                    alt="logo"
-                    key={humlebuks.key}
-                    className="techlogo"
-                    title={humlebuks.name}
-                  />
+                  <div
+                    className="flip-container"
+                    onClick={() =>
+                      handleImageClick(humlebuks.name, humlebuks.parent)
+                    }
+                  >
+                    <div
+                      class={`flipper flipper${humlebuks.name}${humlebuks.parent}`}
+                    >
+                      <div
+                        class={`front front${humlebuks.name}${humlebuks.parent}`}
+                      >
+                        <img
+                          src={humlebuks.path}
+                          alt="logo"
+                          key={humlebuks.key}
+                          className="techlogo"
+                          title={humlebuks.name}
+                        />
+                      </div>
+                      <div
+                        class={`back back${humlebuks.name}${humlebuks.parent}`}
+                      >
+                        <p className="flipped-text">{humlebuks.displayname}</p>
+                      </div>
+                    </div>
+                  </div>
                 ))}
               />
               <Project
@@ -389,47 +534,35 @@ const Tabs = () => {
                   </p>
                 ))}
                 logos={pathsSilkeborgFadoel.map((humlebuks) => (
-                  <img
-                    src={humlebuks.path}
-                    alt="logo"
-                    key={humlebuks.key}
-                    className="techlogo"
-                    title={humlebuks.name}
-                  />
+                  <div
+                    className="flip-container"
+                    onClick={() =>
+                      handleImageClick(humlebuks.name, humlebuks.parent)
+                    }
+                  >
+                    <div
+                      class={`flipper flipper${humlebuks.name}${humlebuks.parent}`}
+                    >
+                      <div
+                        class={`front front${humlebuks.name}${humlebuks.parent}`}
+                      >
+                        <img
+                          src={humlebuks.path}
+                          alt="logo"
+                          key={humlebuks.key}
+                          className="techlogo"
+                          title={humlebuks.name}
+                        />
+                      </div>
+                      <div
+                        class={`back back${humlebuks.name}${humlebuks.parent}`}
+                      >
+                        <p className="flipped-text">{humlebuks.displayname}</p>
+                      </div>
+                    </div>
+                  </div>
                 ))}
               />
-              {/*
-              <Project
-                tagline="www.jeppemølgaard.com"
-                headline="Web Developer"
-                description="With the fear of sounding extremely meta, I want to highlight my own site (this website) which i developed from scratch using React, JavaScript, HTML, CSS and Node.js."
-                image={ownlogo}
-                direction=""
-                classname="ownlogo squareimg"
-                projectnumber={4}
-                animationId={5}
-                animationIdMobile={4}
-                hideImgOnMobile={true}
-                key={4}
-                links={linksOwnSite.map((link) => (
-                  <p className="inline-p" key={link.id}>
-                    <a href={link.link} target="__blank">
-                      {link.name}
-                    </a>
-                    {link.id === 0 ? " " : ", "}
-                  </p>
-                ))}
-                logos={pathsOwnSite.map((humlebuks) => (
-                  <img
-                    src={humlebuks.path}
-                    alt="logo"
-                    key={humlebuks.key}
-                    className="techlogo"
-                    title={humlebuks.name}
-                  />
-                ))}
-              />
-                */}
             </div>
           )}
           {activeTab === "journalism" && (
@@ -453,7 +586,7 @@ const Tabs = () => {
               </center>
               <div className="journalism-links-container">
                 <center>
-                  <ul>
+                  <ul className="linksul">
                     {tempLinksJournalism.map((link) => (
                       <div className="journalism-link-container" key={link.id}>
                         <a href={link.link} target="__blank">
@@ -469,7 +602,7 @@ const Tabs = () => {
                 headline={"Worlds biggest wind turbine"}
                 image={vindturbine}
               />
-          */}
+            */}
             </div>
           )}
         </div>

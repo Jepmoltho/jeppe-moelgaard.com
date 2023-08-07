@@ -704,6 +704,9 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
   padding: 5px;
   font-size: 11px;
   margin: inherit;
+  background-color: white;
+  border-radius: 6px;
+  font-weight: 600;
 }
 
 /* Back side (text) */
@@ -792,6 +795,11 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 
 .journalism-links-container {
   padding-bottom: 40px;
+}
+
+.linksul {
+  padding-left: 40px;
+  padding-right: 40px;
 }
 /*
 .sogslogo,
