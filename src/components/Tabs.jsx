@@ -18,14 +18,6 @@ import templafy from "../media/templafy.png";
 import ownlogo from "../media/own-logo-v2.png";
 import react from "../media/react-v2.png";
 import node from "../media/node-v2.png";
-//journalism media
-/*
-import soaked from "../media/Journalism media/soaked.png";
-import btc from "../media/Journalism media/btc.png";
-import el from "../media/Journalism media/el.png";
-import vindturbine from "../media/Journalism media/vindturbine.png";
-import JournalismProject from "./JournalismProject";
-*/
 import UnderConstruction from "../media/Under_construction_animated.gif";
 
 const Tabs = () => {
@@ -161,6 +153,44 @@ const Tabs = () => {
     },
   ];
 
+  const handleImageClick = (name) => {
+    const flipper = document.querySelector(`.flipper${name}`);
+    const front = document.querySelector(`.front${name}`);
+    const back = document.querySelector(`.back${name}`);
+
+    if (flipper.classList.contains("flipped")) {
+      // If the flipper is already flipped, flip it back to the front side
+      flipper.classList.remove("flipped");
+      front.style.display = "flex";
+      back.style.display = "none";
+    } else {
+      // If the flipper is not flipped, flip it to the back side
+      flipper.classList.add("flipped");
+      front.style.display = "none";
+      back.style.display = "flex";
+    }
+  };
+
+  /*
+  function handleImageClick() {
+    const flipper = document.querySelector(".flipper");
+    const front = document.querySelector(".front");
+    const back = document.querySelector(".back");
+
+    if (flipper.classList.contains("flipped")) {
+      // If the flipper is already flipped, flip it back to the front side
+      flipper.classList.remove("flipped");
+      front.style.display = "block";
+      back.style.display = "none";
+    } else {
+      // If the flipper is not flipped, flip it to the back side
+      flipper.classList.add("flipped");
+      front.style.display = "none";
+      back.style.display = "block";
+    }
+  }
+  */
+
   return (
     <div className="tabscomponent">
       <div>
@@ -174,7 +204,7 @@ const Tabs = () => {
             }`}
             onClick={() => handleTabClick("software")}
           >
-            Software Develop
+            Software Developer
           </div>
           <div
             className={`tab tab-journalism-headline ${
@@ -206,13 +236,42 @@ const Tabs = () => {
                   </p>
                 ))}
                 logos={pathsTamigo.map((humlebuks) => (
-                  <img
-                    src={humlebuks.path}
-                    alt="logo"
-                    key={humlebuks.key}
-                    className="techlogo"
-                    title={humlebuks.name}
-                  />
+                  <div
+                    className="flip-container"
+                    onClick={() => handleImageClick(humlebuks.name)}
+                  >
+                    <div class={`flipper flipper${humlebuks.name}`}>
+                      <div class={`front front${humlebuks.name}`}>
+                        <img
+                          src={humlebuks.path}
+                          alt="logo"
+                          key={humlebuks.key}
+                          className="techlogo"
+                          title={humlebuks.name}
+                        />
+                      </div>
+                      <div class={`back back${humlebuks.name}`}>
+                        <p className="flipped-text">{humlebuks.name}</p>
+                      </div>
+                    </div>
+
+                    {/*
+                    <div class="flipper">
+                      <div class="front">
+                        <img
+                          src={humlebuks.path}
+                          alt="logo"
+                          key={humlebuks.key}
+                          className="techlogo"
+                          title={humlebuks.name}
+                        />
+                      </div>
+                      <div class="back">
+                        <p>{humlebuks.name}</p>
+                      </div>
+                    </div>
+                    */}
+                  </div>
                 ))}
               />
               <Project

@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import useScrollHook from "../hooks/useScrollObserver";
-//import useScrollObserverMobile from "../hooks/useScrollObserverMobile";
 
 export default function Project({
   tagline,
@@ -14,7 +13,6 @@ export default function Project({
   animationId,
   links,
   hideImgOnMobile,
-  scrollSpacer,
 }) {
   const isReverse = `flex-row${direction === "reverse" ? "-reverse" : ""}`;
   const isReverseBool = direction === "reverse";
@@ -30,9 +28,7 @@ export default function Project({
   const isVisible = useScrollHook(animationContainerRef);
 
   const animationContainerMobileRef = useRef();
-  //Applied
   const isVisibleMobile = useScrollHook(animationContainerMobileRef);
-  //const isVisibleMobile = useScrollObserverMobile(animationContainerMobileRef);
 
   const isOnMobile = window.innerWidth < 768;
 
@@ -57,15 +53,6 @@ export default function Project({
   }, [isVisibleMobile, animationId]);
 
   return (
-    /*
-    <>
-
-      <div
-        className={`${
-          scrollSpacer === true ? "scrollspacetall" : "scrollspacer"
-        } `}
-      ></div>
-      */
     <div className={`project ${projectNumber}`}>
       <div className="container project-container">
         <div className={`row ${isReverse}`}>
@@ -108,14 +95,9 @@ export default function Project({
         <div className="techstack">
           <p className="paragraphtechstack">Techstack:</p>
           {/*Pass hook to tech-logo-container*/}
-          <div className="tech-logo-container">
-            <center>{logos}</center>
-          </div>
+          <div className="tech-logo-container">{logos}</div>
         </div>
       </div>
     </div>
-    /*
-    </>
-    */
   );
 }
