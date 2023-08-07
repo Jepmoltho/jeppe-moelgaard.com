@@ -507,8 +507,8 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
     padding-bottom: 4rem;
     padding-right: 20px !important;
     padding-left: 20px !important;
-    scroll-snap-stop: always;
-    scroll-snap-align: start;
+    /*scroll-snap-stop: always;*/
+    /*scroll-snap-align: start;*/
   }
 }
 
