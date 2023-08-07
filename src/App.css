@@ -128,6 +128,10 @@
 
 .profile-picture-container {
   min-height: 300px;
+  align-items: center;
+  @media screen and (max-width: 705px) {
+    align-items: baseline;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -152,13 +156,10 @@
     padding-bottom: 40px;
     padding-left: 10px;
     padding-right: 10px;
-    /*Here*/
-    /*height: 100vh !important;*/ /* Set the height of the container to fit the viewport */
-    /*scroll-snap-align: start !important;*/
-    /*HERE*/
     height: 100vh;
     scroll-snap-align: start;
-    /*scroll-snap-stop: always;*/
+    /*Applied*/
+    scroll-snap-stop: always;
   }
 }
 
@@ -420,6 +421,8 @@
     padding-top: 20px;
     padding-left: 1rem; /*100px*/
     padding-right: 1rem;
+    /*Applied*/
+    scroll-snap-align: start;
   }
 }
 
@@ -460,11 +463,11 @@
 }
 
 .tab-software-headline {
-  font-family: monospace;
+  /*font-family: monospace;*/
 }
 
 .tab-journalism-headline {
-  font-family: cursive;
+  /*font-family: cursive;*/
 }
 
 /*
@@ -495,8 +498,8 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 
 /* Project */
 .project {
-  padding-top: 4rem !important;
-  padding-bottom: 5rem !important;
+  padding-top: 5rem !important;
+  padding-bottom: 6rem !important;
   padding: 40px;
   @media screen and (max-width: 768px) {
     /*margin-bottom: 0rem;*/
@@ -570,11 +573,22 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
   justify-content: center;
   align-items: center;
   padding-right: 0px !important;
+  padding-left: 20px;
+
+  /*
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+  */
   @media screen and (max-width: 768px) {
     padding-right: 0px !important;
     margin-bottom: 20px;
     padding-left: 0px !important; /*Removes padding left on mobile*/
   }
+}
+
+.flex-row-reverse .project-image-parent-container {
+  padding-left: 0px !important;
+  padding-right: 10px !important;
 }
 
 .techstack {

@@ -185,7 +185,6 @@ const Tabs = () => {
             Journalism
           </div>
         </div>
-
         <div className="content-container">
           {activeTab === "software" && (
             <div className="content">
@@ -247,17 +246,49 @@ const Tabs = () => {
                   />
                 ))}
               />
+
+              <Project
+                tagline="www.jeppemølgaard.com"
+                headline="Web Developer"
+                description="With the fear of sounding extremely meta, I want to highlight my own site (this website) which i developed from scratch using React, JavaScript, HTML, CSS and Node.js."
+                image={ownlogo}
+                direction=""
+                classname="ownlogo squareimg"
+                projectnumber={2}
+                animationId={3}
+                animationIdMobile={2}
+                hideImgOnMobile={true}
+                key={2}
+                links={linksOwnSite.map((link) => (
+                  <p className="inline-p" key={link.id}>
+                    <a href={link.link} target="__blank">
+                      {link.name}
+                    </a>
+                    {link.id === 0 ? " " : ", "}
+                  </p>
+                ))}
+                logos={pathsOwnSite.map((humlebuks) => (
+                  <img
+                    src={humlebuks.path}
+                    alt="logo"
+                    key={humlebuks.key}
+                    className="techlogo"
+                    title={humlebuks.name}
+                  />
+                ))}
+              />
+
               <Project
                 tagline="Templafy"
                 headline="Website Specialist"
                 description="I updated and rebuild all Templafy's 300+ landing pages (and HubSpot pages) to WordPress 5.3+ spanning over three diffrenent project."
                 image={templafy}
-                direction=""
+                direction="reverse"
                 classname="templafylogo"
-                projectnumber={2}
-                animationId={3}
-                animationIdMobile={2}
-                key={2}
+                projectnumber={3}
+                animationId={4}
+                animationIdMobile={3}
+                key={3}
                 //pass down the logos constant to the project component
                 links={linksTemplafy.map((link) => (
                   <p className="inline-p" key={link.id}>
@@ -282,13 +313,13 @@ const Tabs = () => {
                 headline="Web Developer"
                 description="I design and develop Silkeborg Fadøls webpage in WordPress. I develop custom JavaScript, CSS & HTML to improve chosen theme and to improve page design for mobile view"
                 image={silkeborgfadoel2}
-                direction="reverse"
+                direction=""
                 classname="silkeborgfadoellogo squareimg"
-                projectnumber={3}
-                animationId={4}
-                animationIdMobile={3}
+                projectnumber={4}
+                animationId={5}
+                animationIdMobile={4}
                 hideImgOnMobile={true}
-                key={3}
+                key={4}
                 //pass down the logos constant to the project component
                 links={linksSilkeborgFadoel.map((link) => (
                   <p className="inline-p" key={link.id}>
@@ -308,6 +339,7 @@ const Tabs = () => {
                   />
                 ))}
               />
+              {/*
               <Project
                 tagline="www.jeppemølgaard.com"
                 headline="Web Developer"
@@ -338,6 +370,7 @@ const Tabs = () => {
                   />
                 ))}
               />
+                */}
             </div>
           )}
           {activeTab === "journalism" && (

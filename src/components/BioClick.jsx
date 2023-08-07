@@ -209,7 +209,7 @@ export default function Bio() {
                     >
                         {currentSlide === 0 ? (<span className="arrow arrow-left hide-default">❮</span>) : (<span className="arrow arrow-left">❮</span>)}
                         {slidesMobile[currentSlide]}
-                        {currentSlide === slidesMobile.length - 1 ? (<span className="arrow arrow-righ hide-default">❯</span>) : (<span className="arrow arrow-right">❯</span>)}
+                        {currentSlide === slidesMobile.length - 1 ? (<span className="arrow arrow-righ">❯</span>) : (<span className="arrow arrow-right">❯</span>)}
                     </div>
                   </div>
                 </center>

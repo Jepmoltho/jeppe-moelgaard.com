@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import useScrollHook from "../hooks/useScrollObserver";
-import useScrollObserverMobile from "../hooks/useScrollObserverMobile";
+//import useScrollObserverMobile from "../hooks/useScrollObserverMobile";
 
 export default function Project({
   tagline,
@@ -29,7 +29,9 @@ export default function Project({
   const isVisible = useScrollHook(animationContainerRef);
 
   const animationContainerMobileRef = useRef();
-  const isVisibleMobile = useScrollObserverMobile(animationContainerMobileRef);
+  //Applied
+  const isVisibleMobile = useScrollHook(animationContainerMobileRef);
+  //const isVisibleMobile = useScrollObserverMobile(animationContainerMobileRef);
 
   const isOnMobile = window.innerWidth < 768;
 
