@@ -504,9 +504,11 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
   padding: 40px;
   @media screen and (max-width: 768px) {
     /*margin-bottom: 0rem;*/
-    padding-bottom: 4rem;
+    padding-top: 3rem !important;
+    padding-bottom: 4rem !important;
     padding-right: 20px !important;
     padding-left: 20px !important;
+
     /*
     scroll-snap-stop: always;
     scroll-snap-align: start;
