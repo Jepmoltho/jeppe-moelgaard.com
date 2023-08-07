@@ -12,8 +12,8 @@ function App() {
       <div className="scroll-snap-container">
         <Header />
         <BioClick />
+        <Tabs />
       </div>
-      <Tabs />
     </div>
   );
 }

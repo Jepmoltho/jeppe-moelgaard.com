@@ -185,7 +185,6 @@ const Tabs = () => {
             Journalism
           </div>
         </div>
-
         <div className="content-container">
           {activeTab === "software" && (
             <div className="content">
