@@ -514,10 +514,21 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
   }
 }
 
-.scrollspacer {
+/*
+.snapper {
+  @media screen and (max-width: 768px) {
+    height: 0px !important;
+    scroll-snap-stop: always;
+    scroll-snap-align: start;
+  }
+}
+*/
+
+.stophere {
   @media screen and (max-width: 768px) {
     scroll-snap-stop: always;
     scroll-snap-align: start;
+    height: 0px !important;
   }
 }
 
@@ -554,6 +565,16 @@ If you want to apply some rules that doesnt count hovering the active tab, you c
 
 .project-3 {
   border-radius: 4px;
+}
+
+.project-0,
+.project-1,
+.project-3,
+.project-4 {
+  @media screen and (max-width: 768px) {
+    scroll-snap-stop: always;
+    scroll-snap-align: start;
+  }
 }
 
 .project-container {

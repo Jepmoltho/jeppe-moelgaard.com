@@ -174,7 +174,7 @@ const Tabs = () => {
             }`}
             onClick={() => handleTabClick("software")}
           >
-            Software Developer
+            Software Develop
           </div>
           <div
             className={`tab tab-journalism-headline ${
@@ -246,7 +246,7 @@ const Tabs = () => {
                   />
                 ))}
               />
-
+              <div className="scrollspacetall"></div>
               <Project
                 tagline="www.jeppemølgaard.com"
                 headline="Web Developer"
@@ -278,7 +278,6 @@ const Tabs = () => {
                   />
                 ))}
               />
-
               <Project
                 tagline="Templafy"
                 headline="Website Specialist"
