@@ -79,6 +79,10 @@ export default function Bio() {
   //State for current slide for mobile
   const [currentSlideMobile, setCurrentSlideMobile] = useState(0);
 
+  useEffect(() => {
+    console.log("Fire currentSlideMobile", currentSlideMobile);
+  }, [currentSlideMobile]);
+
   //Swipe functionality for mobile
   function updateActiveSlide() {
     const slides = document.querySelectorAll(".slide-mobile");
@@ -88,22 +92,21 @@ export default function Bio() {
     const containerWidth = container.clientWidth;
     const scrollLeft = container.scrollLeft;
     const slideWidth = containerWidth;
-    console.log("scrollLeft", scrollLeft);
+    //console.log("scrollLeft", scrollLeft);
 
     // Determine the index of the currently visible slide
     const currentIndex = Math.floor(scrollLeft / slideWidth);
+    console.log("currentIndex", currentIndex);
 
     //Set current slide for mobile rendering of circles
     setCurrentSlideMobile(currentIndex);
+    //console.log("currentIndexHook", currentIndex);
 
     // Remove slide-active class from all slides
     slides.forEach((slide) => slide.classList.remove("slide-active"));
 
     // Add slide-active class to the currently visible slide
     slides[currentIndex].classList.add("slide-active");
-
-    //container.scrollTo({ left: currentIndex * slideWidth, behavior: "smooth" });
-    //container.scrollTo({ left: 600, behavior: "smooth" });
 
     //write a function that color all circles up to the current slide
     const circlesToFill = document.getElementsByClassName("ci" + currentIndex);
