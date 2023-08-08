@@ -91,7 +91,7 @@ export default function Bio() {
     console.log("scrollLeft", scrollLeft);
 
     // Determine the index of the currently visible slide
-    const currentIndex = Math.floor(scrollLeft / slideWidth);
+    const currentIndex = Math.round(scrollLeft / slideWidth);
 
     //Set current slide for mobile rendering of circles
     setCurrentSlideMobile(currentIndex);
@@ -182,7 +182,7 @@ export default function Bio() {
                 {currentSlideMobile === 0 ? (<span className="arrow arrow-left hide-default">❮</span>) : (<span className="arrow arrow-left">❮</span>)}
                 <center>
                   <div>
-                    <p className="tagline">Not your average developer</p>
+                    <p className="tagline">Not your averag developer</p>
                     <div className="paragraph slidecontainer-mobile" onScroll={updateActiveSlide} /*textslide*/>
                       {slides.map((slide, index) => (
                         <div className="slide-mobile" key={index}>
