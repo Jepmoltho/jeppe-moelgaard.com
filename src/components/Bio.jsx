@@ -1,7 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect, useRef } from "react";
 import "../App.css";
-import useScrollHook from "../hooks/useScrollObserver";
+//import useScrollHook from "../hooks/useScrollObserver";
+import useScrollObserverLessSensitive from "../hooks/useScrollObserverLessSensitive";
 
 export default function Bio() {
   const slides = [
@@ -24,19 +25,33 @@ export default function Bio() {
 
   //Ref for animation container to trigger animation when in viewport
   const animationContainerRef = useRef();
-  const isVisible = useScrollHook(animationContainerRef);
+  const isVisible = useScrollObserverLessSensitive(animationContainerRef);
+  //const isVisible = useScrollHook(animationContainerRef);
 
   const mobileBreakpoint = 768;
   const isDesktop = window.innerWidth > mobileBreakpoint;
+
+  /*
+  useEffect(() => {
+    document
+      .getElementsByClassName("animation-container")[0]
+      .classList.add("fade-in");
+    document
+      .getElementsByClassName("animation-container")[0]
+      .classList.remove("hide-default");
+  }, [isVisible]);
+  */
 
   useEffect(() => {
     //prettier-ignore
     if (isVisible) {
       //Add fade in to circle animation upon load
+      
       document.getElementsByClassName("animation-container")[0].classList.add("fade-in");
       document.getElementsByClassName("animation-container")[0].classList.remove("hide-default");
       
       //Collect circles to fill and clean
+      if (isDesktop === true) {
       const circlesToFill = document.getElementsByClassName("ci" + currentSlide);
       const circlesToClean = document.getElementsByClassName("ci" + prevSlideIndex);
 
@@ -58,7 +73,8 @@ export default function Bio() {
         });
       }
     }
-  }, [currentSlide, prevSlideIndex, isVisible]);
+    }
+  }, [currentSlide, prevSlideIndex, isVisible, isDesktop]);
 
   //State for current slide for mobile
   const [currentSlideMobile, setCurrentSlideMobile] = useState(0);
@@ -104,6 +120,7 @@ export default function Bio() {
     );
   }
 
+  /*
   function updateOneSlide() {
     const container = document.querySelector(".paragraph");
     const scrollDistance = 10000000; // Adjust this value to control scroll speed
@@ -112,6 +129,7 @@ export default function Bio() {
       behavior: "smooth",
     });
   }
+  */
 
   return (
     <header className="bio">
@@ -161,7 +179,7 @@ export default function Bio() {
               <div /* onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)} onTouchEnd={(e) => handleTouchEnd(e)}*/
                 className="d-flex align-items-center justify-content-center h-100 bio-text"
               >
-                {currentSlideMobile === 0 ? ("") : (<span className="arrow arrow-left">❮</span>)}
+                {currentSlideMobile === 0 ? (<span className="arrow arrow-left hide-default">❮</span>) : (<span className="arrow arrow-left">❮</span>)}
                 <center>
                   <div>
                     <p className="tagline">Not your average developer</p>
@@ -175,7 +193,7 @@ export default function Bio() {
                     </div>
                   </div>
                 </center>
-                {currentSlideMobile === slides.length - 1 ? ("") : (<span className="arrow arrow-right">❯</span>)}
+                {currentSlideMobile === slides.length - 1 ? (<span className="arrow arrow-right hide-default">❯</span>) : (<span className="arrow arrow-right">❯</span>)}
               </div>
             )}
           </div>

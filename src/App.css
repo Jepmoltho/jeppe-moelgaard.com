@@ -231,6 +231,7 @@
   scroll-snap-align: start; /* Snap each slide to the start of the container */
   /*white-space: nowrap;*/ /* Prevent text from wrapping to next line */
   padding: 10px; /* Add optional padding between slides */
+  scroll-snap-stop: always;
 }
 
 @keyframes fadeIn {
@@ -314,6 +315,7 @@
 
 .c1 {
   margin-top: 0 !important;
+  background-color: #4ca1af;
 }
 
 .c2 {
