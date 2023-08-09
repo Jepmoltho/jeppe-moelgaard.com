@@ -96,7 +96,11 @@ const Tabs = () => {
                 ))}
                 //pass down the data from the techstack json file to the logos prop
                 logos={pathsTamigo.map((logo) => (
-                  <TechLogo logo={logo} handleImageClick={handleImageClick} />
+                  <TechLogo
+                    key={logo.id}
+                    logo={logo}
+                    handleImageClick={handleImageClick}
+                  />
                 ))}
               />
               <Project
@@ -121,7 +125,11 @@ const Tabs = () => {
                   </p>
                 ))}
                 logos={pathsSogS.map((logo) => (
-                  <TechLogo logo={logo} handleImageClick={handleImageClick} />
+                  <TechLogo
+                    key={logo.id}
+                    logo={logo}
+                    handleImageClick={handleImageClick}
+                  />
                 ))}
               />
               <div className="scrollspacetall"></div>
@@ -147,7 +155,11 @@ const Tabs = () => {
                   </p>
                 ))}
                 logos={pathsOwnSite.map((logo) => (
-                  <TechLogo logo={logo} handleImageClick={handleImageClick} />
+                  <TechLogo
+                    key={logo.id}
+                    logo={logo}
+                    handleImageClick={handleImageClick}
+                  />
                 ))}
               />
               <Project
@@ -171,7 +183,11 @@ const Tabs = () => {
                   </p>
                 ))}
                 logos={pathsTemplafy.map((logo) => (
-                  <TechLogo logo={logo} handleImageClick={handleImageClick} />
+                  <TechLogo
+                    key={logo.id}
+                    logo={logo}
+                    handleImageClick={handleImageClick}
+                  />
                 ))}
               />
               <Project
@@ -196,7 +212,11 @@ const Tabs = () => {
                   </p>
                 ))}
                 logos={pathsSilkeborgFadoel.map((logo) => (
-                  <TechLogo logo={logo} handleImageClick={handleImageClick} />
+                  <TechLogo
+                    key={logo.id}
+                    logo={logo}
+                    handleImageClick={handleImageClick}
+                  />
                 ))}
               />
             </div>
@@ -233,12 +253,6 @@ const Tabs = () => {
                   </ul>
                 </center>
               </div>
-              {/*
-              <JournalismProject
-                headline={"Worlds biggest wind turbine"}
-                image={vindturbine}
-              />
-            */}
             </div>
           )}
         </div>
