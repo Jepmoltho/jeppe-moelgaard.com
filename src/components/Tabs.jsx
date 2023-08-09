@@ -77,10 +77,11 @@ const Tabs = () => {
         <div className="content-container">
           {activeTab === "software" && (
             <div className="content">
+              <div className="scrollspacer"></div>
               <Project
                 tagline="tamigo"
                 headline="Frontend Developer"
-                description="I develop and maintain tamigo's website in the Umbraco framework. I developed multiple reusable components & landing pages using HTML, CSS & JavaScript and optimize design for desktop/mobile/tablet using media queries & Bootstrap."
+                description="I developed reusable components & landing pages using HTML, CSS & JavaScript in the Umbraco framework and optimized design for all screen types."
                 image={tamigo}
                 projectnumber={0}
                 animationId={1}
@@ -103,6 +104,7 @@ const Tabs = () => {
                   />
                 ))}
               />
+              {/*<div className="scrollspacer"></div>*/}
               <Project
                 tagline="Staun and Stender"
                 headline="Developer and IT Management Consultant"
@@ -132,7 +134,7 @@ const Tabs = () => {
                   />
                 ))}
               />
-              <div className="scrollspacetall"></div>
+              {/*<div className="scrollspacetall"></div>*/}
               <Project
                 tagline="www.jeppemølgaard.com"
                 headline="Web Developer"

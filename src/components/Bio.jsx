@@ -146,7 +146,7 @@ export default function Bio() {
                 {currentSlideMobile === 0 ? (<span className="arrow arrow-left hide-default">❮</span>) : (<span className="arrow arrow-left">❮</span>)}
                 <center>
                   <div>
-                    <p className="tagline">Not your averag developer</p>
+                    <p className="tagline">Not your average developer</p>
                     <div className="slide-container slidecontainer-mobile" onScroll={updateActiveSlide} >
                       {slides.map((slide, index) => (
                         <div className="slide-mobile" key={index}>
