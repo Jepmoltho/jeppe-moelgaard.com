@@ -9,3 +9,17 @@ Implement darkmode like this guy: https://www.oakharborwebdesigns.com/
 Make background like this guy: https://www.reddit.com/r/webdev/comments/15cxz92/i_redesigned_my_mini_portfolio_twice_which/
 
 Make own portfolio sita a project component to display react and node.js experience
+
+Maybe apply height 100 vh to a projet to center it to every screene
+
+Refactor components
+
+Create data file
+
+Maybe fade scroll on each side so that you can see its scrollable
+
+Implement helper graphics upon load. Header, scroll down. Bio, scroll sideways.
+
+Bio, maybe implement that you can also press arrows to scroll.
+
+Can you: Start page on light mode, and make a graphic that toggles to dark mode?

@@ -88,7 +88,7 @@ export default function Bio() {
     const containerWidth = container.clientWidth;
     const scrollLeft = container.scrollLeft;
     const slideWidth = containerWidth;
-    console.log("scrollLeft", scrollLeft);
+    //console.log("scrollLeft", scrollLeft);
 
     // Determine the index of the currently visible slide
     const currentIndex = Math.round(scrollLeft / slideWidth);
