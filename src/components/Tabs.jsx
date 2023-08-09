@@ -1,276 +1,41 @@
 import React, { useState } from "react";
 import Project from "./Project";
+import TechLogo from "./Techlogo";
 import tamigo from "../media/tamigo.png";
 import sogs from "../media/staunandstender-v2.png";
-import js from "../media/JS.png";
-import html from "../media/HTML.png";
-import net from "../media/net-v2.png";
-import bootstrap from "../media/bootstrap-v3.png";
-import csharp from "../media/csharp-v2.png";
-import css from "../media/CSS-v3.png";
-import github from "../media/github-v2.png";
-import umbraco from "../media/umbraco-v2.png";
-import sql from "../media/SQL-v3.png";
-import ssms from "../media/SSMS-v5.png";
-import wordpress from "../media/WP-v2.png";
 import silkeborgfadoel2 from "../media/SF logo.png";
 import templafy from "../media/templafy.png";
 import ownlogo from "../media/own-logo-v2.png";
-import react from "../media/react-v2.png";
-import node from "../media/node-v2.png";
 import UnderConstruction from "../media/Under_construction_animated.gif";
+import {
+  pathsTamigo,
+  pathsSogS,
+  pathsOwnSite,
+  pathsSilkeborgFadoel,
+  pathsTemplafy,
+} from "../data/techstack.jsx";
+import {
+  linksTamigo,
+  linksSogS,
+  linksTemplafy,
+  linksSilkeborgFadoel,
+  linksOwnSite,
+} from "../data/links.jsx";
+import { tempLinksJournalism } from "../data/journalism.jsx";
 
 const Tabs = () => {
+  //Tab switch logic
   const [activeTab, setActiveTab] = useState("software");
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
 
-  //create a constant coaining all the media imports
-  const pathsTamigo = [
-    {
-      id: 0,
-      path: js,
-      name: "JavaScript",
-      parent: "tamigo",
-      displayname: "JavaScript",
-    },
-    { id: 1, path: html, name: "HTML", parent: "tamigo", displayname: "HTML" },
-    { id: 2, path: css, name: "CSS", parent: "tamigo", displayname: "CSS" },
-    {
-      id: 3,
-      path: bootstrap,
-      name: "Bootstrap",
-      parent: "tamigo",
-      displayname: "Bootstrap",
-    },
-    {
-      id: 4,
-      path: umbraco,
-      name: "Umbraco",
-      parent: "tamigo",
-      displayname: "Umbraco",
-    },
-    { id: 5, path: net, name: "NET", parent: "tamigo", displayname: ".NET" },
-    { id: 6, path: csharp, name: "C", parent: "tamigo", displayname: "C#" },
-    {
-      id: 7,
-      path: github,
-      name: "GitHub",
-      parent: "tamigo",
-      displayname: "GitHub",
-    },
-  ];
-
-  const linksTamigo = [
-    { id: 0, link: "https://tamigo.com/pricing", name: "Pricing" },
-    {
-      id: 1,
-      link: "https://tamigo.com/industries/supermarkets",
-      name: "Industries",
-    },
-    { id: 2, link: "https://tamigo.com/", name: "Front page" },
-    { id: 3, link: "https://tamigo.com/free-demo", name: "Demo" },
-    { id: 4, link: "https://tamigo.de/blog", name: "Blog" },
-    {
-      id: 5,
-      link: "https://www.tamigo.de/blog/so-spart-das-hotel-des-nordens-in-haupt-und-nebensaison-zeit-und-kosten/",
-      name: "Blog post",
-    },
-  ];
-
-  const pathsSogS = [
-    {
-      id: 0,
-      path: js,
-      name: "JavaScript",
-      parent: "sogs",
-      displayname: "JavaScript",
-    },
-    { id: 1, path: sql, name: "SQL", parent: "sogs", displayname: "SQL" },
-    {
-      id: 2,
-      path: ssms,
-      name: "MicrosoftSequelServerManagementStudio",
-      parent: "sogs",
-      displayname: "Microsoft Sequel Server Management Studio",
-    },
-    { id: 3, path: html, name: "HTML", parent: "sogs", displayname: "HTML" },
-    { id: 4, path: css, name: "CSS", parent: "sogs", displayname: "CSS" },
-    {
-      id: 5,
-      path: github,
-      name: "GitHub",
-      parent: "sogs",
-      displayname: "GitHub",
-    },
-  ];
-
-  const linksSogS = [
-    {
-      id: 0,
-      link: "https://github.com/sorenstaun/mood-jsextend",
-      name: "GitHub",
-    },
-  ];
-
-  const pathsTemplafy = [
-    {
-      id: 0,
-      path: wordpress,
-      name: "WordPress",
-      parent: "templafy",
-      displayname: "WordPress",
-    },
-    {
-      id: 1,
-      path: html,
-      name: "HTML",
-      parent: "templafy",
-      displayname: "HTML",
-    },
-    { id: 2, path: css, name: "CSS", parent: "templafy", displayname: "CSS" },
-  ];
-
-  const linksTemplafy = [
-    {
-      id: 0,
-      link: "https://www.templafy.com/",
-      name: "Templafy",
-    },
-  ];
-
-  const pathsSilkeborgFadoel = [
-    {
-      id: 0,
-      path: wordpress,
-      name: "WordPress",
-      parent: "silkeborgfadoel",
-      displayname: "WordPress",
-    },
-    {
-      id: 1,
-      path: css,
-      name: "CSS",
-      parent: "silkeborgfadoel",
-      displayname: "CSS",
-    },
-    {
-      id: 2,
-      path: html,
-      name: "HTML",
-      parent: "silkeborgfadoel",
-      displayname: "HTML",
-    },
-    {
-      id: 3,
-      path: js,
-      name: "JavaScript",
-      parent: "silkeborgfadoel",
-      displayname: "JavaScript",
-    },
-    {
-      id: 4,
-      path: github,
-      name: "GitHub",
-      parent: "silkeborgfadoel",
-      displayname: "GitHub",
-    },
-  ];
-
-  const linksSilkeborgFadoel = [
-    {
-      id: 0,
-      link: "https://www.silkeborgfadoel.dk/",
-      name: "Silkeborg Fadøl",
-    },
-    {
-      id: 1,
-      link: "https://github.com/Jepmoltho/Silkeborgfadoel.dk-Custom-Code-for-WordPress",
-      name: "GitHub",
-    },
-  ];
-
-  const pathsOwnSite = [
-    {
-      id: 0,
-      path: react,
-      name: "React",
-      parent: "ownsite",
-      displayname: "React",
-    },
-    {
-      id: 1,
-      path: js,
-      name: "JavaScript",
-      parent: "ownsite",
-      displayname: "JavaScript",
-    },
-    {
-      id: 2,
-      path: node,
-      name: "Nodejs",
-      parent: "ownsite",
-      displayname: "Node.js",
-    },
-    { id: 3, path: html, name: "HTML", parent: "ownsite", displayname: "HTML" },
-    { id: 4, path: css, name: "CSS", parent: "ownsite", displayname: "CSS" },
-    {
-      id: 5,
-      path: bootstrap,
-      name: "Bootstrap",
-      parent: "ownsite",
-      displayname: "Bootstrap",
-    },
-    {
-      id: 6,
-      path: github,
-      name: "GitHub",
-      parent: "ownsite",
-      displayname: "GitHub",
-    },
-  ];
-
-  const linksOwnSite = [
-    {
-      id: 0,
-      link: "https://github.com/Jepmoltho/jeppe-moelgaard.com",
-      name: "GitHub",
-    },
-  ];
-
-  const tempLinksJournalism = [
-    {
-      id: 0,
-      link: "https://www.slush.org/article/game-developers-create-real-economies-with-blockchain-and-yes-you-can-make-money-from-it/",
-      name: "Soaked",
-      title: "Game developers create real economies with blockchain",
-    },
-    {
-      id: 1,
-      link: "http://emagstudio.win.dtu.dk/e-books/Dynamo/DYNAMO_51/page_9.html",
-      name: "BTC",
-      title: "New technology makes Bitcoin a real currency",
-    },
-    {
-      id: 2,
-      link: "http://emagstudio.win.dtu.dk/e-books/Dynamo/DYNAMO_54/page_14.html",
-      name: "Cyber1",
-      title: "The cyber threat can be turned to our advantage",
-    },
-    {
-      id: 3,
-      link: "http://emagstudio.win.dtu.dk/e-books/Dynamo/DYNAMO_54/page_16.html",
-      name: "Cyber2",
-      title: "Worlds biggest wind turbine",
-    },
-  ];
-
+  //Logo flip logic - passed to TechLogo component
   const handleImageClick = (name, parent) => {
-    const flipper = document.querySelector(`.flipper${name}${parent}`);
-    const front = document.querySelector(`.front${name}${parent}`);
-    const back = document.querySelector(`.back${name}${parent}`);
+    const flipper = document.querySelector(`.flipper-${name}-${parent}`);
+    const front = document.querySelector(`.front-${name}-${parent}`);
+    const back = document.querySelector(`.back-${name}-${parent}`);
 
     if (flipper.classList.contains("flipped")) {
       // If the flipper is already flipped, flip it back to the front side
@@ -329,34 +94,13 @@ const Tabs = () => {
                     {link.id === 5 ? " " : ","}{" "}
                   </p>
                 ))}
-                logos={pathsTamigo.map((humlebuks) => (
-                  <div
-                    className="flip-container"
-                    onClick={() =>
-                      handleImageClick(humlebuks.name, humlebuks.parent)
-                    }
-                  >
-                    <div
-                      class={`flipper flipper${humlebuks.name}${humlebuks.parent}`}
-                    >
-                      <div
-                        class={`front front${humlebuks.name}${humlebuks.parent}`}
-                      >
-                        <img
-                          src={humlebuks.path}
-                          alt="logo"
-                          key={humlebuks.key}
-                          className="techlogo"
-                          title={humlebuks.name}
-                        />
-                      </div>
-                      <div
-                        class={`back back${humlebuks.name}${humlebuks.parent}`}
-                      >
-                        <p className="flipped-text">{humlebuks.displayname}</p>
-                      </div>
-                    </div>
-                  </div>
+                //pass down the data from the techstack json file to the logos prop
+                logos={pathsTamigo.map((logo) => (
+                  <TechLogo
+                    key={logo.id}
+                    logo={logo}
+                    handleImageClick={handleImageClick}
+                  />
                 ))}
               />
               <Project
@@ -380,34 +124,12 @@ const Tabs = () => {
                     {link.id === 0 ? " " : ","}{" "}
                   </p>
                 ))}
-                logos={pathsSogS.map((humlebuks) => (
-                  <div
-                    className="flip-container"
-                    onClick={() =>
-                      handleImageClick(humlebuks.name, humlebuks.parent)
-                    }
-                  >
-                    <div
-                      class={`flipper flipper${humlebuks.name}${humlebuks.parent}`}
-                    >
-                      <div
-                        class={`front front${humlebuks.name}${humlebuks.parent}`}
-                      >
-                        <img
-                          src={humlebuks.path}
-                          alt="logo"
-                          key={humlebuks.key}
-                          className="techlogo"
-                          title={humlebuks.name}
-                        />
-                      </div>
-                      <div
-                        class={`back back${humlebuks.name}${humlebuks.parent}`}
-                      >
-                        <p className="flipped-text">{humlebuks.displayname}</p>
-                      </div>
-                    </div>
-                  </div>
+                logos={pathsSogS.map((logo) => (
+                  <TechLogo
+                    key={logo.id}
+                    logo={logo}
+                    handleImageClick={handleImageClick}
+                  />
                 ))}
               />
               <div className="scrollspacetall"></div>
@@ -432,34 +154,12 @@ const Tabs = () => {
                     {link.id === 0 ? " " : ", "}
                   </p>
                 ))}
-                logos={pathsOwnSite.map((humlebuks) => (
-                  <div
-                    className="flip-container"
-                    onClick={() =>
-                      handleImageClick(humlebuks.name, humlebuks.parent)
-                    }
-                  >
-                    <div
-                      class={`flipper flipper${humlebuks.name}${humlebuks.parent}`}
-                    >
-                      <div
-                        class={`front front${humlebuks.name}${humlebuks.parent}`}
-                      >
-                        <img
-                          src={humlebuks.path}
-                          alt="logo"
-                          key={humlebuks.key}
-                          className="techlogo"
-                          title={humlebuks.name}
-                        />
-                      </div>
-                      <div
-                        class={`back back${humlebuks.name}${humlebuks.parent}`}
-                      >
-                        <p className="flipped-text">{humlebuks.displayname}</p>
-                      </div>
-                    </div>
-                  </div>
+                logos={pathsOwnSite.map((logo) => (
+                  <TechLogo
+                    key={logo.id}
+                    logo={logo}
+                    handleImageClick={handleImageClick}
+                  />
                 ))}
               />
               <Project
@@ -482,34 +182,12 @@ const Tabs = () => {
                     {link.id === 0 ? " " : ","}{" "}
                   </p>
                 ))}
-                logos={pathsTemplafy.map((humlebuks) => (
-                  <div
-                    className="flip-container"
-                    onClick={() =>
-                      handleImageClick(humlebuks.name, humlebuks.parent)
-                    }
-                  >
-                    <div
-                      class={`flipper flipper${humlebuks.name}${humlebuks.parent}`}
-                    >
-                      <div
-                        class={`front front${humlebuks.name}${humlebuks.parent}`}
-                      >
-                        <img
-                          src={humlebuks.path}
-                          alt="logo"
-                          key={humlebuks.key}
-                          className="techlogo"
-                          title={humlebuks.name}
-                        />
-                      </div>
-                      <div
-                        class={`back back${humlebuks.name}${humlebuks.parent}`}
-                      >
-                        <p className="flipped-text">{humlebuks.displayname}</p>
-                      </div>
-                    </div>
-                  </div>
+                logos={pathsTemplafy.map((logo) => (
+                  <TechLogo
+                    key={logo.id}
+                    logo={logo}
+                    handleImageClick={handleImageClick}
+                  />
                 ))}
               />
               <Project
@@ -533,34 +211,12 @@ const Tabs = () => {
                     {link.id === 1 ? " " : ", "}
                   </p>
                 ))}
-                logos={pathsSilkeborgFadoel.map((humlebuks) => (
-                  <div
-                    className="flip-container"
-                    onClick={() =>
-                      handleImageClick(humlebuks.name, humlebuks.parent)
-                    }
-                  >
-                    <div
-                      class={`flipper flipper${humlebuks.name}${humlebuks.parent}`}
-                    >
-                      <div
-                        class={`front front${humlebuks.name}${humlebuks.parent}`}
-                      >
-                        <img
-                          src={humlebuks.path}
-                          alt="logo"
-                          key={humlebuks.key}
-                          className="techlogo"
-                          title={humlebuks.name}
-                        />
-                      </div>
-                      <div
-                        class={`back back${humlebuks.name}${humlebuks.parent}`}
-                      >
-                        <p className="flipped-text">{humlebuks.displayname}</p>
-                      </div>
-                    </div>
-                  </div>
+                logos={pathsSilkeborgFadoel.map((logo) => (
+                  <TechLogo
+                    key={logo.id}
+                    logo={logo}
+                    handleImageClick={handleImageClick}
+                  />
                 ))}
               />
             </div>
@@ -597,12 +253,6 @@ const Tabs = () => {
                   </ul>
                 </center>
               </div>
-              {/*
-              <JournalismProject
-                headline={"Worlds biggest wind turbine"}
-                image={vindturbine}
-              />
-            */}
             </div>
           )}
         </div>
