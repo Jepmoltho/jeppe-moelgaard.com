@@ -145,3 +145,182 @@
 
   }, [currentSlide]);  
   */
+
+/*
+.project-image-parent-container .squareimg,
+.project-image-parent-container .ownlogo,
+.project-image-parent-container .silkeborgfadoellogo {
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0px;
+  }
+}
+*/
+
+/*
+.stophere {
+  @media screen and (max-width: 768px) {
+    scroll-snap-stop: always;
+    scroll-snap-align: start;
+    height: 0px !important;
+  }
+}
+*/
+
+/*
+If you want to apply some rules that doesnt count hovering the active tab, you can use this:
+.tab:not(.active):not(:hover) {
+  background-color: #15395a;
+  color: aliceblue;
+}
+*/
+
+/*
+.sogslogo,
+.ownlogo,
+.silkeborgfadoellogo {
+  padding: 120px;
+}
+@media screen and (max-width: 1200px) {
+  .sogslogo,
+  .ownlogo,
+  .silkeborgfadoellogo {
+    padding: 80px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .sogslogo,
+  .ownlogo,
+  .silkeborgfadoellogo {
+    padding: 70px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .sogslogo,
+  .ownlogo,
+  .silkeborgfadoellogo {
+    padding: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sogslogo,
+  .ownlogo,
+  .silkeborgfadoellogo {
+    padding: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .sogslogo,
+  .ownlogo,
+  .silkeborgfadoellogo {
+    padding: 40px;
+  }
+}
+*/
+
+/*
+.silkeborgfadoellogo {
+  padding: 60px;
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+    padding-bottom: 20px;
+  }
+}
+*/
+
+/*
+.ownlogo {
+  padding: 6rem;
+  @media screen and (max-width: 768px) {
+
+  }
+}
+*/
+
+/*
+.column-circle {
+  display: flex;
+  justify-content: left;
+  height: 100%;
+  align-items: center;
+}
+*/
+
+/*
+.header-container {
+  height: 300px; 
+}
+*/
+
+/*
+.row {
+  height: 100%;
+}
+*/
+
+/*
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+*/
+/*
+.leftalligned {
+  text-align: left;
+}
+*/
+/* Bio */
+/*
+.bio-container {
+  height: 400px;
+}
+*/
+
+/*
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/
+
+/*
+.scrollspacetall {
+  @media screen and (max-width: 768px) {
+    background-color: #ccd7e1;
+    height: 65px !important;
+    scroll-snap-stop: always;
+    scroll-snap-align: start;
+  }
+}
+*/
