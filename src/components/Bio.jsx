@@ -130,7 +130,9 @@ export default function Bio() {
               // Desktop
               <div className="d-flex align-items-center justify-content-center h-100 bio-text">
                 <div>
-                  <p className="tagline">Not your average developer</p>
+                  <p className="tagline">
+                    From Journalist to Software Developer
+                  </p>
                   <div className="slide-container textslide slide-container-desktop">
                     {slides[currentSlide]}
                   </div>
@@ -146,7 +148,7 @@ export default function Bio() {
                 {currentSlideMobile === 0 ? (<span className="arrow arrow-left hide-default">❮</span>) : (<span className="arrow arrow-left">❮</span>)}
                 <center>
                   <div>
-                    <p className="tagline">Not your average developer</p>
+                    <p className="tagline">From Journalist to Software Developer</p>
                     <div className="slide-container slidecontainer-mobile" onScroll={updateActiveSlide} >
                       {slides.map((slide, index) => (
                         <div className="slide-mobile" key={index}>
