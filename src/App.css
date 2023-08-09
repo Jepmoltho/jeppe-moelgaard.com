@@ -69,6 +69,7 @@
   display: flex;
   @media screen and (max-width: 705px) {
     padding-top: 60px;
+    padding-bottom: 70px;
     padding-left: 2rem;
     padding-right: 2rem;
     height: 100vh;
@@ -133,7 +134,7 @@
   align-items: center;
   @media screen and (max-width: 705px) {
     padding-top: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 70px;
     padding-left: 10px;
     padding-right: 10px;
     height: 100vh;
@@ -444,15 +445,34 @@
 .project {
   padding-top: 5rem !important;
   padding-bottom: 6rem !important;
-  padding: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  /*padding: 40px;*/
   @media screen and (max-width: 768px) {
+    /*
     padding-top: 3rem !important;
     padding-bottom: 4rem !important;
+    */
+    padding-top: 0px !important;
+    padding-bottom: 2rem !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
     padding-right: 20px !important;
     padding-left: 20px !important;
   }
 }
 
+.scrollspacer {
+  height: 0px;
+  @media screen and (max-width: 768px) {
+    height: 35px;
+  }
+}
+/*
 .scrollspacetall {
   @media screen and (max-width: 768px) {
     background-color: #ccd7e1;
@@ -461,15 +481,18 @@
     scroll-snap-align: start;
   }
 }
+*/
 
 .project-0,
 .project-2 {
   background-color: #d4dce2 !important;
-  padding-top: 6rem !important;
+  /*padding-top: 6rem !important;*/
   @media screen and (max-width: 768px) {
     /*margin-bottom: 0rem;*/
+    /*
     padding-top: 3rem !important;
     padding-bottom: 4rem;
+    */
   }
 }
 
@@ -481,7 +504,9 @@
 /* Fix this */
 .project-1 {
   @media screen and (max-width: 768px) {
+    /*
     padding-bottom: 2rem !important;
+    */
   }
 }
 
@@ -544,6 +569,9 @@
 .flex-row-reverse .project-image-parent-container {
   padding-left: 0px !important;
   padding-right: 10px !important;
+  @media screen and (max-width: 768px) {
+    padding-right: 0px !important;
+  }
 }
 
 .techstack {
@@ -555,6 +583,10 @@
   @media screen and (max-width: 445px) {
     flex-direction: column;
   }
+}
+
+.techstack-container {
+  width: 100%;
 }
 
 .tech-logo-container {
