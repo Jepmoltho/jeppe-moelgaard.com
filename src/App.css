@@ -473,47 +473,12 @@
 .project-0,
 .project-2 {
   background-color: #d4dce2 !important;
-  /*
-  @media screen and (max-width: 768px) {
-  }
-  */
 }
 
 .project-1,
 .project-3 {
   background-color: #ccd7e1 !important;
 }
-
-/* Fix this */
-/*
-.project-1 {
-  @media screen and (max-width: 768px) {
-    
-    //padding-bottom: 2rem !important;
-    
-  }
-}
-*/
-
-/* Fix this */
-/*
-.project-3 {
-  border-radius: 4px;
-}
-*/
-
-/* Fix this */
-/*
-.project-0,
-.project-1,
-.project-3,
-.project-4 {
-  @media screen and (max-width: 768px) {
-    scroll-snap-stop: always;
-    scroll-snap-align: start;
-  }
-}
-*/
 
 .project-container {
   padding-bottom: 45px;

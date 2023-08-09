@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/jeppe-moelgaard.com/static/css/main.708230da.css",
+    "main.js": "/jeppe-moelgaard.com/static/js/main.4f6c0cbf.js",
+    "static/js/787.c4bf6669.chunk.js": "/jeppe-moelgaard.com/static/js/787.c4bf6669.chunk.js",
+    "static/media/profile-picture-v2.png": "/jeppe-moelgaard.com/static/media/profile-picture-v2.9eebb0ec66483bbbbe40.png",
+    "static/media/SF logo.png": "/jeppe-moelgaard.com/static/media/SF logo.f56fb3416383a08920bc.png",
+    "static/media/staunandstender-v2.png": "/jeppe-moelgaard.com/static/media/staunandstender-v2.0c36cd182474626a13e4.png",
+    "static/media/SSMS-v5.png": "/jeppe-moelgaard.com/static/media/SSMS-v5.aa9072a3658a46b5215e.png",
+    "static/media/WP-v2.png": "/jeppe-moelgaard.com/static/media/WP-v2.d04622abeb54b3ee0ca2.png",
+    "static/media/templafy.png": "/jeppe-moelgaard.com/static/media/templafy.f45508a0b99b8d7ffb0e.png",
+    "static/media/own-logo-v2.png": "/jeppe-moelgaard.com/static/media/own-logo-v2.a24c4c81ceec08fbf113.png",
+    "static/media/react-v2.png": "/jeppe-moelgaard.com/static/media/react-v2.a70c2b470b710a024a5d.png",
+    "static/media/tamigo.png": "/jeppe-moelgaard.com/static/media/tamigo.8d2fccaa0e6ab102d430.png",
+    "static/media/csharp-v2.png": "/jeppe-moelgaard.com/static/media/csharp-v2.5a45dfbe7dbab84acddf.png",
+    "static/media/node-v2.png": "/jeppe-moelgaard.com/static/media/node-v2.58262350c89f93dd6450.png",
+    "static/media/SQL-v3.png": "/jeppe-moelgaard.com/static/media/SQL-v3.2081bfb559d8afe3bfc1.png",
+    "static/media/bootstrap-v3.png": "/jeppe-moelgaard.com/static/media/bootstrap-v3.263a68692de842d61df1.png",
+    "static/media/github-v2.png": "/jeppe-moelgaard.com/static/media/github-v2.e1dff6ff615380f7ae6f.png",
+    "static/media/HTML.png": "/jeppe-moelgaard.com/static/media/HTML.c8e4f4e0b55fcbe52700.png",
+    "static/media/JS.png": "/jeppe-moelgaard.com/static/media/JS.773faebb68b068db8910.png",
+    "static/media/CSS-v3.png": "/jeppe-moelgaard.com/static/media/CSS-v3.2165f49fb4c6643828bc.png",
+    "index.html": "/jeppe-moelgaard.com/index.html",
+    "main.708230da.css.map": "/jeppe-moelgaard.com/static/css/main.708230da.css.map",
+    "main.4f6c0cbf.js.map": "/jeppe-moelgaard.com/static/js/main.4f6c0cbf.js.map",
+    "787.c4bf6669.chunk.js.map": "/jeppe-moelgaard.com/static/js/787.c4bf6669.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.708230da.css",
+    "static/js/main.4f6c0cbf.js"
+  ]
+}
