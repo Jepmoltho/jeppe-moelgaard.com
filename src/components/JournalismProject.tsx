@@ -21,17 +21,6 @@ const JournalismProject: React.FC<JournalismProjectProps> = ({ headline, image }
          <span className="clockicon">&#128337;</span> 10/10/2020
         </p>
       </div>
-
-      {/*
-      <div className="container">
-        <div className="row">
-          <center>
-            <h2>{headline}</h2>
-          </center>
-          <img src={image} alt="" className="journalism-image"></img>
-        </div>
-      </div>
-      */}
     </div>
   );
 };
