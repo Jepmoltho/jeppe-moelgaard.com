@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Project from "./Project";
+import JournalismProject from "./JournalismProject.tsx";
 import TechLogo from "./Techlogo";
 import tamigo from "../media/tamigo.png";
 import sogs from "../media/staunandstender-v2.png";
 import silkeborgfadoel2 from "../media/SF logo.png";
 import templafy from "../media/templafy.png";
 import ownlogo from "../media/own-logo-v2.png";
-import UnderConstruction from "../media/Under_construction_animated.gif";
+//import UnderConstruction from "../media/Under_construction_animated.gif";
 import {
   pathsTamigo,
   pathsSogS,
@@ -22,6 +23,8 @@ import {
   linksOwnSite,
 } from "../data/links.jsx";
 import { tempLinksJournalism } from "../data/journalism.jsx";
+//import { tempLinksJournalism } from "../data/journalism.jsx";
+//import myImage from "../media/profile-picture-v2.png";
 
 const Tabs = () => {
   //Tab switch logic
@@ -224,8 +227,14 @@ const Tabs = () => {
             </div>
           )}
           {activeTab === "journalism" && (
+            <div className="journalism-content">
+              <JournalismProject
+                headline="Game Developers Create Real Economies with Blockchain"
+                image={tempLinksJournalism[0].image}
+              />
+            </div>
+            /*
             <div className="content">
-              {/* Content for Journalism tab */}
               <div className="construction-container">
                 <img
                   src={UnderConstruction}
@@ -256,6 +265,7 @@ const Tabs = () => {
                 </center>
               </div>
             </div>
+            */
           )}
         </div>
       </div>

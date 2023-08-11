@@ -1,9 +1,12 @@
+import slush from "../media/Journalism media/soaked.png";
+
 export const tempLinksJournalism = [
   {
     id: 0,
     link: "https://www.slush.org/article/game-developers-create-real-economies-with-blockchain-and-yes-you-can-make-money-from-it/",
     name: "Soaked",
     title: "Game developers create real economies with blockchain",
+    image: slush,
   },
   {
     id: 1,

@@ -649,6 +649,12 @@
 }
 
 /* Journalism projects */
+
+.journalism-content {
+  display: flex;
+}
+
+/*OLD*/
 .journalism-project {
   padding-top: 80px;
 }
