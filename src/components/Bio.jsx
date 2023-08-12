@@ -4,6 +4,7 @@ import "../App.css";
 //import useScrollHook from "../hooks/useScrollObserver";
 import useScrollObserverLessSensitive from "../hooks/useScrollObserverLessSensitive";
 import { slides } from "../data/biotext.jsx";
+import "../fonts.css";
 
 export default function Bio() {
   //State for current and previous slide on desktop and mobile
@@ -98,7 +99,7 @@ export default function Bio() {
   }
 
   return (
-    <header className="bio">
+    <header className="bio custom-font">
       <div className="container">
         <div className="row flex-column-reverse flex-md-row">
           <div className="col-md-5">

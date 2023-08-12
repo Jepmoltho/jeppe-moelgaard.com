@@ -11,6 +11,7 @@ import ssms from "../media/SSMS-v5.png";
 import wordpress from "../media/WP-v2.png";
 import react from "../media/react-v2.png";
 import node from "../media/node-v2.png";
+import typescript from "../media/Typescript.png";
 
 export const pathsTamigo = [
   {
@@ -122,29 +123,36 @@ export const pathsOwnSite = [
   },
   {
     id: 1,
+    path: typescript,
+    name: "TypeScript",
+    parent: "ownsite",
+    displayname: "TypeScript",
+  },
+  {
+    id: 2,
     path: js,
     name: "JavaScript",
     parent: "ownsite",
     displayname: "JavaScript",
   },
   {
-    id: 2,
+    id: 3,
     path: node,
     name: "Nodejs",
     parent: "ownsite",
     displayname: "Node.js",
   },
-  { id: 3, path: html, name: "HTML", parent: "ownsite", displayname: "HTML" },
-  { id: 4, path: css, name: "CSS", parent: "ownsite", displayname: "CSS" },
+  { id: 4, path: html, name: "HTML", parent: "ownsite", displayname: "HTML" },
+  { id: 5, path: css, name: "CSS", parent: "ownsite", displayname: "CSS" },
   {
-    id: 5,
+    id: 6,
     path: bootstrap,
     name: "Bootstrap",
     parent: "ownsite",
     displayname: "Bootstrap",
   },
   {
-    id: 6,
+    id: 7,
     path: github,
     name: "GitHub",
     parent: "ownsite",

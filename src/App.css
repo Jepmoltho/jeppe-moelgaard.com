@@ -13,6 +13,14 @@
   }
 }
 
+.custom-font {
+  font-family: "CustomFontName";
+}
+
+.custom-font-headline {
+  font-family: "HeadlineFontName";
+}
+
 @keyframes slideInFromBottom {
   0% {
     transform: translateY(30%);
@@ -361,7 +369,8 @@
 
 /* Component Headline */
 .componentheadline {
-  background-color: #15395a;
+  /*background-color: #15395a;*/
+  background-color: inherit;
   color: aliceblue;
   padding-top: 3rem;
   padding-left: 6rem;
@@ -381,7 +390,8 @@
 /* Tabs */
 .tabscomponent {
   background-color: #15395a;
-  background-image: linear-gradient(to bottom, #15395a, #0e273f);
+  background-image: linear-gradient(to bottom, #1c4f7e, #0a1d2e);
+  /*background-image: linear-gradient(to bottom, #15395a, #0e273f);*/
   padding-left: 6rem;
   padding-right: 6rem;
   padding-bottom: 6rem;
@@ -417,6 +427,11 @@
 .tabs-container {
   background-color: #d4dce2;
   border-radius: 4px;
+  /*box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
+  @media screen and (max-width: 705px) {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
 }
 
 .tab.active {
@@ -426,7 +441,8 @@
 }
 
 .tab:not(.active) {
-  background-color: #15395a;
+  background-color: #1c4f7e;
+  background-image: linear-gradient(to bottom, #1c4f7e, #163f63);
   color: aliceblue;
 }
 
@@ -470,7 +486,7 @@
 .scrollspacer {
   height: 0px;
   @media screen and (max-width: 768px) {
-    height: 35px;
+    height: 65px;
   }
 }
 
@@ -676,17 +692,30 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.journalism-image {
-  max-height: fit-content;
-  max-width: 100%;
+.journalism-img-container {
+  /*position: relative;*/
+  overflow: hidden;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  height: 135px;
+}
+
+.journalism-image {
+  width: 100%;
+  overflow: clip;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.journalism-card-link {
+  color: inherit;
+  text-decoration: none;
 }
 
 .card-headline {
   font-size: 20px;
   font-weight: 600;
-  padding: 10px 10px 10px 10px;
+  padding: 20px 10px 10px 10px;
 }
 
 .journalism-card-bottom-text-container {

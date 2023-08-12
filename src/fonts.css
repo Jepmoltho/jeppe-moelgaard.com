@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "CustomFontName";
+  src: url("/Users/jeppe/Documents/Repos/Public repos/jeppe-moelgaard.com/src/fonts/Bricolage_Grotesque/BricolageGrotesque.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HeadlineFontName";
+  src: url("/Users/jeppe/Documents/Repos/Public repos/jeppe-moelgaard.com/src/fonts/Fjalla_One/FjallaOneRegular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}

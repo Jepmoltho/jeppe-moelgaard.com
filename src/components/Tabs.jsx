@@ -22,10 +22,7 @@ import {
   linksSilkeborgFadoel,
   linksOwnSite,
 } from "../data/links.jsx";
-import { tempLinksJournalism } from "../data/journalism.jsx";
-//import "../tailwind.css";
-//import { tempLinksJournalism } from "../data/journalism.jsx";
-//import myImage from "../media/profile-picture-v2.png";
+import { journalism } from "../data/journalism.jsx";
 
 const Tabs = () => {
   //Tab switch logic
@@ -55,7 +52,7 @@ const Tabs = () => {
   };
 
   return (
-    <div className="tabscomponent">
+    <div className="tabscomponent custom-font">
       <div>
         <h2 className="componentheadline">Portfolio</h2>
       </div>
@@ -231,77 +228,17 @@ const Tabs = () => {
             <div className="journalism-content-container">
               <div className="spacer"></div>
               <div className="journalism-content">
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
+                {journalism.map((project) => (
+                  <JournalismProject
+                    key={project.id}
+                    headline={project.title}
+                    image={project.image}
+                    publisher={project.publisher}
+                    link={project.link}
+                  />
+                ))}
               </div>
             </div>
-            /*
-            <div className="content">
-              <div className="construction-container">
-                <img
-                  src={UnderConstruction}
-                  alt="Under construction"
-                  className="construction-image"
-                ></img>
-              </div>
-              <center>
-                <div className="constructions-text-container">
-                  <p className="construction-text">
-                    The aestetics of this page is still under development. In
-                    the meantime, you can check some of my journalism projects
-                    by clicking the links below:
-                  </p>
-                </div>
-              </center>
-              <div className="journalism-links-container">
-                <center>
-                  <ul className="linksul">
-                    {tempLinksJournalism.map((link) => (
-                      <div className="journalism-link-container" key={link.id}>
-                        <a href={link.link} target="__blank">
-                          <p>{link.title}</p>
-                        </a>
-                      </div>
-                    ))}
-                  </ul>
-                </center>
-              </div>
-            </div>
-            */
           )}
         </div>
       </div>
