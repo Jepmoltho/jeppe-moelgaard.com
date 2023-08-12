@@ -730,6 +730,11 @@
   font-size: 20px;
   font-weight: 600;
   padding: 20px 10px 10px 10px;
+  /*If this causes bug remove it*/
+  @media screen and (max-width: 768px) {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
 }
 
 .journalism-card-bottom-text-container {

@@ -6,6 +6,7 @@ interface JournalismProjectProps {
   image: string;
   publisher: string;
   link: string;
+  /*animationRef: any;*/
 }
 
 //prettier-ignore
@@ -13,7 +14,7 @@ const JournalismProject: React.FC<JournalismProjectProps> = ({ headline, image, 
   return (
     <a href={link} target="__blank" className="journalism-card-link">
 
-    <div className="journalism-card">
+    <div className="journalism-card" >
       <div className="journalism-img-container">
           <img src={image} alt="" className="journalism-image"></img>
       </div>

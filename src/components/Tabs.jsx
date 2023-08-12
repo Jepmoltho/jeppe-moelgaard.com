@@ -72,12 +72,14 @@ const Tabs = () => {
 
   //prettier-ignore
   useEffect(() => {
-    const bounceindex = Math.floor(Math.random() * pathsTamigo.length) % pathsTamigo.length;
     if (isVisibleTamigo && bounceHasClicked === false && hasBouncedOne === false) {
+      const bounceindex = Math.floor(Math.random() * pathsTamigo.length) % pathsTamigo.length;
+      document.getElementsByClassName("tab-journalism-headline")[0].style.pointerEvents = "none";
       setTimeout(() => {
         const elementToAnimate = document.getElementsByClassName("bounce-element-tamigo")[bounceindex];
         elementToAnimate.classList.add("bounce");
-      }, 2000);
+        document.getElementsByClassName("tab-journalism-headline")[0].style.pointerEvents = "auto";
+      }, 1000);
       setHasBouncedOne(true);
     }
   }, [isVisibleTamigo, bounceHasClicked, setBounceHasClicked, hasBouncedOne, setHasBouncedOne]);
@@ -89,7 +91,7 @@ const Tabs = () => {
       setTimeout(() => {
         const elementToAnimate = document.getElementsByClassName("bounce-element-sogs")[bounceindex];
         elementToAnimate.classList.add("bounce");
-      }, 2000);
+      }, 1000);
       setHasBouncedTwo(true);
     }
   }, [isVisibleSogS, bounceHasClicked, setBounceHasClicked, hasBouncedTwo, setHasBouncedTwo]);
@@ -101,10 +103,25 @@ const Tabs = () => {
       setTimeout(() => {
         const elementToAnimate = document.getElementsByClassName("bounce-element-ownsite")[bounceindex];
         elementToAnimate.classList.add("bounce");
-      }, 2000);
+      }, 1000);
       setHasBouncedThree(true);
     }
   }, [isVisibleOwnSite, bounceHasClicked, setBounceHasClicked, hasBouncedThree, setHasBouncedThree]);
+
+  /*
+  const JournalismProjectRef = useRef();
+  const isVisibleJournalismProject =
+    useScrollObserverLessSensitive(JournalismProjectRef);
+
+  useEffect(() => {
+    console.log("isVisibleJournalismProject", isVisibleJournalismProject);
+    if (JournalismProjectRef.current) {
+      const journalismCardElement = JournalismProjectRef.current;
+      journalismCardElement.classList.add("journalism-card-animation");
+      console.log("journalismCardElement", journalismCardElement);
+    }
+  }, [JournalismProjectRef, isVisibleJournalismProject]);
+  */
 
   return (
     <div className="tabscomponent custom-font">
@@ -292,6 +309,7 @@ const Tabs = () => {
                     image={project.image}
                     publisher={project.publisher}
                     link={project.link}
+                    /*animationRef={JournalismProjectRef}*/
                   />
                 ))}
               </div>
