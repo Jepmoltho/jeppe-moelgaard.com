@@ -631,6 +631,20 @@
   border-radius: 10px;
 }
 
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.bounce-element.bounce {
+  animation: bounce 0.5s ease-in-out;
+}
+
 .paragraphtechstack {
   margin-bottom: 0rem !important;
   padding-left: 8px;

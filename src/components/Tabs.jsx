@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Project from "./Project";
 import JournalismProject from "./JournalismProject.tsx";
 import TechLogo from "./Techlogo";
@@ -7,7 +7,7 @@ import sogs from "../media/staunandstender-v2.png";
 import silkeborgfadoel2 from "../media/SF logo.png";
 import templafy from "../media/templafy.png";
 import ownlogo from "../media/own-logo-v2.png";
-//import UnderConstruction from "../media/Under_construction_animated.gif";
+import useScrollObserverLessSensitive from "../hooks/useScrollObserverLessSensitive";
 import {
   pathsTamigo,
   pathsSogS,
@@ -49,7 +49,62 @@ const Tabs = () => {
       front.style.display = "none";
       back.style.display = "flex";
     }
+    setBounceHasClicked(true);
   };
+
+  const [bounceHasClicked, setBounceHasClicked] = useState(false);
+  const [hasBouncedOne, setHasBouncedOne] = useState(false);
+  const [hasBouncedTwo, setHasBouncedTwo] = useState(false);
+  const [hasBouncedThree, setHasBouncedThree] = useState(false);
+
+  const animationContainerRefTamigo = useRef();
+  const isVisibleTamigo = useScrollObserverLessSensitive(
+    animationContainerRefTamigo
+  );
+  const animationContainerRefSogS = useRef();
+  const isVisibleSogS = useScrollObserverLessSensitive(
+    animationContainerRefSogS
+  );
+  const animationContainerRefOwnSite = useRef();
+  const isVisibleOwnSite = useScrollObserverLessSensitive(
+    animationContainerRefOwnSite
+  );
+
+  //prettier-ignore
+  useEffect(() => {
+    const bounceindex = Math.floor(Math.random() * pathsTamigo.length) % pathsTamigo.length;
+    if (isVisibleTamigo && bounceHasClicked === false && hasBouncedOne === false) {
+      setTimeout(() => {
+        const elementToAnimate = document.getElementsByClassName("bounce-element-tamigo")[bounceindex];
+        elementToAnimate.classList.add("bounce");
+      }, 2000);
+      setHasBouncedOne(true);
+    }
+  }, [isVisibleTamigo, bounceHasClicked, setBounceHasClicked, hasBouncedOne, setHasBouncedOne]);
+
+  //prettier-ignore
+  useEffect(() => {
+    const bounceindex = Math.floor(Math.random() * pathsSogS.length) % pathsSogS.length;
+    if (isVisibleSogS && bounceHasClicked === false && hasBouncedTwo === false) {
+      setTimeout(() => {
+        const elementToAnimate = document.getElementsByClassName("bounce-element-sogs")[bounceindex];
+        elementToAnimate.classList.add("bounce");
+      }, 2000);
+      setHasBouncedTwo(true);
+    }
+  }, [isVisibleSogS, bounceHasClicked, setBounceHasClicked, hasBouncedTwo, setHasBouncedTwo]);
+
+  //prettier-ignore
+  useEffect(() => {
+    const bounceindex = Math.floor(Math.random() * pathsOwnSite.length) % pathsOwnSite.length;
+      if (isVisibleOwnSite && bounceHasClicked === false && hasBouncedThree === false) {
+      setTimeout(() => {
+        const elementToAnimate = document.getElementsByClassName("bounce-element-ownsite")[bounceindex];
+        elementToAnimate.classList.add("bounce");
+      }, 2000);
+      setHasBouncedThree(true);
+    }
+  }, [isVisibleOwnSite, bounceHasClicked, setBounceHasClicked, hasBouncedThree, setHasBouncedThree]);
 
   return (
     <div className="tabscomponent custom-font">
@@ -102,6 +157,7 @@ const Tabs = () => {
                     key={logo.id}
                     logo={logo}
                     handleImageClick={handleImageClick}
+                    animationContainerRef={animationContainerRefTamigo}
                   />
                 ))}
               />
@@ -132,10 +188,10 @@ const Tabs = () => {
                     key={logo.id}
                     logo={logo}
                     handleImageClick={handleImageClick}
+                    animationContainerRef={animationContainerRefSogS}
                   />
                 ))}
               />
-              {/*<div className="scrollspacetall"></div>*/}
               <Project
                 tagline="www.jeppemølgaard.com"
                 headline="Web Developer"
@@ -162,6 +218,7 @@ const Tabs = () => {
                     key={logo.id}
                     logo={logo}
                     handleImageClick={handleImageClick}
+                    animationContainerRef={animationContainerRefOwnSite}
                   />
                 ))}
               />

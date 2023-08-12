@@ -1,8 +1,13 @@
-export default function TechLogo({ logo, handleImageClick }) {
+export default function TechLogo({
+  logo,
+  handleImageClick,
+  animationContainerRef,
+}) {
   return (
     <div
-      className="flip-container"
+      className={`flip-container bounce-element bounce-element-${logo.parent}`}
       onClick={() => handleImageClick(logo.name, logo.parent)}
+      ref={animationContainerRef}
     >
       <div className={`flipper flipper-${logo.name}-${logo.parent}`}>
         <div className={`front front-${logo.name}-${logo.parent}`}>
