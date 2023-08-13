@@ -57,6 +57,10 @@
   }
 }
 
+.spacer {
+  height: 50px;
+}
+
 /* Header component */
 .header {
   min-height: 530px;
@@ -652,9 +656,60 @@
 
 .journalism-content {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.journalism-card {
+  min-height: 300px;
+  max-width: 250px;
+  margin: 30px;
+  background-color: #aebfc9;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.journalism-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.journalism-image {
+  max-height: fit-content;
+  max-width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-headline {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 10px 10px 10px;
+}
+
+.journalism-card-bottom-text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.date-published {
+  text-align: right;
+  padding-right: 20px;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.clockicon {
+  font-style: normal !important;
 }
 
 /*OLD*/
+/*
 .journalism-project {
   padding-top: 80px;
 }
@@ -665,6 +720,7 @@
 .journalism-image {
   padding: 20px 180px 20px 180px !important;
 }
+*/
 
 .construction-container {
   display: flex;

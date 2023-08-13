@@ -23,6 +23,7 @@ import {
   linksOwnSite,
 } from "../data/links.jsx";
 import { tempLinksJournalism } from "../data/journalism.jsx";
+//import "../tailwind.css";
 //import { tempLinksJournalism } from "../data/journalism.jsx";
 //import myImage from "../media/profile-picture-v2.png";
 
@@ -227,11 +228,46 @@ const Tabs = () => {
             </div>
           )}
           {activeTab === "journalism" && (
-            <div className="journalism-content">
-              <JournalismProject
-                headline="Game Developers Create Real Economies with Blockchain"
-                image={tempLinksJournalism[0].image}
-              />
+            <div className="journalism-content-container">
+              <div className="spacer"></div>
+              <div className="journalism-content">
+                <JournalismProject
+                  headline="Game Developers Create Real Economies with Blockchain"
+                  image={tempLinksJournalism[0].image}
+                />
+                <JournalismProject
+                  headline="Game Developers Create Real Economies with Blockchain"
+                  image={tempLinksJournalism[0].image}
+                />
+                <JournalismProject
+                  headline="Game Developers Create Real Economies with Blockchain"
+                  image={tempLinksJournalism[0].image}
+                />
+                <JournalismProject
+                  headline="Game Developers Create Real Economies with Blockchain"
+                  image={tempLinksJournalism[0].image}
+                />
+                <JournalismProject
+                  headline="Game Developers Create Real Economies with Blockchain"
+                  image={tempLinksJournalism[0].image}
+                />
+                <JournalismProject
+                  headline="Game Developers Create Real Economies with Blockchain"
+                  image={tempLinksJournalism[0].image}
+                />
+                <JournalismProject
+                  headline="Game Developers Create Real Economies with Blockchain"
+                  image={tempLinksJournalism[0].image}
+                />
+                <JournalismProject
+                  headline="Game Developers Create Real Economies with Blockchain"
+                  image={tempLinksJournalism[0].image}
+                />
+                <JournalismProject
+                  headline="Game Developers Create Real Economies with Blockchain"
+                  image={tempLinksJournalism[0].image}
+                />
+              </div>
             </div>
             /*
             <div className="content">
