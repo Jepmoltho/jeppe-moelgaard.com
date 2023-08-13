@@ -13,12 +13,32 @@
   }
 }
 
-.custom-font {
-  font-family: "CustomFontName";
+.BricolageGrotesque {
+  font-family: "BricolageGrotesque";
 }
 
-.custom-font-headline {
-  font-family: "HeadlineFontName";
+.FjallaOneRegular {
+  font-family: "FjallaOneRegular";
+}
+
+.Montserrat {
+  font-family: "Montserrat";
+}
+
+.OpenSans {
+  font-family: "OpenSans";
+}
+
+.FiraCode {
+  font-family: "FiraCode";
+}
+
+.Raleway {
+  font-family: "Raleway";
+}
+
+.SourceSance {
+  font-family: "SourceSance";
 }
 
 @keyframes slideInFromBottom {
@@ -418,10 +438,12 @@
   border-radius: 4px 4px 0 0;
   border-width: 1px 1px 0 1px;
   border-radius: 4px 4px 0 0;
-
   color: aliceblue;
   font-size: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tabs-container {
@@ -441,8 +463,24 @@
 }
 
 .tab:not(.active) {
-  background-color: #1c4f7e;
-  background-image: linear-gradient(to bottom, #1c4f7e, #163f63);
+  background-color: rgb(160, 160, 160);
+  background-image: linear-gradient(
+    to left,
+    rgba(160, 160, 160, 0.9),
+    /* Slightly transparent version for a softer gradient */
+      rgba(140, 140, 140, 0.9) /* Slightly darker color for the left side */
+  );
+  /*
+  background-color: rgb(160, 160, 160);
+  background-image: linear-gradient(
+    to left,
+    rgb(160, 160, 160),
+    rgb(140, 140, 140)
+  );
+  */
+
+  /*background-color: #1c4f7e;*/
+  /*background-image: linear-gradient(to bottom, #1c4f7e, #163f63);*/
   color: aliceblue;
 }
 
@@ -456,9 +494,13 @@
 }
 
 .tagline-tabs {
-  color: #f5692e;
+  /*color: #f5692e;*/
+  color: #555555;
+  /*color: #4ca1af;*/
   font-size: small;
-  margin-bottom: 0rem !important;
+  margin-bottom: 10px !important;
+  /*padding-bottom: 10px;*/
+  padding-left: 2px;
 }
 
 /* Project */
@@ -481,6 +523,10 @@
     padding-right: 20px !important;
     padding-left: 20px !important;
   }
+}
+
+.project-headline {
+  font-weight: 700;
 }
 
 .scrollspacer {
@@ -648,7 +694,7 @@
 .paragraphtechstack {
   margin-bottom: 0rem !important;
   padding-left: 8px;
-  padding: 5px 5px 5px 15px;
+  padding: 7px 5px 5px 15px;
 }
 
 .links {

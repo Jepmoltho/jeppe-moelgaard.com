@@ -8,18 +8,18 @@ interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
   return (
-    <header className="header withts custom-font">
+    <header className="header withts">
       <div className="container header-container">
         <div className="row">
           <div className="col-md-7">
             <div className="d-flex header-text-container h-100">
               <div>
-                <p className="tagline">Hi, I'm a</p>
-                <h1 className="text-start headline ">
+                <p className="tagline Raleway">Hi, I'm a</p>
+                <h1 className="text-start headline Montserrat">
                   Software Developer
                   <br />
                 </h1>
-                <h3 className="text-start sub-headline">
+                <h3 className="text-start sub-headline Raleway">
                   skilled in coding and communications
                 </h3>
               </div>

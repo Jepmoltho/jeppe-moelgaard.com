@@ -65,10 +65,10 @@ export default function Project({
             <div className="d-flex align-items-center h-100">
               <div>
                 <p></p>
-                <p className="tagline-tabs">{tagline}</p>
-                <h2>{headline}</h2>
-                <p>{description}</p>
-                <div className="links">
+                <p className="tagline-tabs Raleway">{tagline}</p>
+                <h2 className="project-headline Montserrat">{headline}</h2>
+                <p className="SourceSance">{description}</p>
+                <div className="links SourceSance">
                   <p className="inline-p">Links: </p>
                   {links}
                 </div>
@@ -93,7 +93,7 @@ export default function Project({
         ref={animationContainerMobileRef}
         className="techstack-container animation-container-mobile hide-default"
       >
-        <div className="techstack">
+        <div className="techstack Raleway">
           <p className="paragraphtechstack">Techstack:</p>
           <div className="tech-logo-container">{logos}</div>
         </div>

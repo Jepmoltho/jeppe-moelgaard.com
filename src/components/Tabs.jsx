@@ -124,12 +124,12 @@ const Tabs = () => {
   */
 
   return (
-    <div className="tabscomponent custom-font">
+    <div className="tabscomponent ">
       <div>
-        <h2 className="componentheadline">Portfolio</h2>
+        <h2 className="componentheadline Montserrat">Portfolio</h2>
       </div>
       <div className="tabs-container">
-        <div className="tabs">
+        <div className="tabs Raleway">
           <div
             className={`tab tab-software-headline ${
               activeTab === "software" ? "active" : ""
@@ -139,7 +139,7 @@ const Tabs = () => {
             Software Developer
           </div>
           <div
-            className={`tab tab-journalism-headline ${
+            className={`tab tab-journalism-headline  ${
               activeTab === "journalism" ? "active" : ""
             }`}
             onClick={() => handleTabClick("journalism")}
@@ -181,7 +181,7 @@ const Tabs = () => {
               {/*<div className="scrollspacer"></div>*/}
               <Project
                 tagline="Staun and Stender"
-                headline="Developer and IT Management Consultant"
+                headline="Developer and IT Consultant"
                 description="I develop interactive web applications for enterprises to manage data in an Enterprise Architecture Relational Database framework. Responsibilities include developing web applications and creating a code library using custom JavaScript, HTML & CSS. Futher, I used a DBMS and SQL to transfer and manipulate data between systems"
                 image={sogs}
                 direction="reverse"
