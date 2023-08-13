@@ -139,8 +139,12 @@
 }
 
 .profile-picture {
-  animation: slideInFromBottom 1s ease-in-out; /* There is an issue here */ /* Apply the animation to the image */
+  /*animation: slideInFromBottom 1s ease-in-out;*/ /* There is an issue here */ /* Apply the animation to the image */
   max-height: 200px;
+}
+
+.profile-picture-animation {
+  animation: slideInFromBottom 1s ease-in-out; /* There is an issue here */ /* Apply the animation to the image */
 }
 
 .profile-picture-container {
