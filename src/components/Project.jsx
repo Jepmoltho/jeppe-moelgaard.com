@@ -6,6 +6,7 @@ export default function Project({
   headline,
   description,
   image,
+  imageLink,
   direction,
   classname,
   logos,
@@ -79,12 +80,14 @@ export default function Project({
           {/*prettier-ignore */}
           <div className={`col-md-5 project-image-parent-container ${hideImgOnMobile === true && isOnMobile ? "remove-default" : ""}`}>
             <div className="d-flex align-items-center" >
+              <a href={imageLink} target="__blank">
               <img
                 ref={animationContainerRef}
                 className={`tabsimage ${classname} animation-container hide-default`}
                 src={image}
                 alt="profile"
               ></img>
+              </a>
             </div>
           </div>
         </div>

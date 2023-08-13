@@ -53,14 +53,16 @@ const Tabs = () => {
   };
 
   const [bounceHasClicked, setBounceHasClicked] = useState(false);
-  const [hasBouncedOne, setHasBouncedOne] = useState(false);
+  //const [hasBouncedOne, setHasBouncedOne] = useState(false);
   const [hasBouncedTwo, setHasBouncedTwo] = useState(false);
   const [hasBouncedThree, setHasBouncedThree] = useState(false);
 
   const animationContainerRefTamigo = useRef();
+  /*
   const isVisibleTamigo = useScrollObserverLessSensitive(
     animationContainerRefTamigo
   );
+  */
   const animationContainerRefSogS = useRef();
   const isVisibleSogS = useScrollObserverLessSensitive(
     animationContainerRefSogS
@@ -71,6 +73,7 @@ const Tabs = () => {
   );
 
   //prettier-ignore
+  /*
   useEffect(() => {
     if (isVisibleTamigo && bounceHasClicked === false && hasBouncedOne === false) {
       const bounceindex = Math.floor(Math.random() * pathsTamigo.length) % pathsTamigo.length;
@@ -83,15 +86,18 @@ const Tabs = () => {
       setHasBouncedOne(true);
     }
   }, [isVisibleTamigo, bounceHasClicked, setBounceHasClicked, hasBouncedOne, setHasBouncedOne]);
+  */
 
   //prettier-ignore
   useEffect(() => {
     const bounceindex = Math.floor(Math.random() * pathsSogS.length) % pathsSogS.length;
     if (isVisibleSogS && bounceHasClicked === false && hasBouncedTwo === false) {
+      document.getElementsByClassName("tab-journalism-headline")[0].style.pointerEvents = "none";
       setTimeout(() => {
         const elementToAnimate = document.getElementsByClassName("bounce-element-sogs")[bounceindex];
         elementToAnimate.classList.add("bounce");
-      }, 1000);
+        document.getElementsByClassName("tab-journalism-headline")[0].style.pointerEvents = "auto";
+      }, 2000);
       setHasBouncedTwo(true);
     }
   }, [isVisibleSogS, bounceHasClicked, setBounceHasClicked, hasBouncedTwo, setHasBouncedTwo]);
@@ -100,10 +106,12 @@ const Tabs = () => {
   useEffect(() => {
     const bounceindex = Math.floor(Math.random() * pathsOwnSite.length) % pathsOwnSite.length;
       if (isVisibleOwnSite && bounceHasClicked === false && hasBouncedThree === false) {
-      setTimeout(() => {
+        document.getElementsByClassName("tab-journalism-headline")[0].style.pointerEvents = "none";
+        setTimeout(() => {
         const elementToAnimate = document.getElementsByClassName("bounce-element-ownsite")[bounceindex];
         elementToAnimate.classList.add("bounce");
-      }, 1000);
+        document.getElementsByClassName("tab-journalism-headline")[0].style.pointerEvents = "auto";
+      }, 2000);
       setHasBouncedThree(true);
     }
   }, [isVisibleOwnSite, bounceHasClicked, setBounceHasClicked, hasBouncedThree, setHasBouncedThree]);
@@ -129,7 +137,7 @@ const Tabs = () => {
         <h2 className="componentheadline Montserrat">Portfolio</h2>
       </div>
       <div className="tabs-container">
-        <div className="tabs Raleway">
+        <div className="tabs ">
           <div
             className={`tab tab-software-headline ${
               activeTab === "software" ? "active" : ""
@@ -156,6 +164,7 @@ const Tabs = () => {
                 headline="Frontend Developer"
                 description="I developed reusable components & landing pages using HTML, CSS & JavaScript in the Umbraco framework and optimized design for all screen types."
                 image={tamigo}
+                imageLink="https://www.tamigo.com/pricing"
                 projectnumber={0}
                 animationId={1}
                 animationIdMobile={0}
@@ -184,6 +193,7 @@ const Tabs = () => {
                 headline="Developer and IT Consultant"
                 description="I develop interactive web applications for enterprises to manage data in an Enterprise Architecture Relational Database framework. Responsibilities include developing web applications and creating a code library using custom JavaScript, HTML & CSS. Futher, I used a DBMS and SQL to transfer and manipulate data between systems"
                 image={sogs}
+                imageLink="https://github.com/Jepmoltho/mood-jsextend"
                 direction="reverse"
                 classname="sogslogo squareimg"
                 projectnumber={1}
@@ -244,6 +254,7 @@ const Tabs = () => {
                 headline="Website Specialist"
                 description="I updated and rebuild all Templafy's 300+ landing pages (and HubSpot pages) to WordPress 5.3+ spanning over three diffrenent project."
                 image={templafy}
+                imageLink={"https://www.templafy.com/"}
                 direction="reverse"
                 classname="templafylogo"
                 projectnumber={3}
@@ -272,6 +283,7 @@ const Tabs = () => {
                 headline="Web Developer"
                 description="I design and develop Silkeborg Fadøls webpage in WordPress. I develop custom JavaScript, CSS & HTML to improve chosen theme and to improve page design for mobile view"
                 image={silkeborgfadoel2}
+                imageLink={"https://silkeborgfadoel.dk/"}
                 direction=""
                 classname="silkeborgfadoellogo squareimg"
                 projectnumber={4}

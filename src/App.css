@@ -120,6 +120,8 @@
 
 .tagline {
   color: #4ca1af;
+  padding-left: 2px;
+  margin-bottom: 10px;
 }
 
 .tagline-paragraph {
@@ -204,6 +206,7 @@
 
 .slide-container-desktop {
   padding-right: 20px;
+  height: 150px;
 }
 
 .slidecontainer-mobile {
@@ -215,6 +218,7 @@
   min-height: 300px;
   border-radius: 6px;
   align-items: center;
+  font-size: 15px;
 }
 
 .slide-no-scroll-container-mobile {
@@ -410,8 +414,12 @@
 /* Tabs */
 .tabscomponent {
   background-color: #15395a;
-  background-image: linear-gradient(to bottom, #1c4f7e, #0a1d2e);
-  /*background-image: linear-gradient(to bottom, #15395a, #0e273f);*/
+  /*background-color: #9f9f9f;*/
+  /*background-color: #8b8989;*/
+  /*background-image: linear-gradient(to bottom, #8b8989, #606060);*/
+  /*background-color: #c1c1c1b3;*/
+  /*background-image: linear-gradient(to bottom, #1c4f7e, #0a1d2e);*/
+  background-image: linear-gradient(to bottom, #15395a, #0e273f);
   padding-left: 6rem;
   padding-right: 6rem;
   padding-bottom: 6rem;
@@ -459,7 +467,7 @@
 .tab.active {
   background-color: #d4dce2;
   color: black;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .tab:not(.active) {
@@ -527,6 +535,10 @@
 
 .project-headline {
   font-weight: 700;
+  font-size: 28px;
+  @media screen and (max-width: 768px) {
+    font-size: auto;
+  }
 }
 
 .scrollspacer {
@@ -777,10 +789,12 @@
   font-weight: 600;
   padding: 20px 10px 10px 10px;
   /*If this causes bug remove it*/
+  /*
   @media screen and (max-width: 768px) {
     scroll-snap-align: start;
     scroll-snap-stop: always;
   }
+  */
 }
 
 .journalism-card-bottom-text-container {
@@ -789,6 +803,10 @@
   left: 0;
   width: 100%;
   padding-left: 10px;
+  @media screen and (max-width: 768px) {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
 }
 
 .date-published {
