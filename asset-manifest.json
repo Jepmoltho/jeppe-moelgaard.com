@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/jeppe-moelgaard.com/static/css/main.a69117f4.css",
-    "main.js": "/jeppe-moelgaard.com/static/js/main.db404ada.js",
+    "main.css": "/jeppe-moelgaard.com/static/css/main.4ee64e28.css",
+    "main.js": "/jeppe-moelgaard.com/static/js/main.df63c3e9.js",
     "static/js/787.c4bf6669.chunk.js": "/jeppe-moelgaard.com/static/js/787.c4bf6669.chunk.js",
-    "static/media/profile-picture-v2.png": "/jeppe-moelgaard.com/static/media/profile-picture-v2.9eebb0ec66483bbbbe40.png",
     "static/media/SourceSans3-VariableFont.ttf": "/jeppe-moelgaard.com/static/media/SourceSans3-VariableFont.b0f73f2e05b36621b8fe.ttf",
     "static/media/OpenSans-VariableFont.ttf": "/jeppe-moelgaard.com/static/media/OpenSans-VariableFont.071a1becc7f00e33cc5b.ttf",
     "static/media/BricolageGrotesque.ttf": "/jeppe-moelgaard.com/static/media/BricolageGrotesque.a9842791f821464a2354.ttf",
@@ -13,6 +12,7 @@
     "static/media/btc.png": "/jeppe-moelgaard.com/static/media/btc.5c515885a35c1facbeef.png",
     "static/media/Raleway-VariableFont.ttf": "/jeppe-moelgaard.com/static/media/Raleway-VariableFont.575ec9e676c7a85494bb.ttf",
     "static/media/el.png": "/jeppe-moelgaard.com/static/media/el.d33c8ddededf73387c3f.png",
+    "static/media/profile-picture-v2-comp.png": "/jeppe-moelgaard.com/static/media/profile-picture-v2-comp.d76a8d43a42c78af67a4.png",
     "static/media/FiraCode-VariableFont.ttf": "/jeppe-moelgaard.com/static/media/FiraCode-VariableFont.4938e54ab2f06530a084.ttf",
     "static/media/hack3.png": "/jeppe-moelgaard.com/static/media/hack3.1ad15a34fbff554f5e60.png",
     "static/media/FjallaOneRegular.ttf": "/jeppe-moelgaard.com/static/media/FjallaOneRegular.34fddd1e53b238e6d80f.ttf",
@@ -41,12 +41,12 @@
     "static/media/Typescript.png": "/jeppe-moelgaard.com/static/media/Typescript.0e441eed78ba11c335df.png",
     "static/media/CSS-v3.png": "/jeppe-moelgaard.com/static/media/CSS-v3.2165f49fb4c6643828bc.png",
     "index.html": "/jeppe-moelgaard.com/index.html",
-    "main.a69117f4.css.map": "/jeppe-moelgaard.com/static/css/main.a69117f4.css.map",
-    "main.db404ada.js.map": "/jeppe-moelgaard.com/static/js/main.db404ada.js.map",
+    "main.4ee64e28.css.map": "/jeppe-moelgaard.com/static/css/main.4ee64e28.css.map",
+    "main.df63c3e9.js.map": "/jeppe-moelgaard.com/static/js/main.df63c3e9.js.map",
     "787.c4bf6669.chunk.js.map": "/jeppe-moelgaard.com/static/js/787.c4bf6669.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a69117f4.css",
-    "static/js/main.db404ada.js"
+    "static/css/main.4ee64e28.css",
+    "static/js/main.df63c3e9.js"
   ]
 }
