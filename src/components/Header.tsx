@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 import myImage from "../media/profile-picture-v2.png";
 import React from "react";
+import "../fonts.css";
 
 interface HeaderProps {}
 
@@ -13,12 +14,12 @@ const Header: React.FC<HeaderProps> = () => {
           <div className="col-md-7">
             <div className="d-flex header-text-container h-100">
               <div>
-                <p className="tagline">Hi, I'm a</p>
-                <h1 className="text-start headline">
+                <p className="tagline Raleway">Hi, I'm a</p>
+                <h1 className="text-start headline Montserrat">
                   Software Developer
                   <br />
                 </h1>
-                <h3 className="text-start sub-headline ">
+                <h3 className="text-start sub-headline Raleway">
                   skilled in coding and communications
                 </h3>
               </div>

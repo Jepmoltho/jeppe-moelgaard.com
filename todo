@@ -23,3 +23,5 @@ Implement helper graphics upon load. Header, scroll down. Bio, scroll sideways.
 Bio, maybe implement that you can also press arrows to scroll.
 
 Can you: Start page on light mode, and make a graphic that toggles to dark mode?
+
+Make journalism cards highligh like on hover on desktop, just on mobile, whenever they are in viewport. So you scroll snap, then it highlights.

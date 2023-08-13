@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Project from "./Project";
 import JournalismProject from "./JournalismProject.tsx";
 import TechLogo from "./Techlogo";
@@ -7,7 +7,7 @@ import sogs from "../media/staunandstender-v2.png";
 import silkeborgfadoel2 from "../media/SF logo.png";
 import templafy from "../media/templafy.png";
 import ownlogo from "../media/own-logo-v2.png";
-//import UnderConstruction from "../media/Under_construction_animated.gif";
+import useScrollObserverLessSensitive from "../hooks/useScrollObserverLessSensitive";
 import {
   pathsTamigo,
   pathsSogS,
@@ -22,10 +22,7 @@ import {
   linksSilkeborgFadoel,
   linksOwnSite,
 } from "../data/links.jsx";
-import { tempLinksJournalism } from "../data/journalism.jsx";
-//import "../tailwind.css";
-//import { tempLinksJournalism } from "../data/journalism.jsx";
-//import myImage from "../media/profile-picture-v2.png";
+import { journalism } from "../data/journalism.jsx";
 
 const Tabs = () => {
   //Tab switch logic
@@ -52,15 +49,95 @@ const Tabs = () => {
       front.style.display = "none";
       back.style.display = "flex";
     }
+    setBounceHasClicked(true);
   };
 
+  const [bounceHasClicked, setBounceHasClicked] = useState(false);
+  //const [hasBouncedOne, setHasBouncedOne] = useState(false);
+  const [hasBouncedTwo, setHasBouncedTwo] = useState(false);
+  const [hasBouncedThree, setHasBouncedThree] = useState(false);
+
+  const animationContainerRefTamigo = useRef();
+  /*
+  const isVisibleTamigo = useScrollObserverLessSensitive(
+    animationContainerRefTamigo
+  );
+  */
+  const animationContainerRefSogS = useRef();
+  const isVisibleSogS = useScrollObserverLessSensitive(
+    animationContainerRefSogS
+  );
+  const animationContainerRefOwnSite = useRef();
+  const isVisibleOwnSite = useScrollObserverLessSensitive(
+    animationContainerRefOwnSite
+  );
+
+  //prettier-ignore
+  /*
+  useEffect(() => {
+    if (isVisibleTamigo && bounceHasClicked === false && hasBouncedOne === false) {
+      const bounceindex = Math.floor(Math.random() * pathsTamigo.length) % pathsTamigo.length;
+      document.getElementsByClassName("tab-journalism-headline")[0].style.pointerEvents = "none";
+      setTimeout(() => {
+        const elementToAnimate = document.getElementsByClassName("bounce-element-tamigo")[bounceindex];
+        elementToAnimate.classList.add("bounce");
+        document.getElementsByClassName("tab-journalism-headline")[0].style.pointerEvents = "auto";
+      }, 1000);
+      setHasBouncedOne(true);
+    }
+  }, [isVisibleTamigo, bounceHasClicked, setBounceHasClicked, hasBouncedOne, setHasBouncedOne]);
+  */
+
+  //prettier-ignore
+  useEffect(() => {
+    const bounceindex = Math.floor(Math.random() * pathsSogS.length) % pathsSogS.length;
+    if (isVisibleSogS && bounceHasClicked === false && hasBouncedTwo === false) {
+      document.getElementsByClassName("tab-journalism-headline")[0].style.pointerEvents = "none";
+      setTimeout(() => {
+        const elementToAnimate = document.getElementsByClassName("bounce-element-sogs")[bounceindex];
+        elementToAnimate.classList.add("bounce");
+        document.getElementsByClassName("tab-journalism-headline")[0].style.pointerEvents = "auto";
+      }, 2000);
+      setHasBouncedTwo(true);
+    }
+  }, [isVisibleSogS, bounceHasClicked, setBounceHasClicked, hasBouncedTwo, setHasBouncedTwo]);
+
+  //prettier-ignore
+  useEffect(() => {
+    const bounceindex = Math.floor(Math.random() * pathsOwnSite.length) % pathsOwnSite.length;
+      if (isVisibleOwnSite && bounceHasClicked === false && hasBouncedThree === false) {
+        document.getElementsByClassName("tab-journalism-headline")[0].style.pointerEvents = "none";
+        setTimeout(() => {
+        const elementToAnimate = document.getElementsByClassName("bounce-element-ownsite")[bounceindex];
+        elementToAnimate.classList.add("bounce");
+        document.getElementsByClassName("tab-journalism-headline")[0].style.pointerEvents = "auto";
+      }, 2000);
+      setHasBouncedThree(true);
+    }
+  }, [isVisibleOwnSite, bounceHasClicked, setBounceHasClicked, hasBouncedThree, setHasBouncedThree]);
+
+  /*
+  const JournalismProjectRef = useRef();
+  const isVisibleJournalismProject =
+    useScrollObserverLessSensitive(JournalismProjectRef);
+
+  useEffect(() => {
+    console.log("isVisibleJournalismProject", isVisibleJournalismProject);
+    if (JournalismProjectRef.current) {
+      const journalismCardElement = JournalismProjectRef.current;
+      journalismCardElement.classList.add("journalism-card-animation");
+      console.log("journalismCardElement", journalismCardElement);
+    }
+  }, [JournalismProjectRef, isVisibleJournalismProject]);
+  */
+
   return (
-    <div className="tabscomponent">
+    <div className="tabscomponent ">
       <div>
-        <h2 className="componentheadline">Portfolio</h2>
+        <h2 className="componentheadline Montserrat">Portfolio</h2>
       </div>
       <div className="tabs-container">
-        <div className="tabs">
+        <div className="tabs ">
           <div
             className={`tab tab-software-headline ${
               activeTab === "software" ? "active" : ""
@@ -70,7 +147,7 @@ const Tabs = () => {
             Software Developer
           </div>
           <div
-            className={`tab tab-journalism-headline ${
+            className={`tab tab-journalism-headline  ${
               activeTab === "journalism" ? "active" : ""
             }`}
             onClick={() => handleTabClick("journalism")}
@@ -87,6 +164,7 @@ const Tabs = () => {
                 headline="Frontend Developer"
                 description="I developed reusable components & landing pages using HTML, CSS & JavaScript in the Umbraco framework and optimized design for all screen types."
                 image={tamigo}
+                imageLink="https://www.tamigo.com/pricing"
                 projectnumber={0}
                 animationId={1}
                 animationIdMobile={0}
@@ -105,15 +183,17 @@ const Tabs = () => {
                     key={logo.id}
                     logo={logo}
                     handleImageClick={handleImageClick}
+                    animationContainerRef={animationContainerRefTamigo}
                   />
                 ))}
               />
               {/*<div className="scrollspacer"></div>*/}
               <Project
                 tagline="Staun and Stender"
-                headline="Developer and IT Management Consultant"
+                headline="Developer and IT Consultant"
                 description="I develop interactive web applications for enterprises to manage data in an Enterprise Architecture Relational Database framework. Responsibilities include developing web applications and creating a code library using custom JavaScript, HTML & CSS. Futher, I used a DBMS and SQL to transfer and manipulate data between systems"
                 image={sogs}
+                imageLink="https://github.com/Jepmoltho/mood-jsextend"
                 direction="reverse"
                 classname="sogslogo squareimg"
                 projectnumber={1}
@@ -135,10 +215,10 @@ const Tabs = () => {
                     key={logo.id}
                     logo={logo}
                     handleImageClick={handleImageClick}
+                    animationContainerRef={animationContainerRefSogS}
                   />
                 ))}
               />
-              {/*<div className="scrollspacetall"></div>*/}
               <Project
                 tagline="www.jeppemølgaard.com"
                 headline="Web Developer"
@@ -165,6 +245,7 @@ const Tabs = () => {
                     key={logo.id}
                     logo={logo}
                     handleImageClick={handleImageClick}
+                    animationContainerRef={animationContainerRefOwnSite}
                   />
                 ))}
               />
@@ -173,6 +254,7 @@ const Tabs = () => {
                 headline="Website Specialist"
                 description="I updated and rebuild all Templafy's 300+ landing pages (and HubSpot pages) to WordPress 5.3+ spanning over three diffrenent project."
                 image={templafy}
+                imageLink={"https://www.templafy.com/"}
                 direction="reverse"
                 classname="templafylogo"
                 projectnumber={3}
@@ -201,6 +283,7 @@ const Tabs = () => {
                 headline="Web Developer"
                 description="I design and develop Silkeborg Fadøls webpage in WordPress. I develop custom JavaScript, CSS & HTML to improve chosen theme and to improve page design for mobile view"
                 image={silkeborgfadoel2}
+                imageLink={"https://silkeborgfadoel.dk/"}
                 direction=""
                 classname="silkeborgfadoellogo squareimg"
                 projectnumber={4}
@@ -231,77 +314,18 @@ const Tabs = () => {
             <div className="journalism-content-container">
               <div className="spacer"></div>
               <div className="journalism-content">
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
-                <JournalismProject
-                  headline="Game Developers Create Real Economies with Blockchain"
-                  image={tempLinksJournalism[0].image}
-                />
+                {journalism.map((project) => (
+                  <JournalismProject
+                    key={project.id}
+                    headline={project.title}
+                    image={project.image}
+                    publisher={project.publisher}
+                    link={project.link}
+                    /*animationRef={JournalismProjectRef}*/
+                  />
+                ))}
               </div>
             </div>
-            /*
-            <div className="content">
-              <div className="construction-container">
-                <img
-                  src={UnderConstruction}
-                  alt="Under construction"
-                  className="construction-image"
-                ></img>
-              </div>
-              <center>
-                <div className="constructions-text-container">
-                  <p className="construction-text">
-                    The aestetics of this page is still under development. In
-                    the meantime, you can check some of my journalism projects
-                    by clicking the links below:
-                  </p>
-                </div>
-              </center>
-              <div className="journalism-links-container">
-                <center>
-                  <ul className="linksul">
-                    {tempLinksJournalism.map((link) => (
-                      <div className="journalism-link-container" key={link.id}>
-                        <a href={link.link} target="__blank">
-                          <p>{link.title}</p>
-                        </a>
-                      </div>
-                    ))}
-                  </ul>
-                </center>
-              </div>
-            </div>
-            */
           )}
         </div>
       </div>

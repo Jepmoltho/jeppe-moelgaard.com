@@ -13,6 +13,34 @@
   }
 }
 
+.BricolageGrotesque {
+  font-family: "BricolageGrotesque";
+}
+
+.FjallaOneRegular {
+  font-family: "FjallaOneRegular";
+}
+
+.Montserrat {
+  font-family: "Montserrat";
+}
+
+.OpenSans {
+  font-family: "OpenSans";
+}
+
+.FiraCode {
+  font-family: "FiraCode";
+}
+
+.Raleway {
+  font-family: "Raleway";
+}
+
+.SourceSance {
+  font-family: "SourceSance";
+}
+
 @keyframes slideInFromBottom {
   0% {
     transform: translateY(30%);
@@ -92,6 +120,8 @@
 
 .tagline {
   color: #4ca1af;
+  padding-left: 2px;
+  margin-bottom: 10px;
 }
 
 .tagline-paragraph {
@@ -176,6 +206,7 @@
 
 .slide-container-desktop {
   padding-right: 20px;
+  height: 150px;
 }
 
 .slidecontainer-mobile {
@@ -187,6 +218,7 @@
   min-height: 300px;
   border-radius: 6px;
   align-items: center;
+  font-size: 15px;
 }
 
 .slide-no-scroll-container-mobile {
@@ -361,7 +393,8 @@
 
 /* Component Headline */
 .componentheadline {
-  background-color: #15395a;
+  /*background-color: #15395a;*/
+  background-color: inherit;
   color: aliceblue;
   padding-top: 3rem;
   padding-left: 6rem;
@@ -381,6 +414,11 @@
 /* Tabs */
 .tabscomponent {
   background-color: #15395a;
+  /*background-color: #9f9f9f;*/
+  /*background-color: #8b8989;*/
+  /*background-image: linear-gradient(to bottom, #8b8989, #606060);*/
+  /*background-color: #c1c1c1b3;*/
+  /*background-image: linear-gradient(to bottom, #1c4f7e, #0a1d2e);*/
   background-image: linear-gradient(to bottom, #15395a, #0e273f);
   padding-left: 6rem;
   padding-right: 6rem;
@@ -408,25 +446,49 @@
   border-radius: 4px 4px 0 0;
   border-width: 1px 1px 0 1px;
   border-radius: 4px 4px 0 0;
-
   color: aliceblue;
   font-size: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tabs-container {
   background-color: #d4dce2;
   border-radius: 4px;
+  /*box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
+  @media screen and (max-width: 705px) {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
 }
 
 .tab.active {
   background-color: #d4dce2;
   color: black;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .tab:not(.active) {
-  background-color: #15395a;
+  background-color: rgb(160, 160, 160);
+  background-image: linear-gradient(
+    to left,
+    rgba(160, 160, 160, 0.9),
+    /* Slightly transparent version for a softer gradient */
+      rgba(140, 140, 140, 0.9) /* Slightly darker color for the left side */
+  );
+  /*
+  background-color: rgb(160, 160, 160);
+  background-image: linear-gradient(
+    to left,
+    rgb(160, 160, 160),
+    rgb(140, 140, 140)
+  );
+  */
+
+  /*background-color: #1c4f7e;*/
+  /*background-image: linear-gradient(to bottom, #1c4f7e, #163f63);*/
   color: aliceblue;
 }
 
@@ -440,9 +502,13 @@
 }
 
 .tagline-tabs {
-  color: #f5692e;
+  /*color: #f5692e;*/
+  color: #555555;
+  /*color: #4ca1af;*/
   font-size: small;
-  margin-bottom: 0rem !important;
+  margin-bottom: 10px !important;
+  /*padding-bottom: 10px;*/
+  padding-left: 2px;
 }
 
 /* Project */
@@ -467,10 +533,18 @@
   }
 }
 
+.project-headline {
+  font-weight: 700;
+  font-size: 28px;
+  @media screen and (max-width: 768px) {
+    font-size: auto;
+  }
+}
+
 .scrollspacer {
   height: 0px;
   @media screen and (max-width: 768px) {
-    height: 35px;
+    height: 65px;
   }
 }
 
@@ -615,10 +689,24 @@
   border-radius: 10px;
 }
 
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.bounce-element.bounce {
+  animation: bounce 0.5s ease-in-out;
+}
+
 .paragraphtechstack {
   margin-bottom: 0rem !important;
   padding-left: 8px;
-  padding: 5px 5px 5px 15px;
+  padding: 7px 5px 5px 15px;
 }
 
 .links {
@@ -676,17 +764,37 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.journalism-image {
-  max-height: fit-content;
-  max-width: 100%;
+.journalism-img-container {
+  /*position: relative;*/
+  overflow: hidden;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  height: 135px;
+}
+
+.journalism-image {
+  width: 100%;
+  overflow: clip;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.journalism-card-link {
+  color: inherit;
+  text-decoration: none;
 }
 
 .card-headline {
   font-size: 20px;
   font-weight: 600;
-  padding: 10px 10px 10px 10px;
+  padding: 20px 10px 10px 10px;
+  /*If this causes bug remove it*/
+  /*
+  @media screen and (max-width: 768px) {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  */
 }
 
 .journalism-card-bottom-text-container {
@@ -695,6 +803,10 @@
   left: 0;
   width: 100%;
   padding-left: 10px;
+  @media screen and (max-width: 768px) {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
 }
 
 .date-published {
