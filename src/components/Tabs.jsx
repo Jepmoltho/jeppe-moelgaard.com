@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Project from "./Project";
+import Project from "./Project.tsx";
 import JournalismProject from "./JournalismProject.tsx";
 import TechLogo from "./Techlogo";
 import tamigo from "../media/tamigo.png";

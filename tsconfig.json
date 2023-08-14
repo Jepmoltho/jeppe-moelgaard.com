@@ -106,5 +106,16 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
-  }
+  },
+  //It is absolutely ridiculous that this works when the module is not being declared in that file
+  "include": [
+    "/Users/jeppe/Documents/Repos/Public repos/jeppe-moelgaard.com/global.d.ts"
+  ]
 }
+
+/*
+The inclusion of the `global.d.ts` file in your `tsconfig.json` file fixes the error with importing `useScrollHook` because it makes TypeScript aware of the type declarations for modules in the specified paths. 
+In your specific case, you were encountering an error when trying to import `useScrollHook` because TypeScript couldn't find a declaration file for it. By adding the `global.d.ts` file to the `include` section of your `tsconfig.json`, you're telling TypeScript to consider this declaration file when trying to resolve imports from the specified paths.
+The content of the `global.d.ts` file itself doesn't directly address the issue with `useScrollHook`. Instead, it's the act of including the declaration file in the `tsconfig.json` that informs TypeScript about the existence of type declarations for modules in certain paths.
+This is why you often see global type declarations, like your `global.d.ts` file, used to provide type information for third-party libraries or custom modules that might not have their own type definitions. It's a way to tell TypeScript about the types associated with those modules, allowing you to use them in your code with proper type checking. 
+*/
