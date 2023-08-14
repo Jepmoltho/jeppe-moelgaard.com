@@ -131,3 +131,6 @@ dist
 
 # DS store
 .DS_Store
+
+# Large files
+Large files/

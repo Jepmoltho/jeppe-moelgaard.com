@@ -53,16 +53,11 @@ const Tabs = () => {
   };
 
   const [bounceHasClicked, setBounceHasClicked] = useState(false);
-  //const [hasBouncedOne, setHasBouncedOne] = useState(false);
   const [hasBouncedTwo, setHasBouncedTwo] = useState(false);
   const [hasBouncedThree, setHasBouncedThree] = useState(false);
 
   const animationContainerRefTamigo = useRef();
-  /*
-  const isVisibleTamigo = useScrollObserverLessSensitive(
-    animationContainerRefTamigo
-  );
-  */
+
   const animationContainerRefSogS = useRef();
   const isVisibleSogS = useScrollObserverLessSensitive(
     animationContainerRefSogS
@@ -71,22 +66,6 @@ const Tabs = () => {
   const isVisibleOwnSite = useScrollObserverLessSensitive(
     animationContainerRefOwnSite
   );
-
-  //prettier-ignore
-  /*
-  useEffect(() => {
-    if (isVisibleTamigo && bounceHasClicked === false && hasBouncedOne === false) {
-      const bounceindex = Math.floor(Math.random() * pathsTamigo.length) % pathsTamigo.length;
-      document.getElementsByClassName("tab-journalism-headline")[0].style.pointerEvents = "none";
-      setTimeout(() => {
-        const elementToAnimate = document.getElementsByClassName("bounce-element-tamigo")[bounceindex];
-        elementToAnimate.classList.add("bounce");
-        document.getElementsByClassName("tab-journalism-headline")[0].style.pointerEvents = "auto";
-      }, 1000);
-      setHasBouncedOne(true);
-    }
-  }, [isVisibleTamigo, bounceHasClicked, setBounceHasClicked, hasBouncedOne, setHasBouncedOne]);
-  */
 
   //prettier-ignore
   useEffect(() => {
@@ -115,21 +94,6 @@ const Tabs = () => {
       setHasBouncedThree(true);
     }
   }, [isVisibleOwnSite, bounceHasClicked, setBounceHasClicked, hasBouncedThree, setHasBouncedThree]);
-
-  /*
-  const JournalismProjectRef = useRef();
-  const isVisibleJournalismProject =
-    useScrollObserverLessSensitive(JournalismProjectRef);
-
-  useEffect(() => {
-    console.log("isVisibleJournalismProject", isVisibleJournalismProject);
-    if (JournalismProjectRef.current) {
-      const journalismCardElement = JournalismProjectRef.current;
-      journalismCardElement.classList.add("journalism-card-animation");
-      console.log("journalismCardElement", journalismCardElement);
-    }
-  }, [JournalismProjectRef, isVisibleJournalismProject]);
-  */
 
   return (
     <div className="tabscomponent ">
@@ -222,7 +186,7 @@ const Tabs = () => {
               <Project
                 tagline="www.jeppemølgaard.com"
                 headline="Web Developer"
-                description="With the fear of sounding extremely meta, I want to highlight my own site (this website) which i developed from scratch using React, JavaScript, HTML, CSS and Node.js."
+                description="I developed my own website jeppemoelgaard.com from scratch using React, TypeScript, JavaScript, HTML, CSS and Node.js."
                 image={ownlogo}
                 direction=""
                 classname="ownlogo squareimg"
@@ -334,3 +298,18 @@ const Tabs = () => {
 };
 
 export default Tabs;
+
+/*
+  const JournalismProjectRef = useRef();
+  const isVisibleJournalismProject =
+    useScrollObserverLessSensitive(JournalismProjectRef);
+
+  useEffect(() => {
+    console.log("isVisibleJournalismProject", isVisibleJournalismProject);
+    if (JournalismProjectRef.current) {
+      const journalismCardElement = JournalismProjectRef.current;
+      journalismCardElement.classList.add("journalism-card-animation");
+      console.log("journalismCardElement", journalismCardElement);
+    }
+  }, [JournalismProjectRef, isVisibleJournalismProject]);
+  */
