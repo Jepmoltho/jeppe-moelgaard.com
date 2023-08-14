@@ -4,7 +4,6 @@ import net from "../media/net-v2.png";
 import bootstrap from "../media/bootstrap-v3.png";
 import csharp from "../media/csharp-v2.png";
 import css from "../media/CSS-v3.png";
-import github from "../media/github-v2.png";
 import umbraco from "../media/umbraco-v2.png";
 import sql from "../media/SQL-v3.png";
 import ssms from "../media/SSMS-v5.png";
@@ -12,6 +11,7 @@ import wordpress from "../media/WP-v2.png";
 import react from "../media/react-v2.png";
 import node from "../media/node-v2.png";
 import typescript from "../media/Typescript.png";
+import git from "../media/Git.png";
 
 export const pathsTamigo = [
   {
@@ -41,10 +41,10 @@ export const pathsTamigo = [
   { id: 6, path: csharp, name: "C", parent: "tamigo", displayname: "C#" },
   {
     id: 7,
-    path: github,
-    name: "GitHub",
+    path: git,
+    name: "Git",
     parent: "tamigo",
-    displayname: "GitHub",
+    displayname: "Git",
   },
 ];
 
@@ -68,10 +68,10 @@ export const pathsSogS = [
   { id: 4, path: css, name: "CSS", parent: "sogs", displayname: "CSS" },
   {
     id: 5,
-    path: github,
-    name: "GitHub",
+    path: git,
+    name: "Git",
     parent: "sogs",
-    displayname: "GitHub",
+    displayname: "Git",
   },
 ];
 
@@ -106,10 +106,10 @@ export const pathsSilkeborgFadoel = [
   },
   {
     id: 4,
-    path: github,
-    name: "GitHub",
+    path: git,
+    name: "Git",
     parent: "silkeborgfadoel",
-    displayname: "GitHub",
+    displayname: "Git",
   },
 ];
 
@@ -153,10 +153,10 @@ export const pathsOwnSite = [
   },
   {
     id: 7,
-    path: github,
-    name: "GitHub",
+    path: git,
+    name: "Git",
     parent: "ownsite",
-    displayname: "GitHub",
+    displayname: "Git",
   },
 ];
 

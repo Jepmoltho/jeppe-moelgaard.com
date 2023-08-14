@@ -3,7 +3,7 @@ import Project from "./Project";
 import JournalismProject from "./JournalismProject.tsx";
 import TechLogo from "./Techlogo";
 import tamigo from "../media/tamigo.png";
-import sogs from "../media/staunandstender-v2.png";
+import github from "../media/github.png";
 import silkeborgfadoel2 from "../media/SF logo.png";
 import templafy from "../media/templafy.png";
 import ownlogo from "../media/own-logo-v2.png";
@@ -156,7 +156,7 @@ const Tabs = () => {
                 tagline="Staun and Stender"
                 headline="Developer and IT Consultant"
                 description="I develop interactive web applications for enterprises to manage data in an Enterprise Architecture Relational Database framework. Responsibilities include developing web applications and creating a code library using custom JavaScript, HTML & CSS. Futher, I used a DBMS and SQL to transfer and manipulate data between systems"
-                image={sogs}
+                image={github}
                 imageLink="https://github.com/Jepmoltho/mood-jsextend"
                 direction="reverse"
                 classname="sogslogo squareimg"
@@ -186,7 +186,7 @@ const Tabs = () => {
               <Project
                 tagline="www.jeppemølgaard.com"
                 headline="Web Developer"
-                description="I developed my own website jeppemoelgaard.com from scratch using React, TypeScript, JavaScript, HTML, CSS and Node.js."
+                description="I developed this website from scratch using React, TypeScript, JavaScript, HTML, CSS and Node.js. It is still under development."
                 image={ownlogo}
                 direction=""
                 classname="ownlogo squareimg"
