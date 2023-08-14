@@ -126,7 +126,7 @@ const Tabs = () => {
               <Project
                 tagline="tamigo"
                 headline="Frontend Developer"
-                description="I developed reusable components & landing pages using HTML, CSS & JavaScript in the Umbraco framework and optimized design for all screen types."
+                description="I developed reusable components & landing pages for all screen types and injected content from multiple domains."
                 image={tamigo}
                 imageLink="https://www.tamigo.com/pricing"
                 projectnumber={0}
