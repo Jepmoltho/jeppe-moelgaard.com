@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/jeppe-moelgaard.com/static/css/main.4ee64e28.css",
-    "main.js": "/jeppe-moelgaard.com/static/js/main.cb98dca2.js",
+    "main.js": "/jeppe-moelgaard.com/static/js/main.39f8977f.js",
     "static/js/787.c4bf6669.chunk.js": "/jeppe-moelgaard.com/static/js/787.c4bf6669.chunk.js",
     "static/media/SourceSans3-VariableFont.ttf": "/jeppe-moelgaard.com/static/media/SourceSans3-VariableFont.b0f73f2e05b36621b8fe.ttf",
     "static/media/OpenSans-VariableFont.ttf": "/jeppe-moelgaard.com/static/media/OpenSans-VariableFont.071a1becc7f00e33cc5b.ttf",
@@ -17,7 +17,6 @@
     "static/media/hack3.png": "/jeppe-moelgaard.com/static/media/hack3.1ad15a34fbff554f5e60.png",
     "static/media/FjallaOneRegular.ttf": "/jeppe-moelgaard.com/static/media/FjallaOneRegular.34fddd1e53b238e6d80f.ttf",
     "static/media/Soaked-v2.png": "/jeppe-moelgaard.com/static/media/Soaked-v2.3ac31183e88057f99c43.png",
-    "static/media/staunandstender-v2.png": "/jeppe-moelgaard.com/static/media/staunandstender-v2.0c36cd182474626a13e4.png",
     "static/media/hack2.png": "/jeppe-moelgaard.com/static/media/hack2.5f8415bb0076b9abdbad.png",
     "static/media/vindturbine.png": "/jeppe-moelgaard.com/static/media/vindturbine.11f9c0f8c9d9c266c80e.png",
     "static/media/hack1.png": "/jeppe-moelgaard.com/static/media/hack1.ffab1c7f52c926da5988.png",
@@ -25,6 +24,7 @@
     "static/media/WP-v2.png": "/jeppe-moelgaard.com/static/media/WP-v2.d04622abeb54b3ee0ca2.png",
     "static/media/templafy.png": "/jeppe-moelgaard.com/static/media/templafy.f45508a0b99b8d7ffb0e.png",
     "static/media/pks.png": "/jeppe-moelgaard.com/static/media/pks.ca03a2891d5a1b31f879.png",
+    "static/media/github.png": "/jeppe-moelgaard.com/static/media/github.abb5df5cb6033db6a886.png",
     "static/media/own-logo-v2.png": "/jeppe-moelgaard.com/static/media/own-logo-v2.a24c4c81ceec08fbf113.png",
     "static/media/react-v2.png": "/jeppe-moelgaard.com/static/media/react-v2.a70c2b470b710a024a5d.png",
     "static/media/tamigo.png": "/jeppe-moelgaard.com/static/media/tamigo.8d2fccaa0e6ab102d430.png",
@@ -35,18 +35,17 @@
     "static/media/SQL-v3.png": "/jeppe-moelgaard.com/static/media/SQL-v3.2081bfb559d8afe3bfc1.png",
     "static/media/nano.png": "/jeppe-moelgaard.com/static/media/nano.a842ab36d3f063d6ba28.png",
     "static/media/bootstrap-v3.png": "/jeppe-moelgaard.com/static/media/bootstrap-v3.263a68692de842d61df1.png",
-    "static/media/github-v2.png": "/jeppe-moelgaard.com/static/media/github-v2.e1dff6ff615380f7ae6f.png",
     "static/media/HTML.png": "/jeppe-moelgaard.com/static/media/HTML.c8e4f4e0b55fcbe52700.png",
     "static/media/JS.png": "/jeppe-moelgaard.com/static/media/JS.773faebb68b068db8910.png",
     "static/media/Typescript.png": "/jeppe-moelgaard.com/static/media/Typescript.0e441eed78ba11c335df.png",
     "static/media/CSS-v3.png": "/jeppe-moelgaard.com/static/media/CSS-v3.2165f49fb4c6643828bc.png",
     "index.html": "/jeppe-moelgaard.com/index.html",
     "main.4ee64e28.css.map": "/jeppe-moelgaard.com/static/css/main.4ee64e28.css.map",
-    "main.cb98dca2.js.map": "/jeppe-moelgaard.com/static/js/main.cb98dca2.js.map",
+    "main.39f8977f.js.map": "/jeppe-moelgaard.com/static/js/main.39f8977f.js.map",
     "787.c4bf6669.chunk.js.map": "/jeppe-moelgaard.com/static/js/787.c4bf6669.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4ee64e28.css",
-    "static/js/main.cb98dca2.js"
+    "static/js/main.39f8977f.js"
   ]
 }
