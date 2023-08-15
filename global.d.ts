@@ -3,7 +3,9 @@ declare module "*.png" {
   export default value;
 }
 
-declare module "/src/hooks/useScrollObserver.jsx" {
-  const value: any;
-  export default value;
+/*
+declare module "../hooks/useScrollObserver" {
+  const useScrollObserver: any;
+  export default useScrollObserver;
 }
+*/

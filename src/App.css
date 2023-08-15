@@ -642,6 +642,7 @@
   perspective: 1000px; /* Add 3D perspective */
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 /* Flip the front and back side of the container */
@@ -860,4 +861,27 @@
 .linksul {
   padding-left: 40px;
   padding-right: 40px;
+}
+
+/* Back to top button */
+
+.back-to-top-button {
+  max-width: fit-content;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #15395a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.back-to-top-button.visible {
+  opacity: 1;
 }

@@ -1,10 +1,9 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-//import Header from "./components/Header";
 import Bio from "./components/Bio";
 import Header from "./components/Header.tsx";
-
 import Tabs from "./components/Tabs";
+import BackToTopButton from "./components/BackToTop";
 
 function App() {
   return (
@@ -13,6 +12,7 @@ function App() {
         <Header />
         <Bio />
         <Tabs />
+        <BackToTopButton />
       </div>
     </div>
   );
