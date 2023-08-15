@@ -23,6 +23,8 @@ import {
   linksOwnSite,
 } from "../data/links.jsx";
 import { journalism } from "../data/journalism.jsx";
+import BackToTopButton from "./BackToTop.tsx";
+import BackToTopButtonJournalism from "./BackToTopJournalism.tsx";
 
 const Tabs = () => {
   //Tab switch logic
@@ -272,6 +274,7 @@ const Tabs = () => {
                   />
                 ))}
               />
+              <BackToTopButton />
             </div>
           )}
           {activeTab === "journalism" && (
@@ -288,6 +291,7 @@ const Tabs = () => {
                     /*animationRef={JournalismProjectRef}*/
                   />
                 ))}
+                <BackToTopButtonJournalism />
               </div>
             </div>
           )}
