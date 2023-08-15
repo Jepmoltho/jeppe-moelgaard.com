@@ -37,7 +37,7 @@ export const pathsTamigo = [
     parent: "tamigo",
     displayname: "Umbraco",
   },
-  { id: 5, path: net, name: "NET", parent: "tamigo", displayname: ".NET" },
+  { id: 5, path: net, name: "NET", parent: "tamigo", displayname: "ASP.NET" },
   { id: 6, path: csharp, name: "C", parent: "tamigo", displayname: "C#" },
   {
     id: 7,

@@ -6,13 +6,10 @@ const BackToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
-    console.log(window.scrollY);
     if (window.scrollY > 1400) {
       setIsVisible(true);
-      console.log("visible");
     } else {
       setIsVisible(false);
-      console.log("not visible");
     }
   };
 

@@ -4,7 +4,6 @@ import Bio from "./components/Bio";
 import Header from "./components/Header.tsx";
 import Tabs from "./components/Tabs";
 import BackToTopButton from "./components/BackToTop";
-import BackToTopButtonDesktop from "./components/BackToTopDesktop";
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
         <Bio />
         <Tabs />
         <BackToTopButton />
-        <BackToTopButtonDesktop />
       </div>
     </div>
   );

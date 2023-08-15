@@ -1,13 +1,13 @@
-//FOR MOBILE
-
 import React, { useState, useEffect } from "react";
 
 const BackToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-    const entry = entries[0];
-    setIsVisible(entry.boundingClientRect.bottom < window.innerHeight);
+    if (window.innerWidth < 768) {
+      const entry = entries[0];
+      setIsVisible(entry.boundingClientRect.bottom < window.innerHeight);
+    }
   };
 
   useEffect(() => {
