@@ -19,7 +19,7 @@ const JournalismProject: React.FC<JournalismProjectProps> = ({ headline, image, 
   /*const isObserved = */useScrollObserver(cardRef, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.5,
+    threshold: 1.0,
   });
 
   //Added isObserved constant which will be true or false because hook returns the state
