@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import useScrollObserver from "../hooks/useScrollObserverJCard";
 //import useScrollHook from "../hooks/useScrollObserver";
 
 interface JournalismProjectProps {
@@ -11,15 +12,28 @@ interface JournalismProjectProps {
 
 //prettier-ignore
 const JournalismProject: React.FC<JournalismProjectProps> = ({ headline, image, publisher, link }) => {
+  
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  //Added isObserved constant
+  /*const isObserved = */useScrollObserver(cardRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  });
+
+  //Added isObserved constant which will be true or false because hook returns the state
+  //const isObservedClass = isObserved ? "hecking-observed" : "no-observe-sempai";
+
   return (
     <a href={link} target="__blank" className="journalism-card-link">
 
-    <div className="journalism-card" >
+    <div className={`journalism-card`} /*${isObservedClass}*/ >
       <div className="journalism-img-container">
           <img src={image} alt="" className="journalism-image"></img>
       </div>
-          <h2 className="card-headline">{headline}</h2>
-      <div className="journalism-card-bottom-text-container">
+          <h2 className="card-headline" ref={cardRef}>{headline}</h2>
+      <div className="journalism-card-bottom-text-container" >
         <p className="publisher">
           Publisher: {publisher}
         </p>

@@ -752,6 +752,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding-bottom: 60px;
 }
 
 .journalism-card {
@@ -885,3 +886,14 @@
 .back-to-top-button.visible {
   opacity: 1;
 }
+
+.jcard-ref {
+  /*transform: scale(1.05);*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/*
+.hecking-observed {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+*/

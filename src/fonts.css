@@ -1,48 +1,48 @@
 @font-face {
   font-family: "BricolageGrotesque";
-  src: url("/Users/jeppe/Documents/Repos/Public repos/jeppe-moelgaard.com/src/fonts/Bricolage_Grotesque/BricolageGrotesque.ttf");
+  src: url("/src/fonts/Bricolage_Grotesque/BricolageGrotesque.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "FjallaOneRegular";
-  src: url("/Users/jeppe/Documents/Repos/Public repos/jeppe-moelgaard.com/src/fonts/Fjalla_One/FjallaOneRegular.ttf");
+  src: url("/src/fonts/Fjalla_One/FjallaOneRegular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Montserrat";
-  src: url("/Users/jeppe/Documents/Repos/Public repos/jeppe-moelgaard.com/src/fonts/Montserrat/Montserrat-VariableFont.ttf");
+  src: url("/src/fonts/Montserrat/Montserrat-VariableFont.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "OpenSans";
-  src: url("/Users/jeppe/Documents/Repos/Public repos/jeppe-moelgaard.com/src/fonts/Open_Sans/OpenSans-VariableFont.ttf");
+  src: url("/src/fonts/Open_Sans/OpenSans-VariableFont.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "FiraCode";
-  src: url("/Users/jeppe/Documents/Repos/Public repos/jeppe-moelgaard.com/src/fonts/Fira_Code/FiraCode-VariableFont.ttf");
+  src: url("/src/fonts/Fira_Code/FiraCode-VariableFont.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Raleway";
-  src: url("/Users/jeppe/Documents/Repos/Public repos/jeppe-moelgaard.com/src/fonts/Raleway/Raleway-VariableFont.ttf");
+  src: url("/src/fonts/Raleway/Raleway-VariableFont.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SourceSance";
-  src: url("/Users/jeppe/Documents/Repos/Public repos/jeppe-moelgaard.com/src/fonts/Source_Sans_3/SourceSans3-VariableFont.ttf");
+  src: url("/src/fonts/Source_Sans_3/SourceSans3-VariableFont.ttf");
   font-weight: normal;
   font-style: normal;
 }
