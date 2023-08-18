@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/jeppe-moelgaard.com/static/css/main.5ba25cfd.css",
-    "main.js": "/jeppe-moelgaard.com/static/js/main.4197cbb8.js",
+    "main.css": "/jeppe-moelgaard.com/static/css/main.349c93bd.css",
+    "main.js": "/jeppe-moelgaard.com/static/js/main.829a3160.js",
     "static/js/787.c4bf6669.chunk.js": "/jeppe-moelgaard.com/static/js/787.c4bf6669.chunk.js",
     "static/media/SourceSans3-VariableFont.ttf": "/jeppe-moelgaard.com/static/media/SourceSans3-VariableFont.b0f73f2e05b36621b8fe.ttf",
     "static/media/OpenSans-VariableFont.ttf": "/jeppe-moelgaard.com/static/media/OpenSans-VariableFont.071a1becc7f00e33cc5b.ttf",
@@ -40,12 +40,12 @@
     "static/media/Typescript.png": "/jeppe-moelgaard.com/static/media/Typescript.0e441eed78ba11c335df.png",
     "static/media/CSS-v3.png": "/jeppe-moelgaard.com/static/media/CSS-v3.2165f49fb4c6643828bc.png",
     "index.html": "/jeppe-moelgaard.com/index.html",
-    "main.5ba25cfd.css.map": "/jeppe-moelgaard.com/static/css/main.5ba25cfd.css.map",
-    "main.4197cbb8.js.map": "/jeppe-moelgaard.com/static/js/main.4197cbb8.js.map",
+    "main.349c93bd.css.map": "/jeppe-moelgaard.com/static/css/main.349c93bd.css.map",
+    "main.829a3160.js.map": "/jeppe-moelgaard.com/static/js/main.829a3160.js.map",
     "787.c4bf6669.chunk.js.map": "/jeppe-moelgaard.com/static/js/787.c4bf6669.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ba25cfd.css",
-    "static/js/main.4197cbb8.js"
+    "static/css/main.349c93bd.css",
+    "static/js/main.829a3160.js"
   ]
 }
