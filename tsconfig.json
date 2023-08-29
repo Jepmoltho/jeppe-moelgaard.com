@@ -109,7 +109,8 @@
   },
   //It is absolutely ridiculous that this works when the module is not being declared in that file
   "include": [
-    "/Users/jeppe/Documents/Repos/Public repos/jeppe-moelgaard.com/global.d.ts"
+    "./global.d.ts"
+    //"/Users/jeppe/Documents/Repos/Public repos/jeppe-moelgaard.com/global.d.ts"
   ]
 }
 
