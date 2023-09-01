@@ -288,6 +288,7 @@ const Tabs = () => {
                     image={project.image}
                     publisher={project.publisher}
                     link={project.link}
+                    date={project.date}
                     /*animationRef={JournalismProjectRef}*/
                   />
                 ))}

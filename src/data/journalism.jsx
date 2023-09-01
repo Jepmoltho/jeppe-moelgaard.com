@@ -21,6 +21,7 @@ export const journalism = [
     title: "Game developers create blockchain economies",
     image: slush,
     publisher: "Soaked by Slush",
+    date: "11-05-2020",
   },
   {
     id: 1,
@@ -29,6 +30,7 @@ export const journalism = [
     title: "New technology makes Bitcoin a real currency",
     image: btc,
     publisher: "Dynamo",
+    date: "01-12-2017",
   },
   {
     id: 2,
@@ -37,6 +39,7 @@ export const journalism = [
     title: "The cyber threat can be turned to our advantage",
     image: hack3,
     publisher: "Dynamo",
+    date: "01-09-2019",
   },
   {
     id: 3,
@@ -45,6 +48,7 @@ export const journalism = [
     title: "Worlds largeest wind turbine",
     image: vindturbine,
     publisher: "Dynamo",
+    date: "01-03-2019",
   },
   {
     id: 4,
@@ -53,6 +57,7 @@ export const journalism = [
     title: "Tandem solar cells needs to be sustainable",
     image: solceller,
     publisher: "Dynamo",
+    date: "01-12-2019",
   },
   {
     id: 5,
@@ -61,14 +66,16 @@ export const journalism = [
     title: "Students learn hacking",
     image: hack2,
     publisher: "Dynamo",
+    date: "01-09-2019",
   },
   {
     id: 6,
-    link: "http://emagstudio.win.dtu.dk/e-books/Dynamo/DYNAMO_54/page_22.html",
+    link: "http://emagstudio.win.dtu.dk/e-books/Dynamo/dynamo56/page_33.html",
     name: "lasertruck",
     title: "Lasertrucks maintain the roads",
     image: lasertruck,
     publisher: "Dynamo",
+    date: "03-09-2019",
   },
   {
     id: 7,
@@ -77,6 +84,7 @@ export const journalism = [
     title: "Startup moves nano analysis out of the lab",
     image: nano,
     publisher: "Dynamo",
+    date: "01-06-2019",
   },
   {
     id: 8,
@@ -85,6 +93,7 @@ export const journalism = [
     title: "Autmoatic design system saves millions",
     image: pks,
     publisher: "Dynamo",
+    date: "01-06-2018",
   },
   {
     id: 9,
@@ -93,21 +102,24 @@ export const journalism = [
     title: "Students develop snake venom tracking",
     image: snake,
     publisher: "Dynamo",
+    date: "01-03-2019",
   },
   {
     id: 10,
-    link: "http://emagstudio.win.dtu.dk/e-books/Dynamo/DYNAMO_54/page_30.html",
+    link: "http://emagstudio.win.dtu.dk/e-books/Dynamo/DYNAMO_54/page_16.html",
     name: "hack1",
     title: "Spinout makes data cyber immune",
     image: hack1,
     publisher: "Dynamo",
+    date: "01-09-2019",
   },
   {
     id: 11,
-    link: "http://emagstudio.win.dtu.dk/e-books/Dynamo/DYNAMO_54/page_32.html",
+    link: "http://emagstudio.win.dtu.dk/e-books/Dynamo/DYNAMO_54/page_13.html",
     name: "el",
     title: "The electricity grid is undemocratic",
     image: el,
     publisher: "Dynamo",
+    date: "01-09-2019",
   },
 ];
