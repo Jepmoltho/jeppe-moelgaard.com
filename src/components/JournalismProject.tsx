@@ -7,11 +7,12 @@ interface JournalismProjectProps {
   image: string;
   publisher: string;
   link: string;
+  date: string;
   /*animationRef: any;*/
 }
 
 //prettier-ignore
-const JournalismProject: React.FC<JournalismProjectProps> = ({ headline, image, publisher, link }) => {
+const JournalismProject: React.FC<JournalismProjectProps> = ({ headline, image, publisher, link, date }) => {
   
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -38,7 +39,7 @@ const JournalismProject: React.FC<JournalismProjectProps> = ({ headline, image, 
           Publisher: {publisher}
         </p>
         <p className="date-published">
-         <span className="clockicon">&#128337;</span> 10/10/2020
+         <span className="clockicon">&#128337;</span> {date}
         </p>
       </div>
     </div>
